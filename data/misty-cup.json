@@ -11,14 +11,17 @@
           "description": "Artisan morning feast: fluffy eggs, sautéed mushrooms, grilled tomatoes, toasted bread bliss",
           "price": 399,
           "image": "/images/tmc-item-images/english-breakfast.jpeg",
+          "foodType": "Veg",
           "variations": [
             {
               "name": "Veg",
-              "price": 399
+              "price": 399,
+              "foodType": "Veg"
             },
             {
               "name": "Chicken",
-              "price": 499
+              "price": 499,
+              "foodType": "Non Veg"
             }
           ]
         },
@@ -26,7 +29,8 @@
           "title": "Egg and Toast",
           "description": "Simple elegance: perfectly cooked eggs on warm, buttery artisan toast",
           "price": 249,
-          "image": "/images/tmc-item-images/egg-and-toast.jpeg"
+          "image": "/images/tmc-item-images/egg-and-toast.jpeg",
+          "foodType": "Egg"
         }
       ]
     },
@@ -39,14 +43,17 @@
           "description": "Silky pasta coated in tangy San Marzano tomato sauce, fresh basil, herbaceous comfort",
           "price": 249,
           "image": "/images/tmc-item-images/pomodoro-pasta.jpeg",
+          "foodType": "Veg",
           "variations": [
             {
               "name": "Veg",
-              "price": 249
+              "price": 249,
+              "foodType": "Veg"
             },
             {
               "name": "Chicken",
-              "price": 279
+              "price": 279,
+              "foodType": "Non Veg"
             }
           ]
         },
@@ -55,14 +62,17 @@
           "description": "Creamy indulgence: tender pasta swimming in rich, velvety parmesan cream sauce",
           "price": 289,
           "image": "/images/tmc-item-images/alfredo-pasta.jpeg",
+          "foodType": "Veg",
           "variations": [
             {
               "name": "Veg",
-              "price": 289
+              "price": 289,
+              "foodType": "Veg"
             },
             {
               "name": "Chicken",
-              "price": 319
+              "price": 319,
+              "foodType": "Non Veg"
             }
           ]
         },
@@ -71,14 +81,17 @@
           "description": "Balanced harmony: creamy tomato sauce with roasted flavors on perfectly al dente pasta",
           "price": 289,
           "image": "/images/tmc-item-images/rosatella-pasta.jpeg",
+          "foodType": "Veg",
           "variations": [
             {
               "name": "Veg",
-              "price": 289
+              "price": 289,
+              "foodType": "Veg"
             },
             {
               "name": "Chicken",
-              "price": 319
+              "price": 319,
+              "foodType": "Non Veg"
             }
           ]
         },
@@ -87,14 +100,17 @@
           "description": "Italian minimalism: garlic-infused olive oil coats delicate spaghetti with subtle elegance",
           "price": 229,
           "image": "/images/tmc-item-images/aglio-e-olio-spaghetti.jpeg",
+          "foodType": "Veg",
           "variations": [
             {
               "name": "Veg",
-              "price": 229
+              "price": 229,
+              "foodType": "Veg"
             },
             {
               "name": "Chicken",
-              "price": 259
+              "price": 259,
+              "foodType": "Non Veg"
             }
           ]
         }
@@ -109,14 +125,17 @@
           "description": "Crisp romaine, creamy caesar dressing, parmesan shavings, croutons: classic lunch",
           "price": 229,
           "image": "/images/tmc-item-images/caesar-salad.jpeg",
+          "foodType": "Veg",
           "variations": [
             {
               "name": "Veg",
-              "price": 229
+              "price": 229,
+              "foodType": "Veg"
             },
             {
               "name": "Chicken",
-              "price": 279
+              "price": 279,
+              "foodType": "Non Veg"
             }
           ]
         },
@@ -125,14 +144,17 @@
           "description": "Fresh vegetables, olives, feta cheese, vibrant dressing: light, nutritious, Mediterranean",
           "price": 299,
           "image": "/images/tmc-item-images/mediterranean-salad.jpeg",
+          "foodType": "Veg",
           "variations": [
             {
               "name": "Veg",
-              "price": 229
+              "price": 229,
+              "foodType": "Veg"
             },
             {
               "name": "Chicken",
-              "price": 349
+              "price": 349,
+              "foodType": "Non Veg"
             }
           ]
         },
@@ -140,13 +162,15 @@
           "title": "Watermelon Feta Salad",
           "description": "Sweet watermelon, tangy feta, mint: refreshing, unexpected, perfectly balanced summer salad",
           "price": 199,
-          "image": "/images/tmc-item-images/watermelon-feta-salad.jpeg"
+          "image": "/images/tmc-item-images/watermelon-feta-salad.jpeg",
+          "foodType": "Veg"
         },
         {
           "title": "Fruit Bowl with Yogurt & Muesli",
           "description": "Fresh seasonal fruits, creamy yogurt, crunchy muesli: wholesome, energizing breakfast",
           "price": 159,
-          "image": "/images/tmc-item-images/fruit-bowl-with-yogurt---muesli.jpeg"
+          "image": "/images/tmc-item-images/fruit-bowl-with-yogurt---muesli.jpeg",
+          "foodType": "Veg"
         }
       ]
     },
@@ -159,14 +183,17 @@
           "description": "Silky-smooth, classic vanilla: timeless flavor, comforting sweetness",
           "price": 79,
           "image": "/images/tmc-item-images/vanilla-ice-cream.jpeg",
+          "foodType": "Veg",
           "variations": [
             {
               "name": "Single Serve",
-              "price": 79
+              "price": 79,
+              "foodType": "Veg"
             },
             {
               "name": "Double Serve",
-              "price": 149
+              "price": 149,
+              "foodType": "Veg"
             }
           ]
         },
@@ -175,14 +202,17 @@
           "description": "Rich, decadent chocolate: smooth texture, deep cocoa satisfaction",
           "price": 79,
           "image": "",
+          "foodType": "Veg",
           "variations": [
             {
               "name": "Single Serve",
-              "price": 79
+              "price": 79,
+              "foodType": "Veg"
             },
             {
               "name": "Double Serve",
-              "price": 149
+              "price": 149,
+              "foodType": "Veg"
             }
           ]
         },
@@ -191,14 +221,17 @@
           "description": "Tropical bliss: creamy mango with bright, natural sweetness, summer in a scoop",
           "price": 79,
           "image": "",
+          "foodType": "Veg",
           "variations": [
             {
               "name": "Single Serve",
-              "price": 79
+              "price": 79,
+              "foodType": "Veg"
             },
             {
               "name": "Double Serve",
-              "price": 149
+              "price": 149,
+              "foodType": "Veg"
             }
           ]
         },
@@ -207,14 +240,17 @@
           "description": "Fruity, vibrant strawberry: fresh berry flavor, smooth indulgence",
           "price": 79,
           "image": "",
+          "foodType": "Veg",
           "variations": [
             {
               "name": "Single Serve",
-              "price": 79
+              "price": 79,
+              "foodType": "Veg"
             },
             {
               "name": "Double Serve",
-              "price": 149
+              "price": 149,
+              "foodType": "Veg"
             }
           ]
         },
@@ -223,14 +259,17 @@
           "description": "Sweet caramel notes, buttery richness: nostalgic, creamy comfort",
           "price": 79,
           "image": "",
+          "foodType": "Veg",
           "variations": [
             {
               "name": "Single Serve",
-              "price": 79
+              "price": 79,
+              "foodType": "Veg"
             },
             {
               "name": "Double Serve",
-              "price": 149
+              "price": 149,
+              "foodType": "Veg"
             }
           ]
         },
@@ -239,14 +278,17 @@
           "description": "Artisan creation: carefully crafted seasonal flavor, unique and memorable",
           "price": 79,
           "image": "",
+          "foodType": "Veg",
           "variations": [
             {
               "name": "Single Serve",
-              "price": 79
+              "price": 79,
+              "foodType": "Veg"
             },
             {
               "name": "Double Serve",
-              "price": 149
+              "price": 149,
+              "foodType": "Veg"
             }
           ]
         }
@@ -260,49 +302,57 @@
           "title": "Espresso",
           "description": "Bold, concentrated coffee: intense shot of pure espresso flavor",
           "price": 89,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Doppio",
           "description": "Double espresso: twice the intensity, twice the caffeine kick, twice the satisfaction",
           "price": 99,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Americano",
           "description": "Smooth espresso diluted with hot water: bold yet balanced, pure coffee magic",
           "price": 109,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Cappuccino",
           "description": "Perfect ratio: rich espresso, steamed milk, velvety foam, cafe perfection",
           "price": 139,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Flat White",
           "description": "Creamy, dense milk foam: smooth espresso, silky milk, Australian favorite",
           "price": 149,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Latte",
           "description": "Creamy comfort: espresso mellowed with steamed milk, approachable warmth",
           "price": 159,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Mocha",
           "description": "Decadent blend: rich espresso meets silky chocolate and steamed milk",
           "price": 189,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Spanish Latte",
           "description": "Sweetened condensed milk espresso: creamy, indulgent, Spanish cafe classic",
           "price": 189,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         }
       ]
     },
@@ -314,37 +364,43 @@
           "title": "Vietnamese Latte",
           "description": "Slow-drip richness: strong coffee, sweet condensed milk, smooth sophistication",
           "price": 189,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Affogato",
           "description": "Dramatic elegance: hot espresso poured over cold vanilla ice cream",
           "price": 169,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Café Frappe",
           "description": "Icy refreshment: cold coffee, milk, ice, perfect summer coffee indulgence",
           "price": 189,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Choco Frappe",
           "description": "Cold, creamy chocolate coffee: rich cocoa meets icy, frothy goodness",
           "price": 189,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Oreo Frappe",
           "description": "Cookies and cream meet cold coffee: sweet, crunchy, utterly indulgent",
           "price": 219,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Brownie Frappe",
           "description": "Fudgy brownie blended into cold coffee: chocolate lovers' frozen dream",
           "price": 239,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         }
       ]
     },
@@ -356,25 +412,29 @@
           "title": "Iced Cold Coffee",
           "description": "Smooth, cold coffee over ice: refreshing, energizing, simple perfection",
           "price": 149,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Vanilla Cold Coffee",
           "description": "Creamy vanilla softens bold cold coffee: sweet, smooth, comforting chill",
           "price": 149,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Chocolate Cold Coffee",
           "description": "Silky chocolate blended into cold coffee: decadent, refreshing, chocolate bliss",
           "price": 149,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Cinnamon Cold Coffee",
           "description": "Warm spice meets cold coffee: cinnamon sweetness, aromatic refreshment",
           "price": 149,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         }
       ]
     },
@@ -386,43 +446,50 @@
           "title": "Mango Milkshake",
           "description": "Thick, creamy mango: tropical fruit, smooth milk, natural sweetness",
           "price": 149,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Chocolate Milkshake",
           "description": "Indulgent chocolate: rich cocoa, cold milk, creamy chocolate heaven",
           "price": 149,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Strawberry Milkshake",
           "description": "Fruity, vibrant strawberry: fresh berry flavor, smooth, refreshing shake",
           "price": 149,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Blueberry Milkshake",
           "description": "Tart and sweet blueberries: antioxidant goodness, creamy texture, berry bliss",
           "price": 149,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Oreo Milkshake",
           "description": "Crunchy cookies and cream: sweet cookies meet smooth milk, nostalgic indulgence",
           "price": 149,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Brownie Blast Milkshake",
           "description": "Fudgy brownie blended smooth: chocolate richness, creamy texture, decadent shake",
           "price": 149,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Blackcurrant Milkshake",
           "description": "Tart, sophisticated blackcurrant: berry tanginess, smooth milk, unique flavor",
           "price": 149,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         }
       ]
     },
@@ -434,25 +501,29 @@
           "title": "Masala Tea",
           "description": "Aromatic spices, steeped black tea: warming comfort, balanced spice blend",
           "price": 39,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Hot Lemon Tea",
           "description": "Bright citrus with black tea: tangy, refreshing, classic clarity",
           "price": 39,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Hot Black Tea",
           "description": "Pure, robust black tea: pure flavor, comforting warmth, timeless tea",
           "price": 39,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Honey Ginger tea",
           "description": "Soothing ginger, sweet honey: warming spice, natural sweetness, wellness sip",
           "price": 49,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         }
       ]
     },
@@ -464,13 +535,15 @@
           "title": "Lemon Iced Tea",
           "description": "Bright, refreshing lemon: citrus tang over cold tea, summer refreshment",
           "price": 119,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Peach Iced Tea",
           "description": "Fruity peach sweetness: smooth stone fruit, cold tea, summery charm",
           "price": 119,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         }
       ]
     },
@@ -482,7 +555,8 @@
           "title": "Hot Chocolate with Marshmallow",
           "description": "Rich, creamy chocolate: warm indulgence, fluffy marshmallows floating on top",
           "price": 200,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         }
       ]
     },
@@ -494,91 +568,106 @@
           "title": "Virgin Mojito",
           "description": "Fresh mint, lime juice, sugar: sparkling, refreshing, mocktail sophistication",
           "price": 119,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Fresh Lime Soda\n(Sweet / Salty)",
           "description": "Delicious fresh lime soda\n(sweet / salty)",
           "price": 119,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Masala Coke",
           "description": "Traditional spiced twist on cola: aromatic, bold, uniquely Indian",
           "price": 119,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Mango Mojito",
           "description": "Tropical mango with fresh mint: sweet fruit, cool spice, refreshing fusion",
           "price": 119,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Strawberry Mojito",
           "description": "Berry sweetness meets minty freshness: fruity, light, spring in a glass",
           "price": 119,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Green Apple Mojito",
           "description": "Tart apple with cool mint: crisp, tangy, perfectly balanced refreshment",
           "price": 119,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Jaljeera Mojito",
           "description": "Cumin-spiced refreshment: aromatic Indian spices, tangy lime, cultural twist",
           "price": 119,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Fire n Ice Mojito",
           "description": "Spicy chilli meets cool mint: heat and chill, daring flavor adventure",
           "price": 119,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Kala Khatta Mojito",
           "description": "Tangy black plum flavor: tart, distinctive, Indian flavors in mojito form",
           "price": 119,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Cucumber Mojito",
           "description": "Crisp cucumber, cool mint: hydrating, garden-fresh, summer in a sip",
           "price": 119,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Ginger Ale Mojito",
           "description": "Spicy ginger meets minty mojito: warmth meets cool, effervescent charm",
           "price": 119,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Blueberry Mojito",
           "description": "Antioxidant blueberries, fresh mint: fruity, slightly tart, sophisticated",
           "price": 119,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Aam Panna Mojito",
           "description": "Raw mango spiced drink: tangy Indian classic, cooling, seasonal favorite",
           "price": 119,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Watermelon Mint Mojito",
           "description": "Sweet watermelon, cooling mint: refreshing summer fruit, light and juicy",
           "price": 119,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Blue Curacao Mojito",
           "description": "Tropical blue citrus: vibrant color, sweet orange notes, party-ready",
           "price": 119,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         }
       ]
     },
@@ -590,25 +679,29 @@
           "title": "Watermelon Juice",
           "description": "Fresh, sweet watermelon: natural hydration, fruity refreshment, pure goodness",
           "price": 139,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Sweetlime Juice",
           "description": "Tart, tangy sweet lime: citrus zing, natural sweetness, tropical brightness",
           "price": 139,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Pineapple Juice",
           "description": "Tropical pineapple: sweet, tangy, golden fruit brightness",
           "price": 139,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Orange Juice",
           "description": "Citrus classic: bright, vitamin-rich, morning freshness",
           "price": 139,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         }
       ]
     },
@@ -620,43 +713,50 @@
           "title": "ABC Juice",
           "description": "Apple, beetroot, carrot blend: earthy sweetness, vibrant nutrition, wellness",
           "price": 159,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Tropical Immunity",
           "description": "Tropical fruits blended: immunity-boosting, warm spices, wellness powerhouse",
           "price": 159,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Golden Root",
           "description": "Turmeric and ginger wellness: anti-inflammatory, warming, golden glow",
           "price": 159,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Red Reboot",
           "description": "Red fruits and vegetables: antioxidant boost, vibrant health, energy refresh",
           "price": 159,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Minty Morning",
           "description": "Fresh mint, citrus, greens: cooling mint, bright morning energy, wellness start",
           "price": 159,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Gut Reset",
           "description": "Probiotic wellness blend: digestive support, balanced health, gut-friendly goodness",
           "price": 159,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Spiced Citrus",
           "description": "Warm spices with bright citrus: balanced warmth, immune boost, wellness sip",
           "price": 159,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         }
       ]
     },
@@ -668,25 +768,29 @@
           "title": "Vanilla Syrup",
           "description": "Sweet vanilla flavor: smooth, aromatic, classic coffee companion",
           "price": 25,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Irish Cream Syrup",
           "description": "Rich cream, whiskey notes: luxurious, smooth, cafe indulgence",
           "price": 25,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Caramel Syrup",
           "description": "Sweet, buttery caramel: indulgent sweetness, coffee enhancement, cozy warmth",
           "price": 25,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Hazelnut Syrup",
           "description": "Nutty, toasted flavor: smooth, sophisticated, coffee-friendly richness",
           "price": 25,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         }
       ]
     }

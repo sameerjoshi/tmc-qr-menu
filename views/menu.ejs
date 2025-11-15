@@ -73,6 +73,66 @@
         height: 20px;
       }
     }
+
+    /* Food Type Filter Styles */
+    .food-type-filter {
+      position: sticky;
+      top: 59px;
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #e9ecef;
+      padding: 8px 0;
+      z-index: 999;
+    }
+    .filter-scroll {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 4px 0;
+    }
+    .filter-scroll::-webkit-scrollbar {
+      display: none;
+    }
+    .filter-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border: 1.5px solid #dee2e6;
+      background-color: white;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #495057;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .filter-btn:hover {
+      background-color: #f8f9fa;
+      border-color: #adb5bd;
+    }
+    .filter-btn.active {
+      background-color: #e7f5ff;
+      border-color: #339af0;
+      color: #1971c2;
+    }
+    .filter-label {
+      line-height: 1;
+    }
+    @media (max-width: 768px) {
+      .filter-btn {
+        padding: 5px 12px;
+        font-size: 12px;
+      }
+    }
+
+    /* Hide filtered items */
+    .menu-item-card.hidden {
+      display: none;
+    }
   </style>
 </head>
 <body class="menu-page" data-brand="<%= brand %>">
@@ -96,6 +156,38 @@
       <div style="width: 60px;"></div>
     </div>
   </nav>
+
+  <!-- Food Type Filter -->
+  <div class="food-type-filter">
+    <div class="container-fluid">
+      <div class="filter-scroll">
+        <button class="filter-btn active" data-filter="all">
+          <span class="filter-label">All</span>
+        </button>
+        <button class="filter-btn" data-filter="veg">
+          <svg width="14" height="14" viewBox="0 0 16 16" style="flex-shrink: 0;">
+            <rect x="1" y="1" width="14" height="14" rx="1" fill="none" stroke="#22c55e" stroke-width="1.5"/>
+            <circle cx="8" cy="8" r="4" fill="#22c55e"/>
+          </svg>
+          <span class="filter-label">Veg</span>
+        </button>
+        <button class="filter-btn" data-filter="non-veg">
+          <svg width="14" height="14" viewBox="0 0 16 16" style="flex-shrink: 0;">
+            <rect x="1" y="1" width="14" height="14" rx="1" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+            <polygon points="8,4.5 12,11.5 4,11.5" fill="#ef4444"/>
+          </svg>
+          <span class="filter-label">Non Veg</span>
+        </button>
+        <button class="filter-btn" data-filter="egg">
+          <svg width="14" height="14" viewBox="0 0 16 16" style="flex-shrink: 0;">
+            <rect x="1" y="1" width="14" height="14" rx="1" fill="none" stroke="#eab308" stroke-width="1.5"/>
+            <polygon points="8,4.5 12,11.5 4,11.5" fill="#eab308"/>
+          </svg>
+          <span class="filter-label">Egg</span>
+        </button>
+      </div>
+    </div>
+  </div>
 
   <div class="category-nav">
     <div class="container-fluid">
@@ -121,13 +213,47 @@
 
         <div class="row g-3">
           <% category.items.forEach((item, itemIndex) => { %>
+            <%
+              // Collect all food types for this item (main + variations)
+              let foodTypes = new Set();
+              if (item.variations) {
+                item.variations.forEach(v => {
+                  foodTypes.add(v.foodType.toLowerCase().replace(/\s+/g, '-'));
+                });
+              } else {
+                foodTypes.add(item.foodType.toLowerCase().replace(/\s+/g, '-'));
+              }
+              const foodTypesStr = Array.from(foodTypes).join(',');
+            %>
             <div class="col-12 col-md-6 col-lg-4">
-              <div class="menu-item-card">
+              <div class="menu-item-card" data-food-types="<%= foodTypesStr %>">
                 <% if (item.image) { %>
                   <div class="menu-item-image" style="background-image: url('<%= item.image %>')"></div>
                 <% } %>
                 <div class="menu-item-body">
-                  <h5 class="menu-item-title mb-2"><%= item.title %></h5>
+                  <% if (!item.variations) { %>
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <%
+                        function getFoodTypeIcon(type) {
+                          if (type === 'Veg') return { border: '#22c55e', color: '#22c55e', shape: 'circle' };
+                          if (type === 'Non Veg') return { border: '#ef4444', color: '#ef4444', shape: 'triangle' };
+                          return { border: '#eab308', color: '#eab308', shape: 'triangle' }; // Egg
+                        }
+                        const icon = getFoodTypeIcon(item.foodType);
+                      %>
+                      <svg width="16" height="16" viewBox="0 0 16 16" style="flex-shrink: 0;">
+                        <rect x="1" y="1" width="14" height="14" rx="1" fill="none" stroke="<%= icon.border %>" stroke-width="1.5"/>
+                        <% if (icon.shape === 'circle') { %>
+                          <circle cx="8" cy="8" r="4" fill="<%= icon.color %>"/>
+                        <% } else { %>
+                          <polygon points="8,4.5 12,11.5 4,11.5" fill="<%= icon.color %>"/>
+                        <% } %>
+                      </svg>
+                      <h5 class="menu-item-title mb-0"><%= item.title %></h5>
+                    </div>
+                  <% } else { %>
+                    <h5 class="menu-item-title mb-2"><%= item.title %></h5>
+                  <% } %>
                   <% if (item.description) { %>
                     <p class="menu-item-description text-muted mb-3"><%= item.description %></p>
                   <% } %>
@@ -135,8 +261,26 @@
                   <% if (item.variations) { %>
                     <div class="variations-inline">
                       <% item.variations.forEach((variation, vIndex) => { %>
+                        <%
+                          function getVarFoodTypeIcon(type) {
+                            if (type === 'Veg') return { border: '#22c55e', color: '#22c55e', shape: 'circle' };
+                            if (type === 'Non Veg') return { border: '#ef4444', color: '#ef4444', shape: 'triangle' };
+                            return { border: '#eab308', color: '#eab308', shape: 'triangle' }; // Egg
+                          }
+                          const varIcon = getVarFoodTypeIcon(variation.foodType);
+                        %>
                         <div class="variation-row">
-                          <span class="variation-name"><%= variation.name %></span>
+                          <div class="d-flex align-items-center gap-2">
+                            <svg width="14" height="14" viewBox="0 0 16 16" style="flex-shrink: 0;">
+                              <rect x="1" y="1" width="14" height="14" rx="1" fill="none" stroke="<%= varIcon.border %>" stroke-width="1.5"/>
+                              <% if (varIcon.shape === 'circle') { %>
+                                <circle cx="8" cy="8" r="4" fill="<%= varIcon.color %>"/>
+                              <% } else { %>
+                                <polygon points="8,4.5 12,11.5 4,11.5" fill="<%= varIcon.color %>"/>
+                              <% } %>
+                            </svg>
+                            <span class="variation-name"><%= variation.name %></span>
+                          </div>
                           <span class="variation-price">₹<%= variation.price %></span>
                         </div>
                       <% }); %>
@@ -224,19 +368,26 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Fix category nav position to prevent overlap with navbar
-    function fixCategoryNavPosition() {
+    // Fix filter and category nav positions to prevent overlap with navbar
+    function fixNavigationPositions() {
       const navbar = document.querySelector('.navbar');
+      const filter = document.querySelector('.food-type-filter');
       const categoryNav = document.querySelector('.category-nav');
-      if (navbar && categoryNav) {
+
+      if (navbar && filter) {
         const navbarHeight = navbar.offsetHeight;
-        categoryNav.style.top = navbarHeight + 'px';
+        filter.style.top = navbarHeight + 'px';
+
+        if (categoryNav) {
+          const filterHeight = filter.offsetHeight;
+          categoryNav.style.top = (navbarHeight + filterHeight) + 'px';
+        }
       }
     }
 
     // Run on load and resize
-    window.addEventListener('load', fixCategoryNavPosition);
-    window.addEventListener('resize', fixCategoryNavPosition);
+    window.addEventListener('load', fixNavigationPositions);
+    window.addEventListener('resize', fixNavigationPositions);
 
     document.querySelectorAll('.category-link').forEach(link => {
       link.addEventListener('click', (e) => {
@@ -246,8 +397,9 @@
 
         if (targetElement) {
           const navbarHeight = document.querySelector('.navbar').offsetHeight;
+          const filterHeight = document.querySelector('.food-type-filter').offsetHeight;
           const categoryNavHeight = document.querySelector('.category-nav').offsetHeight;
-          const offset = navbarHeight + categoryNavHeight + 16;
+          const offset = navbarHeight + filterHeight + categoryNavHeight + 16;
 
           const elementPosition = targetElement.getBoundingClientRect().top;
           const offsetPosition = elementPosition + window.pageYOffset - offset;
@@ -269,8 +421,9 @@
         window.requestAnimationFrame(() => {
           const sections = document.querySelectorAll('.category-section');
           const navbarHeight = document.querySelector('.navbar').offsetHeight;
+          const filterHeight = document.querySelector('.food-type-filter').offsetHeight;
           const categoryNavHeight = document.querySelector('.category-nav').offsetHeight;
-          const offset = navbarHeight + categoryNavHeight + 50;
+          const offset = navbarHeight + filterHeight + categoryNavHeight + 50;
 
           sections.forEach((section, index) => {
             const rect = section.getBoundingClientRect();
@@ -314,6 +467,46 @@
     });
 
     document.querySelector('.category-link')?.classList.add('active');
+
+    // Food Type Filter Functionality
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const menuItems = document.querySelectorAll('.menu-item-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+
+        // Update active button
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Filter menu items
+        menuItems.forEach(item => {
+          const foodTypes = item.dataset.foodTypes;
+
+          if (filter === 'all') {
+            item.classList.remove('hidden');
+          } else {
+            // Check if item has the selected food type
+            if (foodTypes.includes(filter)) {
+              item.classList.remove('hidden');
+            } else {
+              item.classList.add('hidden');
+            }
+          }
+        });
+
+        // Hide empty category sections
+        document.querySelectorAll('.category-section').forEach(section => {
+          const visibleItems = section.querySelectorAll('.menu-item-card:not(.hidden)');
+          if (visibleItems.length === 0) {
+            section.style.display = 'none';
+          } else {
+            section.style.display = 'block';
+          }
+        });
+      });
+    });
 
     // Show disclaimer modal on page load
     window.addEventListener('DOMContentLoaded', () => {

@@ -138,6 +138,13 @@ function parseMenuData(prefix, brandName, brandId) {
     const itemType = row[COL.ITEM_TYPE];
     const price = row[COL.PRICE] || 0;
     const description = row[COL.DESCRIPTION] || '';
+    let foodType = row[COL.FOOD_TYPE] || 'Veg';
+
+    // Intelligently detect egg items from title
+    const lowerTitle = title.toLowerCase();
+    if (lowerTitle.includes('egg') || lowerTitle.includes('omelette')) {
+      foodType = 'Egg';
+    }
 
     // Main item (itemType = 0)
     if (itemType === 0) {
@@ -166,6 +173,7 @@ function parseMenuData(prefix, brandName, brandId) {
         description: excitingDescription,
         price: price,
         image: imagePath,
+        foodType: foodType,
         variations: []
       };
 
@@ -182,9 +190,23 @@ function parseMenuData(prefix, brandName, brandId) {
     }
     // Variation (itemType = 1)
     else if (itemType === 1 && currentMainItem) {
+      // Start with parent item's food type as default (inherit from parent)
+      let variationFoodType = currentMainItem.foodType;
+
+      // Override if variation name has specific keywords
+      const lowerVarTitle = title.toLowerCase();
+      if (lowerVarTitle.includes('chicken') || lowerVarTitle.includes('non veg')) {
+        variationFoodType = 'Non Veg';
+      } else if (lowerVarTitle.includes('egg')) {
+        variationFoodType = 'Egg';
+      } else if (lowerVarTitle.includes('veg') && !lowerVarTitle.includes('non veg')) {
+        variationFoodType = 'Veg';
+      }
+
       currentMainItem.variations.push({
         name: title,
-        price: price
+        price: price,
+        foodType: variationFoodType
       });
     }
   }

@@ -11,14 +11,17 @@
           "description": "Golden-fried perfection: juicy, tender chicken with a shatteringly crispy coating",
           "price": 89,
           "image": "",
+          "foodType": "Non Veg",
           "variations": [
             {
               "name": "REGULAR",
-              "price": 89
+              "price": 89,
+              "foodType": "Non Veg"
             },
             {
               "name": "KOREAN SPICED",
-              "price": 99
+              "price": 99,
+              "foodType": "Non Veg"
             }
           ]
         },
@@ -27,14 +30,17 @@
           "description": "Double the crunch: two pieces of hot, golden-fried chicken that snap with every bite",
           "price": 179,
           "image": "/images/crispy-days-item-images/hot-and-crispy-chicken-2pcs.jpeg",
+          "foodType": "Non Veg",
           "variations": [
             {
               "name": "REGULAR",
-              "price": 179
+              "price": 179,
+              "foodType": "Non Veg"
             },
             {
               "name": "KOREAN SPICED",
-              "price": 189
+              "price": 189,
+              "foodType": "Non Veg"
             }
           ]
         },
@@ -43,14 +49,17 @@
           "description": "Our signature four-piece feast: impossibly crispy outside, succulent inside, pure indulgence",
           "price": 339,
           "image": "/images/crispy-days-item-images/hot-and-crispy-chicken-4pcs.jpeg",
+          "foodType": "Non Veg",
           "variations": [
             {
               "name": "REGULAR",
-              "price": 339
+              "price": 339,
+              "foodType": "Non Veg"
             },
             {
               "name": "KOREAN SPICED",
-              "price": 359
+              "price": 359,
+              "foodType": "Non Veg"
             }
           ]
         },
@@ -59,14 +68,17 @@
           "description": "The ultimate crispy chicken experience: whole pieces of golden, crunchy fried chicken goodness",
           "price": 649,
           "image": "/images/crispy-days-item-images/hot-and-crispy-chicken.jpeg",
+          "foodType": "Non Veg",
           "variations": [
             {
               "name": "REGULAR",
-              "price": 649
+              "price": 649,
+              "foodType": "Non Veg"
             },
             {
               "name": "KOREAN SPICED",
-              "price": 679
+              "price": 679,
+              "foodType": "Non Veg"
             }
           ]
         },
@@ -75,14 +87,17 @@
           "description": "Sticky-finger wings: three pieces of crispy-edged, tender chicken wings ready for sauce",
           "price": 119,
           "image": "",
+          "foodType": "Non Veg",
           "variations": [
             {
               "name": "REGULAR",
-              "price": 119
+              "price": 119,
+              "foodType": "Non Veg"
             },
             {
               "name": "KOREAN SPICED",
-              "price": 129
+              "price": 129,
+              "foodType": "Non Veg"
             }
           ]
         },
@@ -91,14 +106,17 @@
           "description": "Wing heaven: six pieces of addictively crispy, meaty chicken wings for maximum satisfaction",
           "price": 219,
           "image": "/images/crispy-days-item-images/crispy-chicken-wings-6pcs.jpeg",
+          "foodType": "Non Veg",
           "variations": [
             {
               "name": "REGULAR",
-              "price": 219
+              "price": 219,
+              "foodType": "Non Veg"
             },
             {
               "name": "KOREAN SPICED",
-              "price": 239
+              "price": 239,
+              "foodType": "Non Veg"
             }
           ]
         },
@@ -107,14 +125,17 @@
           "description": "Tender strips coated in a shatteringly crisp golden crust; dip-worthy perfection",
           "price": 129,
           "image": "/images/crispy-days-item-images/crispy-chicken-strips-3pcs.jpeg",
+          "foodType": "Non Veg",
           "variations": [
             {
               "name": "REGULAR",
-              "price": 129
+              "price": 129,
+              "foodType": "Non Veg"
             },
             {
               "name": "KOREAN SPICED",
-              "price": 139
+              "price": 139,
+              "foodType": "Non Veg"
             }
           ]
         },
@@ -123,14 +144,17 @@
           "description": "Six strips of juicy, tender chicken with an irresistibly crunchy golden-brown exterior",
           "price": 229,
           "image": "/images/crispy-days-item-images/crispy-chicken-strips-6pcs.jpeg",
+          "foodType": "Non Veg",
           "variations": [
             {
               "name": "REGULAR",
-              "price": 229
+              "price": 229,
+              "foodType": "Non Veg"
             },
             {
               "name": "KOREAN SPICED",
-              "price": 249
+              "price": 249,
+              "foodType": "Non Veg"
             }
           ]
         },
@@ -139,14 +163,17 @@
           "description": "Bite-sized chicken morsels with incredible crunch and savory, juicy centers",
           "price": 159,
           "image": "/images/crispy-days-item-images/crispy-chicken-popcorn.jpeg",
+          "foodType": "Non Veg",
           "variations": [
             {
               "name": "REGULAR",
-              "price": 159
+              "price": 159,
+              "foodType": "Non Veg"
             },
             {
               "name": "KOREAN SPICED",
-              "price": 169
+              "price": 169,
+              "foodType": "Non Veg"
             }
           ]
         }
@@ -160,55 +187,64 @@
           "title": "Crispy Veg Burger",
           "description": "Stacked high: crispy veggie patty, fresh toppings, soft bun, pure comfort in one bite",
           "price": 109,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Spicy Veg Burger",
           "description": "Heat-seeking burger: crispy veg patty loaded with fiery spices and fresh crunchy veggies",
           "price": 119,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Tandoori Veg Burger",
           "description": "Aromatic tandoori-spiced veggie patty with charred flavors and zesty toppings",
           "price": 139,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Mint Fusion Veg Burger",
           "description": "Cooling mint meets crispy veg in this refreshingly bold, flavor-packed burger",
           "price": 139,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Crispy Peri Peri Paneer Burger",
           "description": "Fiery peri peri meets creamy paneer: crispy, smoky, spicy, utterly addictive",
           "price": 149,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Crispy Chicken Burger",
           "description": "Juicy chicken patty in a fluffy bun, stacked with fresh toppings and pure satisfaction",
           "price": 149,
-          "image": ""
+          "image": "",
+          "foodType": "Non Veg"
         },
         {
           "title": "A Peri Peri Crispy Chicken Burger",
           "description": "Zesty peri peri kick: crispy chicken, spicy mayo, soft bun, total flavor explosion",
           "price": 159,
-          "image": ""
+          "image": "",
+          "foodType": "Non Veg"
         },
         {
           "title": "Mint Fusion Crispy Chicken Burger",
           "description": "Cool, refreshing mint sauce meets hot crispy chicken in unexpected harmony",
           "price": 159,
-          "image": ""
+          "image": "",
+          "foodType": "Non Veg"
         },
         {
           "title": "Tandoori Crispy Chicken Burger",
           "description": "Smoky tandoori-spiced chicken patty: aromatic, juicy, unforgettable burger bliss",
           "price": 159,
-          "image": ""
+          "image": "",
+          "foodType": "Non Veg"
         }
       ]
     },
@@ -220,61 +256,71 @@
           "title": "Margherita Pizza",
           "description": "Classic simplicity: melted mozzarella, fresh basil, tangy tomato sauce on crispy crust",
           "price": 129,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Tomato Onion Pizza",
           "description": "Rustic and satisfying: caramelized onions, ripe tomatoes, gooey cheese on thin crust",
           "price": 139,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "O Onion Capsicum Pizza",
           "description": "Garden-fresh: sweet onions, crunchy capsicums, stretchy cheese, crispy pizza magic",
           "price": 139,
-          "image": "/images/crispy-days-item-images/o-onion-capsicum-pizza.jpeg"
+          "image": "/images/crispy-days-item-images/o-onion-capsicum-pizza.jpeg",
+          "foodType": "Veg"
         },
         {
           "title": "Sweet Corn Fiesta Pizza",
           "description": "Sweet corn kernels burst with flavor against melted cheese and crispy pizza perfection",
           "price": 139,
-          "image": "/images/crispy-days-item-images/sweet-corn-fiesta-pizza.jpeg"
+          "image": "/images/crispy-days-item-images/sweet-corn-fiesta-pizza.jpeg",
+          "foodType": "Veg"
         },
         {
           "title": "Double Cheese Pizza",
           "description": "Cheese lover's dream: double layers of gooey, melted cheese with crispy golden crust",
           "price": 169,
-          "image": "/images/crispy-days-item-images/double-cheese-pizza.jpeg"
+          "image": "/images/crispy-days-item-images/double-cheese-pizza.jpeg",
+          "foodType": "Veg"
         },
         {
           "title": "Garden Harvest Pizza",
           "description": "Fresh garden veggies piled high: crunchy peppers, onions, mushrooms, pure veggie bliss",
           "price": 189,
-          "image": "/images/crispy-days-item-images/garden-harvest-pizza.jpeg"
+          "image": "/images/crispy-days-item-images/garden-harvest-pizza.jpeg",
+          "foodType": "Veg"
         },
         {
           "title": "Desi Tandoori Paneer Pizza",
           "description": "Aromatic tandoori-spiced paneer cubes with smoky flavors on crispy, bubbling pizza",
           "price": 209,
-          "image": "/images/crispy-days-item-images/desi-tandoori-paneer-pizza.jpeg"
+          "image": "/images/crispy-days-item-images/desi-tandoori-paneer-pizza.jpeg",
+          "foodType": "Veg"
         },
         {
           "title": "Spicy Chicken Blast Pizza",
           "description": "Fiery chicken chunks with bold spices and heat: for those who crave maximum flavor",
           "price": 219,
-          "image": ""
+          "image": "",
+          "foodType": "Non Veg"
         },
         {
           "title": "Loaded Chicken Pizza",
           "description": "Generous chicken pieces loaded with toppings: savory, satisfying, total flavor overload",
           "price": 219,
-          "image": ""
+          "image": "",
+          "foodType": "Non Veg"
         },
         {
           "title": "Chicken Farmhouse Pizza",
           "description": "Crispy crust topped with tender chicken, farm-fresh veggies, and melted cheese",
           "price": 219,
-          "image": ""
+          "image": "",
+          "foodType": "Non Veg"
         }
       ]
     },
@@ -286,25 +332,29 @@
           "title": "Veggie Fusion Wrap",
           "description": "Crispy wrap stuffed with fresh, crunchy veggies and zesty sauce in every bite",
           "price": 119,
-          "image": "/images/crispy-days-item-images/veggie-fusion-wrap.jpeg"
+          "image": "/images/crispy-days-item-images/veggie-fusion-wrap.jpeg",
+          "foodType": "Veg"
         },
         {
           "title": "Paneer Fiesta Wrap",
           "description": "Soft wrap embracing tender paneer, fresh veggies, and bold spices in one package",
           "price": 139,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Fried Chicken Wrap",
           "description": "Juicy fried chicken, crispy wrap, fresh toppings: handheld indulgence wrapped up",
           "price": 139,
-          "image": "/images/crispy-days-item-images/fried-chicken-wrap.jpeg"
+          "image": "/images/crispy-days-item-images/fried-chicken-wrap.jpeg",
+          "foodType": "Non Veg"
         },
         {
           "title": "Tandoori Grilled Chicken Wrap",
           "description": "Smoky tandoori chicken, cool yogurt sauce, fresh herbs: aromatic wrap perfection",
           "price": 149,
-          "image": ""
+          "image": "",
+          "foodType": "Non Veg"
         }
       ]
     },
@@ -316,37 +366,43 @@
           "title": "Garden Fresh Grilled Sandwich",
           "description": "Toasted bread hugging fresh, crisp vegetables with melted cheese and garden flavors",
           "price": 99,
-          "image": "/images/crispy-days-item-images/garden-fresh-grilled-sandwich.jpeg"
+          "image": "/images/crispy-days-item-images/garden-fresh-grilled-sandwich.jpeg",
+          "foodType": "Veg"
         },
         {
           "title": "Sizzling Veg Grilled Sandwich",
           "description": "Sizzling hot: grilled veggies, melted cheese, crispy bread, savory sandwich magic",
           "price": 119,
-          "image": "/images/crispy-days-item-images/sizzling-veg-grilled-sandwich.jpeg"
+          "image": "/images/crispy-days-item-images/sizzling-veg-grilled-sandwich.jpeg",
+          "foodType": "Veg"
         },
         {
           "title": "Tangy Paneer Grilled Sandwich",
           "description": "Creamy paneer, tangy sauce, grilled to golden perfection between warm, toasted bread",
           "price": 139,
-          "image": "/images/crispy-days-item-images/tangy-paneer-grilled-sandwich.jpeg"
+          "image": "/images/crispy-days-item-images/tangy-paneer-grilled-sandwich.jpeg",
+          "foodType": "Veg"
         },
         {
           "title": "Classic Egg Grilled Sandwich",
           "description": "Fluffy scrambled eggs, crispy bread, melted cheese: ultimate comfort sandwich",
           "price": 129,
-          "image": "/images/crispy-days-item-images/classic-egg-grilled-sandwich.jpeg"
+          "image": "/images/crispy-days-item-images/classic-egg-grilled-sandwich.jpeg",
+          "foodType": "Egg"
         },
         {
           "title": "Tangy Peri Peri Grilled Chicken Sandwich",
           "description": "Hot pressed sandwich: spicy chicken, tangy peri peri, crispy bread, flavor-packed",
           "price": 149,
-          "image": ""
+          "image": "",
+          "foodType": "Non Veg"
         },
         {
           "title": "Mint Fusion Chicken Grilled Sandwich",
           "description": "Succulent chicken, refreshing mint sauce, warm bread: balanced, bold bite",
           "price": 149,
-          "image": ""
+          "image": "",
+          "foodType": "Non Veg"
         }
       ]
     },
@@ -358,25 +414,29 @@
           "title": "Veg Momos 5pcs",
           "description": "Five pillowy dumplings stuffed with fresh veggies: steamed soft or fried golden-crisp",
           "price": 109,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Paneer Momos 5pcs",
           "description": "Five tender momos filled with creamy paneer and aromatic spices: steamed or fried",
           "price": 129,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Chicken Momos 5pcs",
           "description": "Five juicy momos packed with tender chicken: soft steamed or irresistibly crispy fried",
           "price": 129,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Schezwan Chicken Momos 5pcs",
           "description": "Five fiery dumplings: spicy schezwan chicken filling in delicate, delicious momos",
           "price": 129,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         }
       ]
     },
@@ -388,31 +448,36 @@
           "title": "Veg Strips 5 Pcs",
           "description": "Five golden-fried veg strips: crispy coating, tender inside, perfect dipping snack",
           "price": 119,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Paneer Popcorn",
           "description": "Bite-sized paneer morsels fried until golden: crispy, savory, utterly addictive",
           "price": 149,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Crispy Veg Rolls 3 Pcs",
           "description": "Three golden-fried rolls bursting with fresh veggies and crunchy textures inside",
           "price": 99,
-          "image": "/images/crispy-days-item-images/crispy-veg-rolls-3-pcs.jpeg"
+          "image": "/images/crispy-days-item-images/crispy-veg-rolls-3-pcs.jpeg",
+          "foodType": "Veg"
         },
         {
           "title": "Crispy Paneer Rolls 3 Pcs",
           "description": "Three rolls of creamy paneer wrapped in crispy, golden-fried pastry: pure indulgence",
           "price": 109,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Crispy Cheese Corn Rolls 3 Pcs",
           "description": "Three fried rolls: melty cheese and sweet corn kernels in a shatteringly crisp wrapper",
           "price": 109,
-          "image": "/images/crispy-days-item-images/crispy-cheese-corn-rolls-3-pcs.jpeg"
+          "image": "/images/crispy-days-item-images/crispy-cheese-corn-rolls-3-pcs.jpeg",
+          "foodType": "Veg"
         }
       ]
     },
@@ -424,31 +489,36 @@
           "title": "Masala Bread Omelette",
           "description": "Fluffy omelette infused with aromatic spices, grilled between buttery bread slices",
           "price": 89,
-          "image": "/images/crispy-days-item-images/masala-bread-omelette.jpeg"
+          "image": "/images/crispy-days-item-images/masala-bread-omelette.jpeg",
+          "foodType": "Egg"
         },
         {
           "title": "Cheese Masala Bread Omelette",
           "description": "Spiced omelette layered with melting cheese, grilled to golden perfection in bread",
           "price": 109,
-          "image": "/images/crispy-days-item-images/cheese-masala-bread-omelette.jpeg"
+          "image": "/images/crispy-days-item-images/cheese-masala-bread-omelette.jpeg",
+          "foodType": "Egg"
         },
         {
           "title": "Tandoori Chicken Bread Omelette",
           "description": "Smoky tandoori chicken folded into fluffy omelette, grilled with warm bread",
           "price": 119,
-          "image": "/images/crispy-days-item-images/tandoori-chicken-bread-omelette.jpeg"
+          "image": "/images/crispy-days-item-images/tandoori-chicken-bread-omelette.jpeg",
+          "foodType": "Egg"
         },
         {
           "title": "Peri Peri Chicken Bread Omelette",
           "description": "Fiery peri peri chicken in a spiced omelette: hot, bold, utterly satisfying",
           "price": 119,
-          "image": ""
+          "image": "",
+          "foodType": "Egg"
         },
         {
           "title": "Mint Chicken Bread Omelette",
           "description": "Cool mint sauce meets tender chicken omelette: perfectly balanced, flavor-rich",
           "price": 119,
-          "image": ""
+          "image": "",
+          "foodType": "Egg"
         }
       ]
     },
@@ -461,14 +531,17 @@
           "description": "Quick-fix noodles: tangy, satisfying, perfect comfort in a bowl",
           "price": 79,
           "image": "",
+          "foodType": "Veg",
           "variations": [
             {
               "name": "REGULAR",
-              "price": 79
+              "price": 79,
+              "foodType": "Veg"
             },
             {
               "name": "KOREAN SPICED",
-              "price": 89
+              "price": 89,
+              "foodType": "Veg"
             }
           ]
         },
@@ -477,14 +550,17 @@
           "description": "Crispy fried noodles with savory spices: crunchy, flavorful, totally addictive",
           "price": 99,
           "image": "/images/crispy-days-item-images/traditional-fried-maggi.jpeg",
+          "foodType": "Veg",
           "variations": [
             {
               "name": "REGULAR",
-              "price": 99
+              "price": 99,
+              "foodType": "Veg"
             },
             {
               "name": "KOREAN SPICED",
-              "price": 109
+              "price": 109,
+              "foodType": "Veg"
             }
           ]
         },
@@ -493,14 +569,17 @@
           "description": "Creamy paneer mixed with fried noodles and aromatic spices: ultimate noodle bliss",
           "price": 129,
           "image": "",
+          "foodType": "Veg",
           "variations": [
             {
               "name": "REGULAR",
-              "price": 129
+              "price": 129,
+              "foodType": "Veg"
             },
             {
               "name": "KOREAN SPICED",
-              "price": 139
+              "price": 139,
+              "foodType": "Veg"
             }
           ]
         },
@@ -509,14 +588,17 @@
           "description": "Fried noodles loaded with fluffy scrambled eggs and bold flavors: satisfying comfort food",
           "price": 139,
           "image": "/images/crispy-days-item-images/egg-delight-fried-maggi.jpeg",
+          "foodType": "Egg",
           "variations": [
             {
               "name": "REGULAR",
-              "price": 139
+              "price": 139,
+              "foodType": "Egg"
             },
             {
               "name": "KOREAN SPICED",
-              "price": 149
+              "price": 149,
+              "foodType": "Egg"
             }
           ]
         },
@@ -525,14 +607,17 @@
           "description": "Fried noodles packed with tender chicken and crunchy texture: savory, delicious bowl",
           "price": 149,
           "image": "",
+          "foodType": "Non Veg",
           "variations": [
             {
               "name": "REGULAR",
-              "price": 149
+              "price": 149,
+              "foodType": "Non Veg"
             },
             {
               "name": "KOREAN SPICED",
-              "price": 159
+              "price": 159,
+              "foodType": "Non Veg"
             }
           ]
         }
@@ -547,14 +632,17 @@
           "description": "Perfectly golden fries: crispy outside, fluffy inside, pure fried potato perfection",
           "price": 59,
           "image": "/images/crispy-days-item-images/crispy-classic-fries.jpeg",
+          "foodType": "Veg",
           "variations": [
             {
               "name": "SMALL",
-              "price": 59
+              "price": 59,
+              "foodType": "Veg"
             },
             {
               "name": "LARGE",
-              "price": 89
+              "price": 89,
+              "foodType": "Veg"
             }
           ]
         },
@@ -563,14 +651,17 @@
           "description": "Hot and spicy fries coated in peri peri seasoning: addictive heat in every bite",
           "price": 69,
           "image": "/images/crispy-days-item-images/fiery-peri-peri-fries.jpeg",
+          "foodType": "Veg",
           "variations": [
             {
               "name": "SMALL",
-              "price": 69
+              "price": 69,
+              "foodType": "Veg"
             },
             {
               "name": "LARGE",
-              "price": 99
+              "price": 99,
+              "foodType": "Veg"
             }
           ]
         },
@@ -579,14 +670,17 @@
           "description": "Aromatic garlic-chilli seasoning on crispy fries: savory, fragrant, irresistible",
           "price": 69,
           "image": "",
+          "foodType": "Veg",
           "variations": [
             {
               "name": "SMALL",
-              "price": 69
+              "price": 69,
+              "foodType": "Veg"
             },
             {
               "name": "LARGE",
-              "price": 99
+              "price": 99,
+              "foodType": "Veg"
             }
           ]
         },
@@ -595,14 +689,17 @@
           "description": "Bold Korean spices coat crispy fries: smoky, spicy, uniquely crave-worthy",
           "price": 79,
           "image": "",
+          "foodType": "Veg",
           "variations": [
             {
               "name": "SMALL",
-              "price": 79
+              "price": 79,
+              "foodType": "Veg"
             },
             {
               "name": "LARGE",
-              "price": 109
+              "price": 109,
+              "foodType": "Veg"
             }
           ]
         }
@@ -616,19 +713,22 @@
           "title": "Cheese Garlic Bread 4pcs",
           "description": "Four pieces: buttery bread, gooey melted cheese, fragrant garlic: irresistible indulgence",
           "price": 129,
-          "image": "/images/crispy-days-item-images/cheese-garlic-bread-4pcs.jpeg"
+          "image": "/images/crispy-days-item-images/cheese-garlic-bread-4pcs.jpeg",
+          "foodType": "Veg"
         },
         {
           "title": "Spicy Cheese Garlic Bread 4pcs",
           "description": "Four fiery slices: spicy kick meets melted cheese and garlic on warm, butter bread",
           "price": 139,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Chicken & Cheese Garlic Bread 4pcs",
           "description": "Four pieces loaded with tender chicken and layers of melting cheese with garlic",
           "price": 179,
-          "image": ""
+          "image": "",
+          "foodType": "Non Veg"
         }
       ]
     },
@@ -640,19 +740,22 @@
           "title": "Combo 199",
           "description": "Smart value combo: satisfy cravings with a perfectly matched meal deal",
           "price": 199,
-          "image": ""
+          "image": "",
+          "foodType": "Other"
         },
         {
           "title": "Combo 249",
           "description": "Great combo offering: generous portions, varied items, complete satisfaction guaranteed",
           "price": 249,
-          "image": ""
+          "image": "",
+          "foodType": "Other"
         },
         {
           "title": "Combo 499",
           "description": "The feast combo: packed with multiple items for sharing, maximum flavor, best value",
           "price": 499,
-          "image": ""
+          "image": "",
+          "foodType": "Other"
         }
       ]
     },
@@ -664,13 +767,15 @@
           "title": "Fries with Soft Drink",
           "description": "Crispy fries paired with ice-cold soft drink: the perfect quick thirst-quenching combo",
           "price": 89,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Fries with Mocktail",
           "description": "Golden fries matched with a refreshing, colorful mocktail: tasty meal pairing",
           "price": 139,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         }
       ]
     },
@@ -682,13 +787,15 @@
           "title": "Brownie With Ice Cream",
           "description": "Rich, fudgy brownie topped with cold, creamy ice cream: warm-cold dessert heaven",
           "price": 129,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Sizzling Brownie With Ice Cream",
           "description": "Hot brownie plate delivered sizzling: melt into cold ice cream for dramatic indulgence",
           "price": 149,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         }
       ]
     },
@@ -700,7 +807,8 @@
           "title": "Any Soft Drink",
           "description": "Refreshing cold beverage to complement your meal perfectly",
           "price": 0,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         }
       ]
     },
@@ -712,25 +820,29 @@
           "title": "Peri Peri Dip",
           "description": "Fiery, tangy sauce: spicy peri peri flavor bomb for dipping and dunking",
           "price": 15,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Tandoori Dip",
           "description": "Smoky, aromatic tandoori-spiced sauce: perfect savory companion to fried foods",
           "price": 15,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Mint Dip",
           "description": "Cool, refreshing mint sauce: bright, herbal, soothes spicy bites beautifully",
           "price": 15,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Schezwan Dip",
           "description": "Bold, umami-rich schezwan sauce: spicy Asian-inspired flavor for bold tastes",
           "price": 15,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         }
       ]
     },
@@ -742,25 +854,29 @@
           "title": "Extra Cheese Slice",
           "description": "Melting, gooey cheese slice: add extra richness to any burger or sandwich",
           "price": 20,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Extra Pizza Cheese",
           "description": "Extra layer of stretchy, melted mozzarella: for serious cheese lovers only",
           "price": 30,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Extra Veg Toppings",
           "description": "Fresh vegetable toppings: add crunch and nutrition to pizzas or burgers",
           "price": 20,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         },
         {
           "title": "Extra Non Veg Toppings",
           "description": "Protein-packed toppings: add tender meat to pizzas for extra indulgence",
           "price": 30,
-          "image": ""
+          "image": "",
+          "foodType": "Veg"
         }
       ]
     }
