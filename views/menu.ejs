@@ -4,6 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= menu.brandName %> - Menu</title>
+
+  <%
+    const brandDescriptions = {
+      'misty-cup': 'Discover our menu featuring artisan coffee, fresh pasta, healthy salads, milkshakes, mocktails and wellness juices. Your cozy coffee room experience.',
+      'crispy-days': 'Explore our menu of crispy fried chicken, gourmet burgers, wood-fired pizzas, wraps, momos and more. Quality fast food made fresh.'
+    };
+    const brandTaglines = {
+      'misty-cup': 'Coffee. Pasta. Salads',
+      'crispy-days': 'Fried Chicken. Burgers. Pizzas'
+    };
+    const description = brandDescriptions[brand] || 'Explore our delicious menu';
+    const tagline = brandTaglines[brand] || '';
+  %>
+
+  <meta name="description" content="<%= description %>" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="<%= menu.brandName %> - Menu" />
+  <meta property="og:description" content="<%= description %>" />
+  <meta property="og:site_name" content="<%= menu.brandName %>" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="<%= menu.brandName %> - Menu" />
+  <meta name="twitter:description" content="<%= description %>" />
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -17,7 +44,14 @@
         </svg>
         Back
       </a>
-      <h5 class="mb-0 brand-title"><%= menu.brandName %></h5>
+      <%
+        const logoFiles = {
+          'misty-cup': '/images/tmc-logo.png',
+          'crispy-days': '/images/cd-logo.png'
+        };
+        const logoSrc = logoFiles[brand] || '';
+      %>
+      <img src="<%= logoSrc %>" alt="<%= menu.brandName %>" class="navbar-logo" />
       <div style="width: 60px;"></div>
     </div>
   </nav>
@@ -53,7 +87,9 @@
                 <% } %>
                 <div class="menu-item-body">
                   <h5 class="menu-item-title mb-2"><%= item.title %></h5>
-                  <p class="menu-item-description text-muted mb-3"><%= item.description %></p>
+                  <% if (item.description) { %>
+                    <p class="menu-item-description text-muted mb-3"><%= item.description %></p>
+                  <% } %>
 
                   <% if (item.variations) { %>
                     <div class="variations-inline">
