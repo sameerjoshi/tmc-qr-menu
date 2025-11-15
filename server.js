@@ -40,5 +40,5 @@ app.use((req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`TapTable server running on http://localhost:${PORT}`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });
