@@ -1,0 +1,57 @@
+{
+  "english-breakfast.jpeg": {
+    "title": "English Breakfast",
+    "category": "Breakfast",
+    "type": "ai-generated"
+  },
+  "egg-and-toast.jpeg": {
+    "title": "Egg and Toast",
+    "category": "Breakfast",
+    "type": "ai-generated"
+  },
+  "pomodoro-pasta.jpeg": {
+    "title": "Pomodoro Pasta",
+    "category": "Pasta",
+    "type": "ai-generated"
+  },
+  "alfredo-pasta.jpeg": {
+    "title": "Alfredo Pasta",
+    "category": "Pasta",
+    "type": "ai-generated"
+  },
+  "rosatella-pasta.jpeg": {
+    "title": "Rosatella Pasta",
+    "category": "Pasta",
+    "type": "ai-generated"
+  },
+  "aglio-e-olio-spaghetti.jpeg": {
+    "title": "Aglio e Olio Spaghetti",
+    "category": "Pasta",
+    "type": "ai-generated"
+  },
+  "caesar-salad.jpeg": {
+    "title": "Caesar Salad",
+    "category": "Salads",
+    "type": "ai-generated"
+  },
+  "mediterranean-salad.jpeg": {
+    "title": "Mediterranean Salad",
+    "category": "Salads",
+    "type": "ai-generated"
+  },
+  "watermelon-feta-salad.jpeg": {
+    "title": "Watermelon Feta Salad",
+    "category": "Salads",
+    "type": "ai-generated"
+  },
+  "fruit-bowl-with-yogurt---muesli.jpeg": {
+    "title": "Fruit Bowl with Yogurt & Muesli",
+    "category": "Salads",
+    "type": "ai-generated"
+  },
+  "vanilla-ice-cream.jpeg": {
+    "title": "Vanilla Ice Cream",
+    "category": "Ice Creams",
+    "type": "ai-generated"
+  }
+}

@@ -26,7 +26,7 @@
           "title": "Hot & Crispy Chicken 2pcs",
           "description": "Delicious hot & crispy chicken 2pcs",
           "price": 179,
-          "image": "",
+          "image": "/images/crispy-days-item-images/hot-and-crispy-chicken-2pcs.jpeg",
           "variations": [
             {
               "name": "REGULAR",
@@ -42,7 +42,7 @@
           "title": "Hot & Crispy Chicken 4pcs",
           "description": "Delicious hot & crispy chicken 4pcs",
           "price": 339,
-          "image": "",
+          "image": "/images/crispy-days-item-images/hot-and-crispy-chicken-4pcs.jpeg",
           "variations": [
             {
               "name": "REGULAR",
@@ -58,7 +58,7 @@
           "title": "Hot & Crispy Chicken",
           "description": "Delicious hot & crispy chicken",
           "price": 649,
-          "image": "",
+          "image": "/images/crispy-days-item-images/hot-and-crispy-chicken.jpeg",
           "variations": [
             {
               "name": "REGULAR",
@@ -90,7 +90,7 @@
           "title": "Crispy Chicken Wings 6Pcs",
           "description": "Delicious crispy chicken wings 6pcs",
           "price": 219,
-          "image": "",
+          "image": "/images/crispy-days-item-images/crispy-chicken-wings-6pcs.jpeg",
           "variations": [
             {
               "name": "REGULAR",
@@ -106,7 +106,7 @@
           "title": "Crispy Chicken Strips 3Pcs",
           "description": "Delicious crispy chicken strips 3pcs",
           "price": 129,
-          "image": "",
+          "image": "/images/crispy-days-item-images/crispy-chicken-strips-3pcs.jpeg",
           "variations": [
             {
               "name": "REGULAR",
@@ -122,7 +122,7 @@
           "title": "Crispy Chicken Strips 6Pcs",
           "description": "Delicious crispy chicken strips 6pcs",
           "price": 229,
-          "image": "",
+          "image": "/images/crispy-days-item-images/crispy-chicken-strips-6pcs.jpeg",
           "variations": [
             {
               "name": "REGULAR",
@@ -138,7 +138,7 @@
           "title": "Crispy Chicken Popcorn",
           "description": "Delicious crispy chicken popcorn",
           "price": 159,
-          "image": "",
+          "image": "/images/crispy-days-item-images/crispy-chicken-popcorn.jpeg",
           "variations": [
             {
               "name": "REGULAR",
@@ -232,31 +232,31 @@
           "title": "O Onion Capsicum Pizza",
           "description": "Delicious o onion capsicum pizza",
           "price": 139,
-          "image": ""
+          "image": "/images/crispy-days-item-images/o-onion-capsicum-pizza.jpeg"
         },
         {
           "title": "Sweet Corn Fiesta Pizza",
           "description": "Delicious sweet corn fiesta pizza",
           "price": 139,
-          "image": ""
+          "image": "/images/crispy-days-item-images/sweet-corn-fiesta-pizza.jpeg"
         },
         {
           "title": "Double Cheese Pizza",
           "description": "Delicious double cheese pizza",
           "price": 169,
-          "image": ""
+          "image": "/images/crispy-days-item-images/double-cheese-pizza.jpeg"
         },
         {
           "title": "Garden Harvest Pizza",
           "description": "Delicious garden harvest pizza",
           "price": 189,
-          "image": ""
+          "image": "/images/crispy-days-item-images/garden-harvest-pizza.jpeg"
         },
         {
           "title": "Desi Tandoori Paneer Pizza",
           "description": "Delicious desi tandoori paneer pizza",
           "price": 209,
-          "image": ""
+          "image": "/images/crispy-days-item-images/desi-tandoori-paneer-pizza.jpeg"
         },
         {
           "title": "Spicy Chicken Blast Pizza",
@@ -286,7 +286,7 @@
           "title": "Veggie Fusion Wrap",
           "description": "Delicious veggie fusion wrap",
           "price": 119,
-          "image": ""
+          "image": "/images/crispy-days-item-images/veggie-fusion-wrap.jpeg"
         },
         {
           "title": "Paneer Fiesta Wrap",
@@ -298,7 +298,7 @@
           "title": "Fried Chicken Wrap",
           "description": "Delicious fried chicken wrap",
           "price": 139,
-          "image": ""
+          "image": "/images/crispy-days-item-images/fried-chicken-wrap.jpeg"
         },
         {
           "title": "Tandoori Grilled Chicken Wrap",
@@ -316,25 +316,25 @@
           "title": "Garden Fresh Grilled Sandwich",
           "description": "Delicious garden fresh grilled sandwich",
           "price": 99,
-          "image": ""
+          "image": "/images/crispy-days-item-images/garden-fresh-grilled-sandwich.jpeg"
         },
         {
           "title": "Sizzling Veg Grilled Sandwich",
           "description": "Delicious sizzling veg grilled sandwich",
           "price": 119,
-          "image": ""
+          "image": "/images/crispy-days-item-images/sizzling-veg-grilled-sandwich.jpeg"
         },
         {
           "title": "Tangy Paneer Grilled Sandwich",
           "description": "Delicious tangy paneer grilled sandwich",
           "price": 139,
-          "image": ""
+          "image": "/images/crispy-days-item-images/tangy-paneer-grilled-sandwich.jpeg"
         },
         {
           "title": "Classic Egg Grilled Sandwich",
           "description": "Delicious classic egg grilled sandwich",
           "price": 129,
-          "image": ""
+          "image": "/images/crispy-days-item-images/classic-egg-grilled-sandwich.jpeg"
         },
         {
           "title": "Tangy Peri Peri Grilled Chicken Sandwich",
@@ -400,7 +400,7 @@
           "title": "Crispy Veg Rolls 3 Pcs",
           "description": "Delicious crispy veg rolls 3 pcs",
           "price": 99,
-          "image": ""
+          "image": "/images/crispy-days-item-images/crispy-veg-rolls-3-pcs.jpeg"
         },
         {
           "title": "Crispy Paneer Rolls 3 Pcs",
@@ -412,7 +412,7 @@
           "title": "Crispy Cheese Corn Rolls 3 Pcs",
           "description": "Delicious crispy cheese corn rolls 3 pcs",
           "price": 109,
-          "image": ""
+          "image": "/images/crispy-days-item-images/crispy-cheese-corn-rolls-3-pcs.jpeg"
         }
       ]
     },
@@ -424,19 +424,19 @@
           "title": "Masala Bread Omelette",
           "description": "Delicious masala bread omelette",
           "price": 89,
-          "image": ""
+          "image": "/images/crispy-days-item-images/masala-bread-omelette.jpeg"
         },
         {
           "title": "Cheese Masala Bread Omelette",
           "description": "Delicious cheese masala bread omelette",
           "price": 109,
-          "image": ""
+          "image": "/images/crispy-days-item-images/cheese-masala-bread-omelette.jpeg"
         },
         {
           "title": "Tandoori Chicken Bread Omelette",
           "description": "Delicious tandoori chicken bread omelette",
           "price": 119,
-          "image": ""
+          "image": "/images/crispy-days-item-images/tandoori-chicken-bread-omelette.jpeg"
         },
         {
           "title": "Peri Peri Chicken Bread Omelette",
@@ -476,7 +476,7 @@
           "title": "Traditional Fried Maggi",
           "description": "Delicious traditional fried maggi",
           "price": 99,
-          "image": "",
+          "image": "/images/crispy-days-item-images/traditional-fried-maggi.jpeg",
           "variations": [
             {
               "name": "REGULAR",
@@ -508,7 +508,7 @@
           "title": "Egg Delight Fried Maggi",
           "description": "Delicious egg delight fried maggi",
           "price": 139,
-          "image": "",
+          "image": "/images/crispy-days-item-images/egg-delight-fried-maggi.jpeg",
           "variations": [
             {
               "name": "REGULAR",
@@ -546,7 +546,7 @@
           "title": "Crispy Classic Fries",
           "description": "Delicious crispy classic fries",
           "price": 59,
-          "image": "",
+          "image": "/images/crispy-days-item-images/crispy-classic-fries.jpeg",
           "variations": [
             {
               "name": "SMALL",
@@ -562,7 +562,7 @@
           "title": "Fiery Peri Peri Fries",
           "description": "Delicious fiery peri peri fries",
           "price": 69,
-          "image": "",
+          "image": "/images/crispy-days-item-images/fiery-peri-peri-fries.jpeg",
           "variations": [
             {
               "name": "SMALL",
@@ -616,7 +616,7 @@
           "title": "Cheese Garlic Bread 4pcs",
           "description": "Delicious cheese garlic bread 4pcs",
           "price": 129,
-          "image": ""
+          "image": "/images/crispy-days-item-images/cheese-garlic-bread-4pcs.jpeg"
         },
         {
           "title": "Spicy Cheese Garlic Bread 4pcs",

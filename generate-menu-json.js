@@ -1,5 +1,21 @@
 const XLSX = require('xlsx');
 const fs = require('fs');
+const path = require('path');
+
+// Load image mappings
+const crispyDaysImageMapPath = path.join(__dirname, 'public/images/crispy-days-image-map.json');
+const tmcImageMapPath = path.join(__dirname, 'public/images/tmc-image-map.json');
+
+let crispyDaysImageMapping = {};
+let tmcImageMapping = {};
+
+if (fs.existsSync(crispyDaysImageMapPath)) {
+  crispyDaysImageMapping = JSON.parse(fs.readFileSync(crispyDaysImageMapPath, 'utf8'));
+}
+
+if (fs.existsSync(tmcImageMapPath)) {
+  tmcImageMapping = JSON.parse(fs.readFileSync(tmcImageMapPath, 'utf8'));
+}
 
 // Read Excel file
 const workbook = XLSX.readFile('Crispy Days Kompally Menu.xlsx');
@@ -119,11 +135,27 @@ function parseMenuData(prefix, brandName, brandId) {
 
     // Main item (itemType = 0)
     if (itemType === 0) {
+      // Find image for this item
+      let imagePath = '';
+      if (prefix === 'CKK') {
+        // Find matching image from Crispy Days mapping
+        const matchingImage = Object.entries(crispyDaysImageMapping).find(([_, itemTitle]) => itemTitle === title);
+        if (matchingImage) {
+          imagePath = `/images/crispy-days-item-images/${matchingImage[0]}`;
+        }
+      } else if (prefix === 'TMC') {
+        // Find matching image from TMC mapping
+        const matchingImage = Object.entries(tmcImageMapping).find(([filename, itemData]) => itemData.title === title);
+        if (matchingImage) {
+          imagePath = `/images/tmc-item-images/${matchingImage[0]}`;
+        }
+      }
+
       currentMainItem = {
         title: title,
         description: description || `Delicious ${title.toLowerCase()}`,
         price: price,
-        image: '', // Will be added later
+        image: imagePath,
         variations: []
       };
 

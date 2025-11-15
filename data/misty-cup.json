@@ -10,7 +10,7 @@
           "title": "English Breakfast",
           "description": "Delicious english breakfast",
           "price": 399,
-          "image": "",
+          "image": "/images/tmc-item-images/english-breakfast.jpeg",
           "variations": [
             {
               "name": "Veg",
@@ -26,7 +26,7 @@
           "title": "Egg and Toast",
           "description": "Delicious egg and toast",
           "price": 249,
-          "image": ""
+          "image": "/images/tmc-item-images/egg-and-toast.jpeg"
         }
       ]
     },
@@ -38,7 +38,7 @@
           "title": "Pomodoro Pasta",
           "description": "Delicious pomodoro pasta",
           "price": 249,
-          "image": "",
+          "image": "/images/tmc-item-images/pomodoro-pasta.jpeg",
           "variations": [
             {
               "name": "Veg",
@@ -54,7 +54,7 @@
           "title": "Alfredo Pasta",
           "description": "Delicious alfredo pasta",
           "price": 289,
-          "image": "",
+          "image": "/images/tmc-item-images/alfredo-pasta.jpeg",
           "variations": [
             {
               "name": "Veg",
@@ -70,7 +70,7 @@
           "title": "Rosatella Pasta",
           "description": "Delicious rosatella pasta",
           "price": 289,
-          "image": "",
+          "image": "/images/tmc-item-images/rosatella-pasta.jpeg",
           "variations": [
             {
               "name": "Veg",
@@ -86,7 +86,7 @@
           "title": "Aglio e Olio Spaghetti",
           "description": "Delicious aglio e olio spaghetti",
           "price": 229,
-          "image": "",
+          "image": "/images/tmc-item-images/aglio-e-olio-spaghetti.jpeg",
           "variations": [
             {
               "name": "Veg",
@@ -108,7 +108,7 @@
           "title": "Caesar Salad",
           "description": "Delicious caesar salad",
           "price": 229,
-          "image": "",
+          "image": "/images/tmc-item-images/caesar-salad.jpeg",
           "variations": [
             {
               "name": "Veg",
@@ -124,7 +124,7 @@
           "title": "Mediterranean Salad",
           "description": "Delicious mediterranean salad",
           "price": 299,
-          "image": "",
+          "image": "/images/tmc-item-images/mediterranean-salad.jpeg",
           "variations": [
             {
               "name": "Veg",
@@ -140,13 +140,13 @@
           "title": "Watermelon Feta Salad",
           "description": "Delicious watermelon feta salad",
           "price": 199,
-          "image": ""
+          "image": "/images/tmc-item-images/watermelon-feta-salad.jpeg"
         },
         {
           "title": "Fruit Bowl with Yogurt & Muesli",
           "description": "Delicious fruit bowl with yogurt & muesli",
           "price": 159,
-          "image": ""
+          "image": "/images/tmc-item-images/fruit-bowl-with-yogurt---muesli.jpeg"
         }
       ]
     },
@@ -158,7 +158,7 @@
           "title": "Vanilla Ice Cream",
           "description": "Delicious vanilla ice cream",
           "price": 79,
-          "image": "",
+          "image": "/images/tmc-item-images/vanilla-ice-cream.jpeg",
           "variations": [
             {
               "name": "Single Serve",
