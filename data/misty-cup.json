@@ -8,7 +8,7 @@
       "items": [
         {
           "title": "English Breakfast",
-          "description": "Delicious english breakfast",
+          "description": "Artisan morning feast: fluffy eggs, sautéed mushrooms, grilled tomatoes, toasted bread bliss",
           "price": 399,
           "image": "/images/tmc-item-images/english-breakfast.jpeg",
           "variations": [
@@ -24,7 +24,7 @@
         },
         {
           "title": "Egg and Toast",
-          "description": "Delicious egg and toast",
+          "description": "Simple elegance: perfectly cooked eggs on warm, buttery artisan toast",
           "price": 249,
           "image": "/images/tmc-item-images/egg-and-toast.jpeg"
         }
@@ -36,7 +36,7 @@
       "items": [
         {
           "title": "Pomodoro Pasta",
-          "description": "Delicious pomodoro pasta",
+          "description": "Silky pasta coated in tangy San Marzano tomato sauce, fresh basil, herbaceous comfort",
           "price": 249,
           "image": "/images/tmc-item-images/pomodoro-pasta.jpeg",
           "variations": [
@@ -52,7 +52,7 @@
         },
         {
           "title": "Alfredo Pasta",
-          "description": "Delicious alfredo pasta",
+          "description": "Creamy indulgence: tender pasta swimming in rich, velvety parmesan cream sauce",
           "price": 289,
           "image": "/images/tmc-item-images/alfredo-pasta.jpeg",
           "variations": [
@@ -68,7 +68,7 @@
         },
         {
           "title": "Rosatella Pasta",
-          "description": "Delicious rosatella pasta",
+          "description": "Balanced harmony: creamy tomato sauce with roasted flavors on perfectly al dente pasta",
           "price": 289,
           "image": "/images/tmc-item-images/rosatella-pasta.jpeg",
           "variations": [
@@ -84,7 +84,7 @@
         },
         {
           "title": "Aglio e Olio Spaghetti",
-          "description": "Delicious aglio e olio spaghetti",
+          "description": "Italian minimalism: garlic-infused olive oil coats delicate spaghetti with subtle elegance",
           "price": 229,
           "image": "/images/tmc-item-images/aglio-e-olio-spaghetti.jpeg",
           "variations": [
@@ -106,7 +106,7 @@
       "items": [
         {
           "title": "Caesar Salad",
-          "description": "Delicious caesar salad",
+          "description": "Crisp romaine, creamy caesar dressing, parmesan shavings, croutons: classic lunch",
           "price": 229,
           "image": "/images/tmc-item-images/caesar-salad.jpeg",
           "variations": [
@@ -122,7 +122,7 @@
         },
         {
           "title": "Mediterranean Salad",
-          "description": "Delicious mediterranean salad",
+          "description": "Fresh vegetables, olives, feta cheese, vibrant dressing: light, nutritious, Mediterranean",
           "price": 299,
           "image": "/images/tmc-item-images/mediterranean-salad.jpeg",
           "variations": [
@@ -138,13 +138,13 @@
         },
         {
           "title": "Watermelon Feta Salad",
-          "description": "Delicious watermelon feta salad",
+          "description": "Sweet watermelon, tangy feta, mint: refreshing, unexpected, perfectly balanced summer salad",
           "price": 199,
           "image": "/images/tmc-item-images/watermelon-feta-salad.jpeg"
         },
         {
           "title": "Fruit Bowl with Yogurt & Muesli",
-          "description": "Delicious fruit bowl with yogurt & muesli",
+          "description": "Fresh seasonal fruits, creamy yogurt, crunchy muesli: wholesome, energizing breakfast",
           "price": 159,
           "image": "/images/tmc-item-images/fruit-bowl-with-yogurt---muesli.jpeg"
         }
@@ -156,7 +156,7 @@
       "items": [
         {
           "title": "Vanilla Ice Cream",
-          "description": "Delicious vanilla ice cream",
+          "description": "Silky-smooth, classic vanilla: timeless flavor, comforting sweetness",
           "price": 79,
           "image": "/images/tmc-item-images/vanilla-ice-cream.jpeg",
           "variations": [
@@ -172,7 +172,7 @@
         },
         {
           "title": "Chocolate Ice Cream",
-          "description": "Delicious chocolate ice cream",
+          "description": "Rich, decadent chocolate: smooth texture, deep cocoa satisfaction",
           "price": 79,
           "image": "",
           "variations": [
@@ -188,7 +188,7 @@
         },
         {
           "title": "Mango Ice Cream",
-          "description": "Delicious mango ice cream",
+          "description": "Tropical bliss: creamy mango with bright, natural sweetness, summer in a scoop",
           "price": 79,
           "image": "",
           "variations": [
@@ -204,7 +204,7 @@
         },
         {
           "title": "Strawberry Ice Cream",
-          "description": "Delicious strawberry ice cream",
+          "description": "Fruity, vibrant strawberry: fresh berry flavor, smooth indulgence",
           "price": 79,
           "image": "",
           "variations": [
@@ -220,7 +220,7 @@
         },
         {
           "title": "Butterscotch Ice Cream",
-          "description": "Delicious butterscotch ice cream",
+          "description": "Sweet caramel notes, buttery richness: nostalgic, creamy comfort",
           "price": 79,
           "image": "",
           "variations": [
@@ -236,7 +236,7 @@
         },
         {
           "title": "Special Ice Cream",
-          "description": "Delicious special ice cream",
+          "description": "Artisan creation: carefully crafted seasonal flavor, unique and memorable",
           "price": 79,
           "image": "",
           "variations": [
@@ -258,49 +258,49 @@
       "items": [
         {
           "title": "Espresso",
-          "description": "Delicious espresso",
+          "description": "Bold, concentrated coffee: intense shot of pure espresso flavor",
           "price": 89,
           "image": ""
         },
         {
           "title": "Doppio",
-          "description": "Delicious doppio",
+          "description": "Double espresso: twice the intensity, twice the caffeine kick, twice the satisfaction",
           "price": 99,
           "image": ""
         },
         {
           "title": "Americano",
-          "description": "Delicious americano",
+          "description": "Smooth espresso diluted with hot water: bold yet balanced, pure coffee magic",
           "price": 109,
           "image": ""
         },
         {
           "title": "Cappuccino",
-          "description": "Delicious cappuccino",
+          "description": "Perfect ratio: rich espresso, steamed milk, velvety foam, cafe perfection",
           "price": 139,
           "image": ""
         },
         {
           "title": "Flat White",
-          "description": "Delicious flat white",
+          "description": "Creamy, dense milk foam: smooth espresso, silky milk, Australian favorite",
           "price": 149,
           "image": ""
         },
         {
           "title": "Latte",
-          "description": "Delicious latte",
+          "description": "Creamy comfort: espresso mellowed with steamed milk, approachable warmth",
           "price": 159,
           "image": ""
         },
         {
           "title": "Mocha",
-          "description": "Delicious mocha",
+          "description": "Decadent blend: rich espresso meets silky chocolate and steamed milk",
           "price": 189,
           "image": ""
         },
         {
           "title": "Spanish Latte",
-          "description": "Delicious spanish latte",
+          "description": "Sweetened condensed milk espresso: creamy, indulgent, Spanish cafe classic",
           "price": 189,
           "image": ""
         }
@@ -312,37 +312,37 @@
       "items": [
         {
           "title": "Vietnamese Latte",
-          "description": "Delicious vietnamese latte",
+          "description": "Slow-drip richness: strong coffee, sweet condensed milk, smooth sophistication",
           "price": 189,
           "image": ""
         },
         {
           "title": "Affogato",
-          "description": "Delicious affogato",
+          "description": "Dramatic elegance: hot espresso poured over cold vanilla ice cream",
           "price": 169,
           "image": ""
         },
         {
           "title": "Café Frappe",
-          "description": "Delicious café frappe",
+          "description": "Icy refreshment: cold coffee, milk, ice, perfect summer coffee indulgence",
           "price": 189,
           "image": ""
         },
         {
           "title": "Choco Frappe",
-          "description": "Delicious choco frappe",
+          "description": "Cold, creamy chocolate coffee: rich cocoa meets icy, frothy goodness",
           "price": 189,
           "image": ""
         },
         {
           "title": "Oreo Frappe",
-          "description": "Delicious oreo frappe",
+          "description": "Cookies and cream meet cold coffee: sweet, crunchy, utterly indulgent",
           "price": 219,
           "image": ""
         },
         {
           "title": "Brownie Frappe",
-          "description": "Delicious brownie frappe",
+          "description": "Fudgy brownie blended into cold coffee: chocolate lovers' frozen dream",
           "price": 239,
           "image": ""
         }
@@ -354,25 +354,25 @@
       "items": [
         {
           "title": "Iced Cold Coffee",
-          "description": "Delicious iced cold coffee",
+          "description": "Smooth, cold coffee over ice: refreshing, energizing, simple perfection",
           "price": 149,
           "image": ""
         },
         {
           "title": "Vanilla Cold Coffee",
-          "description": "Delicious vanilla cold coffee",
+          "description": "Creamy vanilla softens bold cold coffee: sweet, smooth, comforting chill",
           "price": 149,
           "image": ""
         },
         {
           "title": "Chocolate Cold Coffee",
-          "description": "Delicious chocolate cold coffee",
+          "description": "Silky chocolate blended into cold coffee: decadent, refreshing, chocolate bliss",
           "price": 149,
           "image": ""
         },
         {
           "title": "Cinnamon Cold Coffee",
-          "description": "Delicious cinnamon cold coffee",
+          "description": "Warm spice meets cold coffee: cinnamon sweetness, aromatic refreshment",
           "price": 149,
           "image": ""
         }
@@ -384,43 +384,43 @@
       "items": [
         {
           "title": "Mango Milkshake",
-          "description": "Delicious mango milkshake",
+          "description": "Thick, creamy mango: tropical fruit, smooth milk, natural sweetness",
           "price": 149,
           "image": ""
         },
         {
           "title": "Chocolate Milkshake",
-          "description": "Delicious chocolate milkshake",
+          "description": "Indulgent chocolate: rich cocoa, cold milk, creamy chocolate heaven",
           "price": 149,
           "image": ""
         },
         {
           "title": "Strawberry Milkshake",
-          "description": "Delicious strawberry milkshake",
+          "description": "Fruity, vibrant strawberry: fresh berry flavor, smooth, refreshing shake",
           "price": 149,
           "image": ""
         },
         {
           "title": "Blueberry Milkshake",
-          "description": "Delicious blueberry milkshake",
+          "description": "Tart and sweet blueberries: antioxidant goodness, creamy texture, berry bliss",
           "price": 149,
           "image": ""
         },
         {
           "title": "Oreo Milkshake",
-          "description": "Delicious oreo milkshake",
+          "description": "Crunchy cookies and cream: sweet cookies meet smooth milk, nostalgic indulgence",
           "price": 149,
           "image": ""
         },
         {
           "title": "Brownie Blast Milkshake",
-          "description": "Delicious brownie blast milkshake",
+          "description": "Fudgy brownie blended smooth: chocolate richness, creamy texture, decadent shake",
           "price": 149,
           "image": ""
         },
         {
           "title": "Blackcurrant Milkshake",
-          "description": "Delicious blackcurrant milkshake",
+          "description": "Tart, sophisticated blackcurrant: berry tanginess, smooth milk, unique flavor",
           "price": 149,
           "image": ""
         }
@@ -432,25 +432,25 @@
       "items": [
         {
           "title": "Masala Tea",
-          "description": "Delicious masala tea",
+          "description": "Aromatic spices, steeped black tea: warming comfort, balanced spice blend",
           "price": 39,
           "image": ""
         },
         {
           "title": "Hot Lemon Tea",
-          "description": "Delicious hot lemon tea",
+          "description": "Bright citrus with black tea: tangy, refreshing, classic clarity",
           "price": 39,
           "image": ""
         },
         {
           "title": "Hot Black Tea",
-          "description": "Delicious hot black tea",
+          "description": "Pure, robust black tea: pure flavor, comforting warmth, timeless tea",
           "price": 39,
           "image": ""
         },
         {
           "title": "Honey Ginger tea",
-          "description": "Delicious honey ginger tea",
+          "description": "Soothing ginger, sweet honey: warming spice, natural sweetness, wellness sip",
           "price": 49,
           "image": ""
         }
@@ -462,13 +462,13 @@
       "items": [
         {
           "title": "Lemon Iced Tea",
-          "description": "Delicious lemon iced tea",
+          "description": "Bright, refreshing lemon: citrus tang over cold tea, summer refreshment",
           "price": 119,
           "image": ""
         },
         {
           "title": "Peach Iced Tea",
-          "description": "Delicious peach iced tea",
+          "description": "Fruity peach sweetness: smooth stone fruit, cold tea, summery charm",
           "price": 119,
           "image": ""
         }
@@ -480,7 +480,7 @@
       "items": [
         {
           "title": "Hot Chocolate with Marshmallow",
-          "description": "Delicious hot chocolate with marshmallow",
+          "description": "Rich, creamy chocolate: warm indulgence, fluffy marshmallows floating on top",
           "price": 200,
           "image": ""
         }
@@ -492,7 +492,7 @@
       "items": [
         {
           "title": "Virgin Mojito",
-          "description": "Delicious virgin mojito",
+          "description": "Fresh mint, lime juice, sugar: sparkling, refreshing, mocktail sophistication",
           "price": 119,
           "image": ""
         },
@@ -504,79 +504,79 @@
         },
         {
           "title": "Masala Coke",
-          "description": "Delicious masala coke",
+          "description": "Traditional spiced twist on cola: aromatic, bold, uniquely Indian",
           "price": 119,
           "image": ""
         },
         {
           "title": "Mango Mojito",
-          "description": "Delicious mango mojito",
+          "description": "Tropical mango with fresh mint: sweet fruit, cool spice, refreshing fusion",
           "price": 119,
           "image": ""
         },
         {
           "title": "Strawberry Mojito",
-          "description": "Delicious strawberry mojito",
+          "description": "Berry sweetness meets minty freshness: fruity, light, spring in a glass",
           "price": 119,
           "image": ""
         },
         {
           "title": "Green Apple Mojito",
-          "description": "Delicious green apple mojito",
+          "description": "Tart apple with cool mint: crisp, tangy, perfectly balanced refreshment",
           "price": 119,
           "image": ""
         },
         {
           "title": "Jaljeera Mojito",
-          "description": "Delicious jaljeera mojito",
+          "description": "Cumin-spiced refreshment: aromatic Indian spices, tangy lime, cultural twist",
           "price": 119,
           "image": ""
         },
         {
           "title": "Fire n Ice Mojito",
-          "description": "Delicious fire n ice mojito",
+          "description": "Spicy chilli meets cool mint: heat and chill, daring flavor adventure",
           "price": 119,
           "image": ""
         },
         {
           "title": "Kala Khatta Mojito",
-          "description": "Delicious kala khatta mojito",
+          "description": "Tangy black plum flavor: tart, distinctive, Indian flavors in mojito form",
           "price": 119,
           "image": ""
         },
         {
           "title": "Cucumber Mojito",
-          "description": "Delicious cucumber mojito",
+          "description": "Crisp cucumber, cool mint: hydrating, garden-fresh, summer in a sip",
           "price": 119,
           "image": ""
         },
         {
           "title": "Ginger Ale Mojito",
-          "description": "Delicious ginger ale mojito",
+          "description": "Spicy ginger meets minty mojito: warmth meets cool, effervescent charm",
           "price": 119,
           "image": ""
         },
         {
           "title": "Blueberry Mojito",
-          "description": "Delicious blueberry mojito",
+          "description": "Antioxidant blueberries, fresh mint: fruity, slightly tart, sophisticated",
           "price": 119,
           "image": ""
         },
         {
           "title": "Aam Panna Mojito",
-          "description": "Delicious aam panna mojito",
+          "description": "Raw mango spiced drink: tangy Indian classic, cooling, seasonal favorite",
           "price": 119,
           "image": ""
         },
         {
           "title": "Watermelon Mint Mojito",
-          "description": "Delicious watermelon mint mojito",
+          "description": "Sweet watermelon, cooling mint: refreshing summer fruit, light and juicy",
           "price": 119,
           "image": ""
         },
         {
           "title": "Blue Curacao Mojito",
-          "description": "Delicious blue curacao mojito",
+          "description": "Tropical blue citrus: vibrant color, sweet orange notes, party-ready",
           "price": 119,
           "image": ""
         }
@@ -588,25 +588,25 @@
       "items": [
         {
           "title": "Watermelon Juice",
-          "description": "Delicious watermelon juice",
+          "description": "Fresh, sweet watermelon: natural hydration, fruity refreshment, pure goodness",
           "price": 139,
           "image": ""
         },
         {
           "title": "Sweetlime Juice",
-          "description": "Delicious sweetlime juice",
+          "description": "Tart, tangy sweet lime: citrus zing, natural sweetness, tropical brightness",
           "price": 139,
           "image": ""
         },
         {
           "title": "Pineapple Juice",
-          "description": "Delicious pineapple juice",
+          "description": "Tropical pineapple: sweet, tangy, golden fruit brightness",
           "price": 139,
           "image": ""
         },
         {
           "title": "Orange Juice",
-          "description": "Delicious orange juice",
+          "description": "Citrus classic: bright, vitamin-rich, morning freshness",
           "price": 139,
           "image": ""
         }
@@ -618,43 +618,43 @@
       "items": [
         {
           "title": "ABC Juice",
-          "description": "Delicious abc juice",
+          "description": "Apple, beetroot, carrot blend: earthy sweetness, vibrant nutrition, wellness",
           "price": 159,
           "image": ""
         },
         {
           "title": "Tropical Immunity",
-          "description": "Delicious tropical immunity",
+          "description": "Tropical fruits blended: immunity-boosting, warm spices, wellness powerhouse",
           "price": 159,
           "image": ""
         },
         {
           "title": "Golden Root",
-          "description": "Delicious golden root",
+          "description": "Turmeric and ginger wellness: anti-inflammatory, warming, golden glow",
           "price": 159,
           "image": ""
         },
         {
           "title": "Red Reboot",
-          "description": "Delicious red reboot",
+          "description": "Red fruits and vegetables: antioxidant boost, vibrant health, energy refresh",
           "price": 159,
           "image": ""
         },
         {
           "title": "Minty Morning",
-          "description": "Delicious minty morning",
+          "description": "Fresh mint, citrus, greens: cooling mint, bright morning energy, wellness start",
           "price": 159,
           "image": ""
         },
         {
           "title": "Gut Reset",
-          "description": "Delicious gut reset",
+          "description": "Probiotic wellness blend: digestive support, balanced health, gut-friendly goodness",
           "price": 159,
           "image": ""
         },
         {
           "title": "Spiced Citrus",
-          "description": "Delicious spiced citrus",
+          "description": "Warm spices with bright citrus: balanced warmth, immune boost, wellness sip",
           "price": 159,
           "image": ""
         }
@@ -666,25 +666,25 @@
       "items": [
         {
           "title": "Vanilla Syrup",
-          "description": "Delicious vanilla syrup",
+          "description": "Sweet vanilla flavor: smooth, aromatic, classic coffee companion",
           "price": 25,
           "image": ""
         },
         {
           "title": "Irish Cream Syrup",
-          "description": "Delicious irish cream syrup",
+          "description": "Rich cream, whiskey notes: luxurious, smooth, cafe indulgence",
           "price": 25,
           "image": ""
         },
         {
           "title": "Caramel Syrup",
-          "description": "Delicious caramel syrup",
+          "description": "Sweet, buttery caramel: indulgent sweetness, coffee enhancement, cozy warmth",
           "price": 25,
           "image": ""
         },
         {
           "title": "Hazelnut Syrup",
-          "description": "Delicious hazelnut syrup",
+          "description": "Nutty, toasted flavor: smooth, sophisticated, coffee-friendly richness",
           "price": 25,
           "image": ""
         }

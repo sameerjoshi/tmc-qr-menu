@@ -5,9 +5,11 @@ const path = require('path');
 // Load image mappings
 const crispyDaysImageMapPath = path.join(__dirname, 'public/images/crispy-days-image-map.json');
 const tmcImageMapPath = path.join(__dirname, 'public/images/tmc-image-map.json');
+const descriptionsPath = path.join(__dirname, 'menu-descriptions.json');
 
 let crispyDaysImageMapping = {};
 let tmcImageMapping = {};
+let menuDescriptions = { 'crispy-days': {}, 'misty-cup': {} };
 
 if (fs.existsSync(crispyDaysImageMapPath)) {
   crispyDaysImageMapping = JSON.parse(fs.readFileSync(crispyDaysImageMapPath, 'utf8'));
@@ -15,6 +17,10 @@ if (fs.existsSync(crispyDaysImageMapPath)) {
 
 if (fs.existsSync(tmcImageMapPath)) {
   tmcImageMapping = JSON.parse(fs.readFileSync(tmcImageMapPath, 'utf8'));
+}
+
+if (fs.existsSync(descriptionsPath)) {
+  menuDescriptions = JSON.parse(fs.readFileSync(descriptionsPath, 'utf8'));
 }
 
 // Read Excel file
@@ -151,9 +157,13 @@ function parseMenuData(prefix, brandName, brandId) {
         }
       }
 
+      // Get exciting description from menu-descriptions.json
+      const brandDescriptions = menuDescriptions[brandId] || {};
+      const excitingDescription = brandDescriptions[title] || description || `Delicious ${title.toLowerCase()}`;
+
       currentMainItem = {
         title: title,
-        description: description || `Delicious ${title.toLowerCase()}`,
+        description: excitingDescription,
         price: price,
         image: imagePath,
         variations: []
