@@ -409,6 +409,12 @@ body[data-brand="crispy-days"] .category-link:hover {
   color: var(--crispy-days-primary);
 }
 
+body[data-brand="crispy-days"] .category-link.active:hover {
+  color: white;
+  background: var(--crispy-days-primary);
+  border-color: var(--crispy-days-primary);
+}
+
 body[data-brand="crispy-days"] .menu-item-price {
   color: var(--crispy-days-primary);
 }
@@ -441,6 +447,12 @@ body[data-brand="misty-cup"] .category-link.active {
 
 body[data-brand="misty-cup"] .category-link:hover {
   color: var(--misty-cup-color);
+}
+
+body[data-brand="misty-cup"] .category-link.active:hover {
+  color: white;
+  background: var(--misty-cup-color);
+  border-color: var(--misty-cup-color);
 }
 
 body[data-brand="misty-cup"] .menu-item-price {
