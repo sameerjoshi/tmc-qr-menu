@@ -464,65 +464,27 @@ body[data-brand="misty-cup"] .btn-outline-secondary:hover {
   border-color: var(--misty-cup-color);
 }
 
-/* Variation Styles */
-.menu-item-card.has-variations {
-  transition: all 0.2s ease;
-}
-
-.menu-item-card.has-variations:hover {
-  transform: translateY(-2px);
-  border-color: var(--text-dark);
-}
-
-.variation-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-  margin-top: 0.5rem;
-  padding: 0.25rem 0.5rem;
-  background: var(--bg-gray);
-  border-radius: 4px;
-  font-size: 0.75rem;
-  color: var(--text-medium);
-  font-weight: 500;
-}
-
-.variation-badge svg {
-  opacity: 0.7;
-}
-
-.variation-list {
+/* Inline Variation Styles */
+.variations-inline {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  margin-top: auto;
 }
 
-.variation-option {
+.variation-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.875rem 1rem;
+  padding: 0.625rem 0.875rem;
   background: var(--bg-gray);
   border: 1px solid var(--border-light);
-  border-radius: 8px;
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-
-.variation-option:hover {
-  background: white;
-  border-color: var(--text-dark);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-}
-
-.variation-info {
-  display: flex;
-  flex-direction: column;
+  border-radius: 6px;
 }
 
 .variation-name {
-  font-weight: 600;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
   color: var(--text-dark);
 }
 
@@ -532,48 +494,20 @@ body[data-brand="misty-cup"] .btn-outline-secondary:hover {
   color: var(--text-dark);
 }
 
-.modal-content {
-  border: none;
-  border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-}
-
-.modal-header {
-  border-bottom: 1px solid var(--border-light);
-  padding: 1.25rem 1.5rem;
-}
-
-.modal-title {
+.menu-item-price-single {
+  font-size: 1.25rem;
   font-weight: 700;
-  font-size: 1.125rem;
   color: var(--text-dark);
-}
-
-.modal-body {
-  padding: 1.5rem;
-}
-
-.modal-body h6 {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--text-medium);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  margin-top: auto;
 }
 
 /* Brand-specific variation styles */
-body[data-brand="crispy-days"] .variation-option:hover {
-  border-color: var(--crispy-days-primary);
-}
-
-body[data-brand="crispy-days"] .variation-price {
+body[data-brand="crispy-days"] .variation-price,
+body[data-brand="crispy-days"] .menu-item-price-single {
   color: var(--crispy-days-primary);
 }
 
-body[data-brand="misty-cup"] .variation-option:hover {
-  border-color: var(--misty-cup-color);
-}
-
-body[data-brand="misty-cup"] .variation-price {
+body[data-brand="misty-cup"] .variation-price,
+body[data-brand="misty-cup"] .menu-item-price-single {
   color: var(--misty-cup-color);
 }

@@ -47,64 +47,29 @@
         <div class="row g-3">
           <% category.items.forEach((item, itemIndex) => { %>
             <div class="col-12 col-md-6 col-lg-4">
-              <div class="menu-item-card <%= item.variations ? 'has-variations' : '' %>"
-                   <% if (item.variations) { %>
-                   data-bs-toggle="modal"
-                   data-bs-target="#variationModal-<%= categoryIndex %>-<%= itemIndex %>"
-                   style="cursor: pointer;"
-                   <% } %>>
+              <div class="menu-item-card">
                 <% if (item.image) { %>
                   <div class="menu-item-image" style="background-image: url('<%= item.image %>')"></div>
                 <% } %>
                 <div class="menu-item-body">
-                  <div class="d-flex justify-content-between align-items-start mb-2">
-                    <h5 class="menu-item-title mb-0"><%= item.title %></h5>
-                    <% if (item.variations) { %>
-                      <span class="menu-item-price">from ₹<%= Math.min(...item.variations.map(v => v.price)) %></span>
-                    <% } else { %>
-                      <span class="menu-item-price">₹<%= item.price %></span>
-                    <% } %>
-                  </div>
-                  <p class="menu-item-description text-muted"><%= item.description %></p>
+                  <h5 class="menu-item-title mb-2"><%= item.title %></h5>
+                  <p class="menu-item-description text-muted mb-3"><%= item.description %></p>
+
                   <% if (item.variations) { %>
-                    <div class="variation-badge">
-                      <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                      </svg>
-                      <%= item.variations.length %> options
+                    <div class="variations-inline">
+                      <% item.variations.forEach((variation, vIndex) => { %>
+                        <div class="variation-row">
+                          <span class="variation-name"><%= variation.name %></span>
+                          <span class="variation-price">₹<%= variation.price %></span>
+                        </div>
+                      <% }); %>
                     </div>
+                  <% } else { %>
+                    <div class="menu-item-price-single">₹<%= item.price %></div>
                   <% } %>
                 </div>
               </div>
             </div>
-
-            <!-- Variation Modal -->
-            <% if (item.variations) { %>
-              <div class="modal fade" id="variationModal-<%= categoryIndex %>-<%= itemIndex %>" tabindex="-1">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title"><%= item.title %></h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                      <p class="text-muted small mb-3"><%= item.description %></p>
-                      <h6 class="mb-3">Select an option:</h6>
-                      <div class="variation-list">
-                        <% item.variations.forEach(variation => { %>
-                          <div class="variation-option">
-                            <div class="variation-info">
-                              <span class="variation-name"><%= variation.name %></span>
-                            </div>
-                            <span class="variation-price">₹<%= variation.price %></span>
-                          </div>
-                        <% }); %>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            <% } %>
           <% }); %>
         </div>
       </div>
