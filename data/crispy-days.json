@@ -10,7 +10,7 @@
           "title": "Hot & Crispy Chicken 1pcs",
           "description": "Delicious hot & crispy chicken 1pcs",
           "price": 89,
-          "image": "",
+          "image": "/images/crispy-days-item-images/hot-and-crispy-chicken-2pcs.jpeg",
           "variations": [
             {
               "name": "REGULAR",
@@ -26,7 +26,7 @@
           "title": "Hot & Crispy Chicken 2pcs",
           "description": "Delicious hot & crispy chicken 2pcs",
           "price": 179,
-          "image": "/images/crispy-days-item-images/hot-and-crispy-chicken-2pcs.jpeg",
+          "image": "/images/crispy-days-item-images/hot-and-crispy-chicken-1pcs.jpeg",
           "variations": [
             {
               "name": "REGULAR",
