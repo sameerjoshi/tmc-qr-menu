@@ -1,0 +1,768 @@
+{
+  "brandName": "Crispy Days",
+  "brandId": "crispy-days",
+  "categories": [
+    {
+      "name": "Fried Chicken",
+      "description": "",
+      "items": [
+        {
+          "title": "Hot & Crispy Chicken 1pcs",
+          "description": "Delicious hot & crispy chicken 1pcs",
+          "price": 89,
+          "image": "",
+          "variations": [
+            {
+              "name": "REGULAR",
+              "price": 89
+            },
+            {
+              "name": "KOREAN SPICED",
+              "price": 99
+            }
+          ]
+        },
+        {
+          "title": "Hot & Crispy Chicken 2pcs",
+          "description": "Delicious hot & crispy chicken 2pcs",
+          "price": 179,
+          "image": "",
+          "variations": [
+            {
+              "name": "REGULAR",
+              "price": 179
+            },
+            {
+              "name": "KOREAN SPICED",
+              "price": 189
+            }
+          ]
+        },
+        {
+          "title": "Hot & Crispy Chicken 4pcs",
+          "description": "Delicious hot & crispy chicken 4pcs",
+          "price": 339,
+          "image": "",
+          "variations": [
+            {
+              "name": "REGULAR",
+              "price": 339
+            },
+            {
+              "name": "KOREAN SPICED",
+              "price": 359
+            }
+          ]
+        },
+        {
+          "title": "Hot & Crispy Chicken",
+          "description": "Delicious hot & crispy chicken",
+          "price": 649,
+          "image": "",
+          "variations": [
+            {
+              "name": "REGULAR",
+              "price": 649
+            },
+            {
+              "name": "KOREAN SPICED",
+              "price": 679
+            }
+          ]
+        },
+        {
+          "title": "Crispy Chicken Wings 3Pcs",
+          "description": "Delicious crispy chicken wings 3pcs",
+          "price": 119,
+          "image": "",
+          "variations": [
+            {
+              "name": "REGULAR",
+              "price": 119
+            },
+            {
+              "name": "KOREAN SPICED",
+              "price": 129
+            }
+          ]
+        },
+        {
+          "title": "Crispy Chicken Wings 6Pcs",
+          "description": "Delicious crispy chicken wings 6pcs",
+          "price": 219,
+          "image": "",
+          "variations": [
+            {
+              "name": "REGULAR",
+              "price": 219
+            },
+            {
+              "name": "KOREAN SPICED",
+              "price": 239
+            }
+          ]
+        },
+        {
+          "title": "Crispy Chicken Strips 3Pcs",
+          "description": "Delicious crispy chicken strips 3pcs",
+          "price": 129,
+          "image": "",
+          "variations": [
+            {
+              "name": "REGULAR",
+              "price": 129
+            },
+            {
+              "name": "KOREAN SPICED",
+              "price": 139
+            }
+          ]
+        },
+        {
+          "title": "Crispy Chicken Strips 6Pcs",
+          "description": "Delicious crispy chicken strips 6pcs",
+          "price": 229,
+          "image": "",
+          "variations": [
+            {
+              "name": "REGULAR",
+              "price": 229
+            },
+            {
+              "name": "KOREAN SPICED",
+              "price": 249
+            }
+          ]
+        },
+        {
+          "title": "Crispy Chicken Popcorn",
+          "description": "Delicious crispy chicken popcorn",
+          "price": 159,
+          "image": "",
+          "variations": [
+            {
+              "name": "REGULAR",
+              "price": 159
+            },
+            {
+              "name": "KOREAN SPICED",
+              "price": 169
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Burgers",
+      "description": "",
+      "items": [
+        {
+          "title": "Crispy Veg Burger",
+          "description": "Delicious crispy veg burger",
+          "price": 109,
+          "image": ""
+        },
+        {
+          "title": "Spicy Veg Burger",
+          "description": "Delicious spicy veg burger",
+          "price": 119,
+          "image": ""
+        },
+        {
+          "title": "Tandoori Veg Burger",
+          "description": "Delicious tandoori veg burger",
+          "price": 139,
+          "image": ""
+        },
+        {
+          "title": "Mint Fusion Veg Burger",
+          "description": "Delicious mint fusion veg burger",
+          "price": 139,
+          "image": ""
+        },
+        {
+          "title": "Crispy Peri Peri Paneer Burger",
+          "description": "Delicious crispy peri peri paneer burger",
+          "price": 149,
+          "image": ""
+        },
+        {
+          "title": "Crispy Chicken Burger",
+          "description": "Delicious crispy chicken burger",
+          "price": 149,
+          "image": ""
+        },
+        {
+          "title": "A Peri Peri Crispy Chicken Burger",
+          "description": "Delicious a peri peri crispy chicken burger",
+          "price": 159,
+          "image": ""
+        },
+        {
+          "title": "Mint Fusion Crispy Chicken Burger",
+          "description": "Delicious mint fusion crispy chicken burger",
+          "price": 159,
+          "image": ""
+        },
+        {
+          "title": "Tandoori Crispy Chicken Burger",
+          "description": "Delicious tandoori crispy chicken burger",
+          "price": 159,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Pizzas",
+      "description": "",
+      "items": [
+        {
+          "title": "Margherita Pizza",
+          "description": "Delicious margherita pizza",
+          "price": 129,
+          "image": ""
+        },
+        {
+          "title": "Tomato Onion Pizza",
+          "description": "Delicious tomato onion pizza",
+          "price": 139,
+          "image": ""
+        },
+        {
+          "title": "O Onion Capsicum Pizza",
+          "description": "Delicious o onion capsicum pizza",
+          "price": 139,
+          "image": ""
+        },
+        {
+          "title": "Sweet Corn Fiesta Pizza",
+          "description": "Delicious sweet corn fiesta pizza",
+          "price": 139,
+          "image": ""
+        },
+        {
+          "title": "Double Cheese Pizza",
+          "description": "Delicious double cheese pizza",
+          "price": 169,
+          "image": ""
+        },
+        {
+          "title": "Garden Harvest Pizza",
+          "description": "Delicious garden harvest pizza",
+          "price": 189,
+          "image": ""
+        },
+        {
+          "title": "Desi Tandoori Paneer Pizza",
+          "description": "Delicious desi tandoori paneer pizza",
+          "price": 209,
+          "image": ""
+        },
+        {
+          "title": "Spicy Chicken Blast Pizza",
+          "description": "Delicious spicy chicken blast pizza",
+          "price": 219,
+          "image": ""
+        },
+        {
+          "title": "Loaded Chicken Pizza",
+          "description": "Delicious loaded chicken pizza",
+          "price": 219,
+          "image": ""
+        },
+        {
+          "title": "Chicken Farmhouse Pizza",
+          "description": "Delicious chicken farmhouse pizza",
+          "price": 219,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Wraps",
+      "description": "",
+      "items": [
+        {
+          "title": "Veggie Fusion Wrap",
+          "description": "Delicious veggie fusion wrap",
+          "price": 119,
+          "image": ""
+        },
+        {
+          "title": "Paneer Fiesta Wrap",
+          "description": "Delicious paneer fiesta wrap",
+          "price": 139,
+          "image": ""
+        },
+        {
+          "title": "Fried Chicken Wrap",
+          "description": "Delicious fried chicken wrap",
+          "price": 139,
+          "image": ""
+        },
+        {
+          "title": "Tandoori Grilled Chicken Wrap",
+          "description": "Delicious tandoori grilled chicken wrap",
+          "price": 149,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Grilled Sandwiches",
+      "description": "",
+      "items": [
+        {
+          "title": "Garden Fresh Grilled Sandwich",
+          "description": "Delicious garden fresh grilled sandwich",
+          "price": 99,
+          "image": ""
+        },
+        {
+          "title": "Sizzling Veg Grilled Sandwich",
+          "description": "Delicious sizzling veg grilled sandwich",
+          "price": 119,
+          "image": ""
+        },
+        {
+          "title": "Tangy Paneer Grilled Sandwich",
+          "description": "Delicious tangy paneer grilled sandwich",
+          "price": 139,
+          "image": ""
+        },
+        {
+          "title": "Classic Egg Grilled Sandwich",
+          "description": "Delicious classic egg grilled sandwich",
+          "price": 129,
+          "image": ""
+        },
+        {
+          "title": "Tangy Peri Peri Grilled Chicken Sandwich",
+          "description": "Delicious tangy peri peri grilled chicken sandwich",
+          "price": 149,
+          "image": ""
+        },
+        {
+          "title": "Mint Fusion Chicken Grilled Sandwich",
+          "description": "Delicious mint fusion chicken grilled sandwich",
+          "price": 149,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Momos (fried/steamed)",
+      "description": "",
+      "items": [
+        {
+          "title": "Veg Momos 5pcs",
+          "description": "Delicious veg momos 5pcs",
+          "price": 109,
+          "image": ""
+        },
+        {
+          "title": "Paneer Momos 5pcs",
+          "description": "Delicious paneer momos 5pcs",
+          "price": 129,
+          "image": ""
+        },
+        {
+          "title": "Chicken Momos 5pcs",
+          "description": "Delicious chicken momos 5pcs",
+          "price": 129,
+          "image": ""
+        },
+        {
+          "title": "Schezwan Chicken Momos 5pcs",
+          "description": "Delicious schezwan chicken momos 5pcs",
+          "price": 129,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Veg Starters",
+      "description": "",
+      "items": [
+        {
+          "title": "Veg Strips 5 Pcs",
+          "description": "Delicious veg strips 5 pcs",
+          "price": 119,
+          "image": ""
+        },
+        {
+          "title": "Paneer Popcorn",
+          "description": "Delicious paneer popcorn",
+          "price": 149,
+          "image": ""
+        },
+        {
+          "title": "Crispy Veg Rolls 3 Pcs",
+          "description": "Delicious crispy veg rolls 3 pcs",
+          "price": 99,
+          "image": ""
+        },
+        {
+          "title": "Crispy Paneer Rolls 3 Pcs",
+          "description": "Delicious crispy paneer rolls 3 pcs",
+          "price": 109,
+          "image": ""
+        },
+        {
+          "title": "Crispy Cheese Corn Rolls 3 Pcs",
+          "description": "Delicious crispy cheese corn rolls 3 pcs",
+          "price": 109,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Bread Omelette",
+      "description": "",
+      "items": [
+        {
+          "title": "Masala Bread Omelette",
+          "description": "Delicious masala bread omelette",
+          "price": 89,
+          "image": ""
+        },
+        {
+          "title": "Cheese Masala Bread Omelette",
+          "description": "Delicious cheese masala bread omelette",
+          "price": 109,
+          "image": ""
+        },
+        {
+          "title": "Tandoori Chicken Bread Omelette",
+          "description": "Delicious tandoori chicken bread omelette",
+          "price": 119,
+          "image": ""
+        },
+        {
+          "title": "Peri Peri Chicken Bread Omelette",
+          "description": "Delicious peri peri chicken bread omelette",
+          "price": 119,
+          "image": ""
+        },
+        {
+          "title": "Mint Chicken Bread Omelette",
+          "description": "Delicious mint chicken bread omelette",
+          "price": 119,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Maggi",
+      "description": "",
+      "items": [
+        {
+          "title": "Classic Simple Maggi",
+          "description": "Delicious classic simple maggi",
+          "price": 79,
+          "image": "",
+          "variations": [
+            {
+              "name": "REGULAR",
+              "price": 79
+            },
+            {
+              "name": "KOREAN SPICED",
+              "price": 89
+            }
+          ]
+        },
+        {
+          "title": "Traditional Fried Maggi",
+          "description": "Delicious traditional fried maggi",
+          "price": 99,
+          "image": "",
+          "variations": [
+            {
+              "name": "REGULAR",
+              "price": 99
+            },
+            {
+              "name": "KOREAN SPICED",
+              "price": 109
+            }
+          ]
+        },
+        {
+          "title": "Paneer Paradise Fried Maggi",
+          "description": "Delicious paneer paradise fried maggi",
+          "price": 129,
+          "image": "",
+          "variations": [
+            {
+              "name": "REGULAR",
+              "price": 129
+            },
+            {
+              "name": "KOREAN SPICED",
+              "price": 139
+            }
+          ]
+        },
+        {
+          "title": "Egg Delight Fried Maggi",
+          "description": "Delicious egg delight fried maggi",
+          "price": 139,
+          "image": "",
+          "variations": [
+            {
+              "name": "REGULAR",
+              "price": 139
+            },
+            {
+              "name": "KOREAN SPICED",
+              "price": 149
+            }
+          ]
+        },
+        {
+          "title": "Chicken Crunchy Maggi",
+          "description": "Delicious chicken crunchy maggi",
+          "price": 149,
+          "image": "",
+          "variations": [
+            {
+              "name": "REGULAR",
+              "price": 149
+            },
+            {
+              "name": "KOREAN SPICED",
+              "price": 159
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fries",
+      "description": "",
+      "items": [
+        {
+          "title": "Crispy Classic Fries",
+          "description": "Delicious crispy classic fries",
+          "price": 59,
+          "image": "",
+          "variations": [
+            {
+              "name": "SMALL",
+              "price": 59
+            },
+            {
+              "name": "LARGE",
+              "price": 89
+            }
+          ]
+        },
+        {
+          "title": "Fiery Peri Peri Fries",
+          "description": "Delicious fiery peri peri fries",
+          "price": 69,
+          "image": "",
+          "variations": [
+            {
+              "name": "SMALL",
+              "price": 69
+            },
+            {
+              "name": "LARGE",
+              "price": 99
+            }
+          ]
+        },
+        {
+          "title": "Chilli Garlic Fries",
+          "description": "Delicious chilli garlic fries",
+          "price": 69,
+          "image": "",
+          "variations": [
+            {
+              "name": "SMALL",
+              "price": 69
+            },
+            {
+              "name": "LARGE",
+              "price": 99
+            }
+          ]
+        },
+        {
+          "title": "Korean Spiced Fries",
+          "description": "Delicious korean spiced fries",
+          "price": 79,
+          "image": "",
+          "variations": [
+            {
+              "name": "SMALL",
+              "price": 79
+            },
+            {
+              "name": "LARGE",
+              "price": 109
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Garlic Breads",
+      "description": "",
+      "items": [
+        {
+          "title": "Cheese Garlic Bread 4pcs",
+          "description": "Delicious cheese garlic bread 4pcs",
+          "price": 129,
+          "image": ""
+        },
+        {
+          "title": "Spicy Cheese Garlic Bread 4pcs",
+          "description": "Delicious spicy cheese garlic bread 4pcs",
+          "price": 139,
+          "image": ""
+        },
+        {
+          "title": "Chicken & Cheese Garlic Bread 4pcs",
+          "description": "Delicious chicken & cheese garlic bread 4pcs",
+          "price": 179,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Combos",
+      "description": "",
+      "items": [
+        {
+          "title": "Combo 199",
+          "description": "Delicious combo 199",
+          "price": 199,
+          "image": ""
+        },
+        {
+          "title": "Combo 249",
+          "description": "Delicious combo 249",
+          "price": 249,
+          "image": ""
+        },
+        {
+          "title": "Combo 499",
+          "description": "Delicious combo 499",
+          "price": 499,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Make A Meal",
+      "description": "",
+      "items": [
+        {
+          "title": "Fries with Soft Drink",
+          "description": "Delicious fries with soft drink",
+          "price": 89,
+          "image": ""
+        },
+        {
+          "title": "Fries with Mocktail",
+          "description": "Delicious fries with mocktail",
+          "price": 139,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Desserts",
+      "description": "",
+      "items": [
+        {
+          "title": "Brownie With Ice Cream",
+          "description": "Delicious brownie with ice cream",
+          "price": 129,
+          "image": ""
+        },
+        {
+          "title": "Sizzling Brownie With Ice Cream",
+          "description": "Delicious sizzling brownie with ice cream",
+          "price": 149,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Soft Drinks",
+      "description": "",
+      "items": [
+        {
+          "title": "Any Soft Drink",
+          "description": "Delicious any soft drink",
+          "price": 0,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Dip Sauces",
+      "description": "",
+      "items": [
+        {
+          "title": "Peri Peri Dip",
+          "description": "Delicious peri peri dip",
+          "price": 15,
+          "image": ""
+        },
+        {
+          "title": "Tandoori Dip",
+          "description": "Delicious tandoori dip",
+          "price": 15,
+          "image": ""
+        },
+        {
+          "title": "Mint Dip",
+          "description": "Delicious mint dip",
+          "price": 15,
+          "image": ""
+        },
+        {
+          "title": "Schezwan Dip",
+          "description": "Delicious schezwan dip",
+          "price": 15,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Add-Ons",
+      "description": "",
+      "items": [
+        {
+          "title": "Extra Cheese Slice",
+          "description": "Delicious extra cheese slice",
+          "price": 20,
+          "image": ""
+        },
+        {
+          "title": "Extra Pizza Cheese",
+          "description": "Delicious extra pizza cheese",
+          "price": 30,
+          "image": ""
+        },
+        {
+          "title": "Extra Veg Toppings",
+          "description": "Delicious extra veg toppings",
+          "price": 20,
+          "image": ""
+        },
+        {
+          "title": "Extra Non Veg Toppings",
+          "description": "Delicious extra non veg toppings",
+          "price": 30,
+          "image": ""
+        }
+      ]
+    }
+  ]
+}

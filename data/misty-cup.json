@@ -1,0 +1,694 @@
+{
+  "brandName": "The Misty Cup Coffee Room",
+  "brandId": "misty-cup",
+  "categories": [
+    {
+      "name": "Breakfast",
+      "description": "",
+      "items": [
+        {
+          "title": "English Breakfast",
+          "description": "Delicious english breakfast",
+          "price": 399,
+          "image": "",
+          "variations": [
+            {
+              "name": "Veg",
+              "price": 399
+            },
+            {
+              "name": "Chicken",
+              "price": 499
+            }
+          ]
+        },
+        {
+          "title": "Egg and Toast",
+          "description": "Delicious egg and toast",
+          "price": 249,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Pasta",
+      "description": "",
+      "items": [
+        {
+          "title": "Pomodoro Pasta",
+          "description": "Delicious pomodoro pasta",
+          "price": 249,
+          "image": "",
+          "variations": [
+            {
+              "name": "Veg",
+              "price": 249
+            },
+            {
+              "name": "Chicken",
+              "price": 279
+            }
+          ]
+        },
+        {
+          "title": "Alfredo Pasta",
+          "description": "Delicious alfredo pasta",
+          "price": 289,
+          "image": "",
+          "variations": [
+            {
+              "name": "Veg",
+              "price": 289
+            },
+            {
+              "name": "Chicken",
+              "price": 319
+            }
+          ]
+        },
+        {
+          "title": "Rosatella Pasta",
+          "description": "Delicious rosatella pasta",
+          "price": 289,
+          "image": "",
+          "variations": [
+            {
+              "name": "Veg",
+              "price": 289
+            },
+            {
+              "name": "Chicken",
+              "price": 319
+            }
+          ]
+        },
+        {
+          "title": "Aglio e Olio Spaghetti",
+          "description": "Delicious aglio e olio spaghetti",
+          "price": 229,
+          "image": "",
+          "variations": [
+            {
+              "name": "Veg",
+              "price": 229
+            },
+            {
+              "name": "Chicken",
+              "price": 259
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Salads",
+      "description": "",
+      "items": [
+        {
+          "title": "Caesar Salad",
+          "description": "Delicious caesar salad",
+          "price": 229,
+          "image": "",
+          "variations": [
+            {
+              "name": "Veg",
+              "price": 229
+            },
+            {
+              "name": "Chicken",
+              "price": 279
+            }
+          ]
+        },
+        {
+          "title": "Mediterranean Salad",
+          "description": "Delicious mediterranean salad",
+          "price": 299,
+          "image": "",
+          "variations": [
+            {
+              "name": "Veg",
+              "price": 229
+            },
+            {
+              "name": "Chicken",
+              "price": 349
+            }
+          ]
+        },
+        {
+          "title": "Watermelon Feta Salad",
+          "description": "Delicious watermelon feta salad",
+          "price": 199,
+          "image": ""
+        },
+        {
+          "title": "Fruit Bowl with Yogurt & Muesli",
+          "description": "Delicious fruit bowl with yogurt & muesli",
+          "price": 159,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Ice Creams",
+      "description": "",
+      "items": [
+        {
+          "title": "Vanilla Ice Cream",
+          "description": "Delicious vanilla ice cream",
+          "price": 79,
+          "image": "",
+          "variations": [
+            {
+              "name": "Single Serve",
+              "price": 79
+            },
+            {
+              "name": "Double Serve",
+              "price": 149
+            }
+          ]
+        },
+        {
+          "title": "Chocolate Ice Cream",
+          "description": "Delicious chocolate ice cream",
+          "price": 79,
+          "image": "",
+          "variations": [
+            {
+              "name": "Single Serve",
+              "price": 79
+            },
+            {
+              "name": "Double Serve",
+              "price": 149
+            }
+          ]
+        },
+        {
+          "title": "Mango Ice Cream",
+          "description": "Delicious mango ice cream",
+          "price": 79,
+          "image": "",
+          "variations": [
+            {
+              "name": "Single Serve",
+              "price": 79
+            },
+            {
+              "name": "Double Serve",
+              "price": 149
+            }
+          ]
+        },
+        {
+          "title": "Strawberry Ice Cream",
+          "description": "Delicious strawberry ice cream",
+          "price": 79,
+          "image": "",
+          "variations": [
+            {
+              "name": "Single Serve",
+              "price": 79
+            },
+            {
+              "name": "Double Serve",
+              "price": 149
+            }
+          ]
+        },
+        {
+          "title": "Butterscotch Ice Cream",
+          "description": "Delicious butterscotch ice cream",
+          "price": 79,
+          "image": "",
+          "variations": [
+            {
+              "name": "Single Serve",
+              "price": 79
+            },
+            {
+              "name": "Double Serve",
+              "price": 149
+            }
+          ]
+        },
+        {
+          "title": "Special Ice Cream",
+          "description": "Delicious special ice cream",
+          "price": 79,
+          "image": "",
+          "variations": [
+            {
+              "name": "Single Serve",
+              "price": 79
+            },
+            {
+              "name": "Double Serve",
+              "price": 149
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hot Coffee",
+      "description": "",
+      "items": [
+        {
+          "title": "Espresso",
+          "description": "Delicious espresso",
+          "price": 89,
+          "image": ""
+        },
+        {
+          "title": "Doppio",
+          "description": "Delicious doppio",
+          "price": 99,
+          "image": ""
+        },
+        {
+          "title": "Americano",
+          "description": "Delicious americano",
+          "price": 109,
+          "image": ""
+        },
+        {
+          "title": "Cappuccino",
+          "description": "Delicious cappuccino",
+          "price": 139,
+          "image": ""
+        },
+        {
+          "title": "Flat White",
+          "description": "Delicious flat white",
+          "price": 149,
+          "image": ""
+        },
+        {
+          "title": "Latte",
+          "description": "Delicious latte",
+          "price": 159,
+          "image": ""
+        },
+        {
+          "title": "Mocha",
+          "description": "Delicious mocha",
+          "price": 189,
+          "image": ""
+        },
+        {
+          "title": "Spanish Latte",
+          "description": "Delicious spanish latte",
+          "price": 189,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Cold Coffee",
+      "description": "",
+      "items": [
+        {
+          "title": "Vietnamese Latte",
+          "description": "Delicious vietnamese latte",
+          "price": 189,
+          "image": ""
+        },
+        {
+          "title": "Affogato",
+          "description": "Delicious affogato",
+          "price": 169,
+          "image": ""
+        },
+        {
+          "title": "Café Frappe",
+          "description": "Delicious café frappe",
+          "price": 189,
+          "image": ""
+        },
+        {
+          "title": "Choco Frappe",
+          "description": "Delicious choco frappe",
+          "price": 189,
+          "image": ""
+        },
+        {
+          "title": "Oreo Frappe",
+          "description": "Delicious oreo frappe",
+          "price": 219,
+          "image": ""
+        },
+        {
+          "title": "Brownie Frappe",
+          "description": "Delicious brownie frappe",
+          "price": 239,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Iced Cold Coffee",
+      "description": "",
+      "items": [
+        {
+          "title": "Iced Cold Coffee",
+          "description": "Delicious iced cold coffee",
+          "price": 149,
+          "image": ""
+        },
+        {
+          "title": "Vanilla Cold Coffee",
+          "description": "Delicious vanilla cold coffee",
+          "price": 149,
+          "image": ""
+        },
+        {
+          "title": "Chocolate Cold Coffee",
+          "description": "Delicious chocolate cold coffee",
+          "price": 149,
+          "image": ""
+        },
+        {
+          "title": "Cinnamon Cold Coffee",
+          "description": "Delicious cinnamon cold coffee",
+          "price": 149,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Milkshakes",
+      "description": "",
+      "items": [
+        {
+          "title": "Mango Milkshake",
+          "description": "Delicious mango milkshake",
+          "price": 149,
+          "image": ""
+        },
+        {
+          "title": "Chocolate Milkshake",
+          "description": "Delicious chocolate milkshake",
+          "price": 149,
+          "image": ""
+        },
+        {
+          "title": "Strawberry Milkshake",
+          "description": "Delicious strawberry milkshake",
+          "price": 149,
+          "image": ""
+        },
+        {
+          "title": "Blueberry Milkshake",
+          "description": "Delicious blueberry milkshake",
+          "price": 149,
+          "image": ""
+        },
+        {
+          "title": "Oreo Milkshake",
+          "description": "Delicious oreo milkshake",
+          "price": 149,
+          "image": ""
+        },
+        {
+          "title": "Brownie Blast Milkshake",
+          "description": "Delicious brownie blast milkshake",
+          "price": 149,
+          "image": ""
+        },
+        {
+          "title": "Blackcurrant Milkshake",
+          "description": "Delicious blackcurrant milkshake",
+          "price": 149,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Teas",
+      "description": "",
+      "items": [
+        {
+          "title": "Masala Tea",
+          "description": "Delicious masala tea",
+          "price": 39,
+          "image": ""
+        },
+        {
+          "title": "Hot Lemon Tea",
+          "description": "Delicious hot lemon tea",
+          "price": 39,
+          "image": ""
+        },
+        {
+          "title": "Hot Black Tea",
+          "description": "Delicious hot black tea",
+          "price": 39,
+          "image": ""
+        },
+        {
+          "title": "Honey Ginger tea",
+          "description": "Delicious honey ginger tea",
+          "price": 49,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Iced Teas",
+      "description": "",
+      "items": [
+        {
+          "title": "Lemon Iced Tea",
+          "description": "Delicious lemon iced tea",
+          "price": 119,
+          "image": ""
+        },
+        {
+          "title": "Peach Iced Tea",
+          "description": "Delicious peach iced tea",
+          "price": 119,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Non Coffee",
+      "description": "",
+      "items": [
+        {
+          "title": "Hot Chocolate with Marshmallow",
+          "description": "Delicious hot chocolate with marshmallow",
+          "price": 200,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Mojito",
+      "description": "",
+      "items": [
+        {
+          "title": "Virgin Mojito",
+          "description": "Delicious virgin mojito",
+          "price": 119,
+          "image": ""
+        },
+        {
+          "title": "Fresh Lime Soda\n(Sweet / Salty)",
+          "description": "Delicious fresh lime soda\n(sweet / salty)",
+          "price": 119,
+          "image": ""
+        },
+        {
+          "title": "Masala Coke",
+          "description": "Delicious masala coke",
+          "price": 119,
+          "image": ""
+        },
+        {
+          "title": "Mango Mojito",
+          "description": "Delicious mango mojito",
+          "price": 119,
+          "image": ""
+        },
+        {
+          "title": "Strawberry Mojito",
+          "description": "Delicious strawberry mojito",
+          "price": 119,
+          "image": ""
+        },
+        {
+          "title": "Green Apple Mojito",
+          "description": "Delicious green apple mojito",
+          "price": 119,
+          "image": ""
+        },
+        {
+          "title": "Jaljeera Mojito",
+          "description": "Delicious jaljeera mojito",
+          "price": 119,
+          "image": ""
+        },
+        {
+          "title": "Fire n Ice Mojito",
+          "description": "Delicious fire n ice mojito",
+          "price": 119,
+          "image": ""
+        },
+        {
+          "title": "Kala Khatta Mojito",
+          "description": "Delicious kala khatta mojito",
+          "price": 119,
+          "image": ""
+        },
+        {
+          "title": "Cucumber Mojito",
+          "description": "Delicious cucumber mojito",
+          "price": 119,
+          "image": ""
+        },
+        {
+          "title": "Ginger Ale Mojito",
+          "description": "Delicious ginger ale mojito",
+          "price": 119,
+          "image": ""
+        },
+        {
+          "title": "Blueberry Mojito",
+          "description": "Delicious blueberry mojito",
+          "price": 119,
+          "image": ""
+        },
+        {
+          "title": "Aam Panna Mojito",
+          "description": "Delicious aam panna mojito",
+          "price": 119,
+          "image": ""
+        },
+        {
+          "title": "Watermelon Mint Mojito",
+          "description": "Delicious watermelon mint mojito",
+          "price": 119,
+          "image": ""
+        },
+        {
+          "title": "Blue Curacao Mojito",
+          "description": "Delicious blue curacao mojito",
+          "price": 119,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Juice",
+      "description": "",
+      "items": [
+        {
+          "title": "Watermelon Juice",
+          "description": "Delicious watermelon juice",
+          "price": 139,
+          "image": ""
+        },
+        {
+          "title": "Sweetlime Juice",
+          "description": "Delicious sweetlime juice",
+          "price": 139,
+          "image": ""
+        },
+        {
+          "title": "Pineapple Juice",
+          "description": "Delicious pineapple juice",
+          "price": 139,
+          "image": ""
+        },
+        {
+          "title": "Orange Juice",
+          "description": "Delicious orange juice",
+          "price": 139,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Wellness Juices",
+      "description": "",
+      "items": [
+        {
+          "title": "ABC Juice",
+          "description": "Delicious abc juice",
+          "price": 159,
+          "image": ""
+        },
+        {
+          "title": "Tropical Immunity",
+          "description": "Delicious tropical immunity",
+          "price": 159,
+          "image": ""
+        },
+        {
+          "title": "Golden Root",
+          "description": "Delicious golden root",
+          "price": 159,
+          "image": ""
+        },
+        {
+          "title": "Red Reboot",
+          "description": "Delicious red reboot",
+          "price": 159,
+          "image": ""
+        },
+        {
+          "title": "Minty Morning",
+          "description": "Delicious minty morning",
+          "price": 159,
+          "image": ""
+        },
+        {
+          "title": "Gut Reset",
+          "description": "Delicious gut reset",
+          "price": 159,
+          "image": ""
+        },
+        {
+          "title": "Spiced Citrus",
+          "description": "Delicious spiced citrus",
+          "price": 159,
+          "image": ""
+        }
+      ]
+    },
+    {
+      "name": "Extra Syrup Shot",
+      "description": "",
+      "items": [
+        {
+          "title": "Vanilla Syrup",
+          "description": "Delicious vanilla syrup",
+          "price": 25,
+          "image": ""
+        },
+        {
+          "title": "Irish Cream Syrup",
+          "description": "Delicious irish cream syrup",
+          "price": 25,
+          "image": ""
+        },
+        {
+          "title": "Caramel Syrup",
+          "description": "Delicious caramel syrup",
+          "price": 25,
+          "image": ""
+        },
+        {
+          "title": "Hazelnut Syrup",
+          "description": "Delicious hazelnut syrup",
+          "price": 25,
+          "image": ""
+        }
+      ]
+    }
+  ]
+}
