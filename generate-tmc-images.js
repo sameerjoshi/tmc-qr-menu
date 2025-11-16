@@ -2,10 +2,10 @@ const fs = require('fs').promises;
 const path = require('path');
 const https = require('https');
 
-// OpenRouter configuration
-const OPENROUTER_API_KEY = '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';
-const OPENROUTER_API_URL = 'https://openrouter.ai/api/v1/chat/completions';
-const MODEL = 'google/gemini-2.5-flash-image-preview'; // Image generation model
+// Gemini 2.5 Flash Image (Nano Banana) API configuration
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY || 'AIzaSyCb0i8SWhCQwff8MBmiJH3fUbwtdRikXTM';
+const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent';
+const IMAGE_ASPECT_RATIO = '3:2';  // 3:2 landscape aspect ratio (produces ~1536x1024)
 
 // Load The Misty Cup menu
 const menuPath = path.join(__dirname, 'data/misty-cup.json');
@@ -205,17 +205,18 @@ function makeRequest(url, options, postData, maxRedirects = 5) {
         return;
       }
 
-      let data = '';
+      const chunks = [];
 
       res.on('data', (chunk) => {
-        data += chunk;
+        chunks.push(chunk);
       });
 
       res.on('end', () => {
+        const buffer = Buffer.concat(chunks);
         if (res.statusCode >= 200 && res.statusCode < 300) {
-          resolve({ statusCode: res.statusCode, data: data });
+          resolve({ statusCode: res.statusCode, data: buffer });
         } else {
-          reject(new Error(`HTTP ${res.statusCode}: ${data}`));
+          reject(new Error(`HTTP ${res.statusCode}: ${buffer.toString()}`));
         }
       });
     });
@@ -230,109 +231,130 @@ function makeRequest(url, options, postData, maxRedirects = 5) {
   });
 }
 
-// Generate image using Gemini Flash Image Preview
-async function generateImage(prompt, itemName, maxRetries = 3) {
-  console.log(`🎨 Generating image for: ${itemName}...`);
+// Search keywords mapping for better Unsplash results
+const searchKeywords = {
+  'English Breakfast': 'english breakfast plate eggs toast',
+  'Egg and Toast': 'poached eggs toast breakfast',
+  'Pomodoro Pasta': 'pasta tomato sauce basil',
+  'Alfredo Pasta': 'fettuccine alfredo creamy pasta',
+  'Rosatella Pasta': 'pink pasta rose sauce',
+  'Aglio e Olio Spaghetti': 'spaghetti aglio olio garlic',
+  'Caesar Salad': 'caesar salad romaine parmesan',
+  'Mediterranean Salad': 'mediterranean salad olives feta',
+  'Watermelon Feta Salad': 'watermelon feta salad mint',
+  'Fruit Bowl with Yogurt & Muesli': 'fruit bowl yogurt granola',
+  'Vanilla Ice Cream': 'vanilla ice cream scoop',
+  'Chocolate Ice Cream': 'chocolate ice cream scoop',
+  'Mango Ice Cream': 'mango ice cream scoop',
+  'Strawberry Ice Cream': 'strawberry ice cream scoop',
+  'Butterscotch Ice Cream': 'butterscotch ice cream scoop',
+  'Special Ice Cream': 'gourmet ice cream dessert',
+  'Espresso': 'espresso cup coffee',
+  'Doppio': 'double espresso shot',
+  'Americano': 'americano coffee cup',
+  'Cappuccino': 'cappuccino foam latte art',
+  'Flat White': 'flat white coffee milk',
+  'Latte': 'latte coffee milk foam',
+  'Mocha': 'mocha chocolate coffee',
+  'Spanish Latte': 'spanish latte condensed milk',
+  'Vietnamese Latte': 'vietnamese coffee condensed milk',
+  'Affogato': 'affogato ice cream espresso'
+};
 
-  for (let attempt = 1; attempt <= maxRetries; attempt++) {
-    try {
-      const requestBody = JSON.stringify({
-        model: MODEL,
-        messages: [
-          {
-            role: 'user',
-            content: prompt
-          }
-        ],
-        modalities: ['image', 'text'], // Required for image generation
-        image_config: {
-          aspect_ratio: '3:2' // Landscape format like Crispy Days (600x400)
-        },
-        max_tokens: 2000,
-        temperature: 0.8
-      });
+// Generate image using Gemini 2.5 Flash Image (Nano Banana) API
+async function generateImage(prompt, itemName, category) {
+  console.log(`🎨 Generating with Gemini Nano Banana: ${itemName}...`);
 
-      const options = {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
-          'Content-Type': 'application/json',
-          'Content-Length': Buffer.byteLength(requestBody),
-          'HTTP-Referer': 'http://localhost:4445',
-          'X-Title': 'TMC Menu Image Generator'
-        }
-      };
-
-      const { data } = await makeRequest(OPENROUTER_API_URL, options, requestBody);
-      const response = JSON.parse(data);
-
-      // Extract image data from response
-      const assistantMessage = response.choices?.[0]?.message;
-      const images = assistantMessage?.images;
-
-      if (images && images.length > 0) {
-        const imageObject = images[0];
-
-        // Per OpenRouter docs: images[0].image_url.url contains base64 data URI
-        let imageData = null;
-        if (imageObject?.image_url?.url) {
-          imageData = imageObject.image_url.url;
-        } else if (imageObject?.data?.image_url?.url) {
-          imageData = imageObject.data.image_url.url;
-        } else if (imageObject?.url) {
-          imageData = imageObject.url;
-        } else if (typeof imageObject === 'string') {
-          imageData = imageObject;
-        }
-
-        if (imageData) {
-          console.log(`✓ Generated image for ${itemName}`);
-          return { data: imageData, type: 'ai-generated' };
+  try {
+    // Build Gemini API request
+    const requestBody = JSON.stringify({
+      contents: [{
+        parts: [{
+          text: prompt
+        }]
+      }],
+      generationConfig: {
+        responseModalities: ["Image"],
+        imageConfig: {
+          aspectRatio: IMAGE_ASPECT_RATIO
         }
       }
+    });
 
-      // If no image in response, use placeholder
-      console.log(`⚠️  No image in response for ${itemName}, using placeholder`);
-      const seed = `${itemName}`.toLowerCase().replace(/[^a-z0-9]/g, '');
-      return {
-        data: `https://picsum.photos/seed/tmc-${seed}/1024/1024`,
-        type: 'placeholder'
-      };
-
-    } catch (error) {
-      console.log(`Attempt ${attempt}/${maxRetries} failed: ${error.message}`);
-
-      if (attempt === maxRetries) {
-        console.log(`❌ Failed after ${maxRetries} attempts, using placeholder`);
-        const seed = `${itemName}`.toLowerCase().replace(/[^a-z0-9]/g, '');
-        return {
-          data: `https://picsum.photos/seed/tmc-${seed}/1024/1024`,
-          type: 'fallback-placeholder'
-        };
+    const url = new URL(GEMINI_API_URL);
+    const options = {
+      method: 'POST',
+      hostname: url.hostname,
+      path: url.pathname,
+      headers: {
+        'x-goog-api-key': GEMINI_API_KEY,
+        'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(requestBody)
       }
+    };
 
-      // Exponential backoff
-      await new Promise(resolve => setTimeout(resolve, Math.pow(2, attempt) * 1000));
+    const { data } = await makeRequest(url, options, requestBody);
+    const response = JSON.parse(data.toString());
+
+    // Extract image from response
+    if (response.candidates && response.candidates[0]) {
+      const parts = response.candidates[0].content.parts;
+
+      for (const part of parts) {
+        if (part.inlineData) {
+          const imageData = part.inlineData.data;
+          const mimeType = part.inlineData.mimeType;
+
+          console.log(`✓ Generated image for ${itemName} (${mimeType})`);
+
+          // Convert base64 to buffer
+          const imageBuffer = Buffer.from(imageData, 'base64');
+
+          return {
+            data: imageBuffer,
+            type: 'gemini-binary',
+            mimeType: mimeType
+          };
+        }
+      }
     }
+
+    throw new Error('No image data in Gemini response');
+
+  } catch (error) {
+    // Handle quota errors specifically
+    if (error.message.includes('429') || error.message.includes('quota')) {
+      console.log(`⚠️  Quota exceeded for ${itemName}`);
+      console.log(`   Gemini API quota limit reached. Using placeholder.`);
+    } else {
+      console.log(`⚠️  Error generating image for ${itemName}: ${error.message}`);
+    }
+
+    // Fallback to placeholder with 3:2 aspect ratio
+    const seed = `${itemName}`.toLowerCase().replace(/[^a-z0-9]/g, '');
+    return {
+      data: `https://picsum.photos/seed/tmc-${seed}/1536/1024`,
+      type: 'fallback-placeholder'
+    };
   }
 }
 
-// Download image from URL or convert base64 to file
-async function saveImage(imageData, itemName) {
+// Save image (either binary data or download from URL)
+async function saveImage(imageData, itemName, type) {
   const fileName = `${itemName.toLowerCase().replace(/[^a-z0-9]/g, '-')}.jpeg`;
   const filePath = path.join(outputDir, fileName);
 
   try {
-    let buffer;
-
-    // Check if it's base64 data URL
-    if (imageData.startsWith('data:image/')) {
-      console.log(`📝 Saving AI-generated base64 image: ${fileName}`);
-      const [header, base64Data] = imageData.split(',');
-      buffer = Buffer.from(base64Data, 'base64');
+    if (type === 'gemini-binary' || type === 'sdxl-binary') {
+      // Data is already binary from Gemini or Hugging Face
+      const source = type === 'gemini-binary' ? 'Gemini' : 'SDXL';
+      console.log(`💾 Saving ${source} image: ${fileName}`);
+      await fs.writeFile(filePath, imageData);
+      console.log(`✓ Saved: ${fileName} (${Math.round(imageData.length / 1024)}KB)`);
     } else {
-      // Download from URL
-      console.log(`📥 Downloading image: ${fileName}`);
+      // Download from URL (placeholder)
+      const downloadType = 'placeholder';
+      console.log(`📥 Downloading ${downloadType} image: ${fileName}`);
       const url = new URL(imageData);
 
       const options = {
@@ -343,11 +365,9 @@ async function saveImage(imageData, itemName) {
       };
 
       const { data } = await makeRequest(url, options);
-      buffer = Buffer.from(data, 'binary');
+      await fs.writeFile(filePath, data);
+      console.log(`✓ Saved: ${fileName} (${Math.round(data.length / 1024)}KB)`);
     }
-
-    await fs.writeFile(filePath, buffer);
-    console.log(`✓ Saved: ${fileName} (${Math.round(buffer.length / 1024)}KB)`);
 
     return fileName;
   } catch (error) {
@@ -379,10 +399,10 @@ async function generateAllImages() {
 
       for (const item of category.items) {
         const prompt = createFoodImagePrompt(item.title, category.name, item.description);
-        const imageResult = await generateImage(prompt, item.title);
+        const imageResult = await generateImage(prompt, item.title, category.name);
 
         if (imageResult) {
-          const fileName = await saveImage(imageResult.data, item.title);
+          const fileName = await saveImage(imageResult.data, item.title, imageResult.type);
 
           if (fileName) {
             imageMapping[fileName] = {
@@ -398,8 +418,8 @@ async function generateAllImages() {
           errorCount++;
         }
 
-        // Rate limiting: wait 2 seconds between requests
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        // Rate limiting: wait 5 seconds between requests (Gemini free tier: conservative)
+        await new Promise(resolve => setTimeout(resolve, 5000));
       }
     }
 
