@@ -9,18 +9,18 @@
         {
           "title": "English Breakfast",
           "description": "Artisan morning feast: fluffy eggs, sautéed mushrooms, grilled tomatoes, toasted bread bliss",
-          "price": 399,
+          "price": 359,
           "image": "/images/tmc-item-images/english-breakfast.jpeg",
           "foodType": "Veg",
           "variations": [
             {
               "name": "Veg",
-              "price": 399,
+              "price": 359,
               "foodType": "Veg"
             },
             {
               "name": "Chicken",
-              "price": 499,
+              "price": 399,
               "foodType": "Non Veg"
             }
           ]
@@ -30,6 +30,13 @@
           "description": "Simple elegance: perfectly cooked eggs on warm, buttery artisan toast",
           "price": 249,
           "image": "/images/tmc-item-images/egg-and-toast.jpeg",
+          "foodType": "Egg"
+        },
+        {
+          "title": "Baked Beans on Toast",
+          "description": "Simple elegance: perfectly cooked eggs on warm, buttery artisan toast",
+          "price": 199,
+          "image": "/images/tmc-item-images/baked-beans.png",
           "foodType": "Egg"
         }
       ]
