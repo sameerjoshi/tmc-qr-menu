@@ -3,7 +3,7 @@
   "brandId": "misty-cup",
   "categories": [
     {
-      "name": "Breakfast (8 AM to 11 PM)",
+      "name": "Breakfast (7:30 AM to 11 PM)",
       "description": "",
       "items": [
         {
@@ -12,6 +12,30 @@
           "price": 359,
           "image": "/images/tmc-item-images/english-breakfast.jpeg",
           "foodType": "Veg",
+          "details": {
+            "VEG": [
+              "Paneer Bhurji",
+              "Potato Cutlet",
+              "Potato Wedges",
+              "Baked Beans",
+              "2 Toast",
+              "Grilled Tomato",
+              "Sauteed Veggies with Mushroom",
+              "Fruits (Watermelon OR Papaya)",
+              "Choice of Tea"
+            ],
+            "CHICKEN": [
+              "Choice of Egg (Sunnyside up, scrambled, masala omelette, cheese omelette)",
+              "1pc Chicken Sausage",
+              "Potato Wedges",
+              "Baked Beans",
+              "2 Toast",
+              "Grilled Tomato",
+              "Sauteed Veggies with Mushroom",
+              "Fruits (Watermelon OR Papaya)",
+              "Choice of Tea"
+            ]
+          },
           "variations": [
             {
               "name": "Veg",
@@ -30,14 +54,29 @@
           "description": "Simple elegance: perfectly cooked eggs on warm, buttery artisan toast",
           "price": 249,
           "image": "/images/tmc-item-images/egg-and-toast.jpeg",
-          "foodType": "Egg"
+          "foodType": "Egg",
+          "details": {
+            "INCLUDES": [
+              "Choice of Egg (Sunnyside up, scrambled, masala omelette, cheese omelette)",
+              "2 Toast",
+              "Baked Beans",
+              "Choice of tea"
+            ]
+          }
         },
         {
           "title": "Baked Beans on Toast",
           "description": "Simple elegance: perfectly cooked eggs on warm, buttery artisan toast",
           "price": 199,
           "image": "/images/tmc-item-images/baked-beans.png",
-          "foodType": "Egg"
+          "foodType": "Egg",
+          "details": {
+            "INCLUDES": [
+              "Baked Beans",
+              "2 Toast",
+              "Choice of tea"
+            ]
+          }
         }
       ]
     },

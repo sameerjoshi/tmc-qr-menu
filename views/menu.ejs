@@ -255,7 +255,15 @@
                     <h5 class="menu-item-title mb-2"><%= item.title %></h5>
                   <% } %>
                   <% if (item.description) { %>
-                    <p class="menu-item-description text-muted mb-3"><%= item.description %></p>
+                    <p class="menu-item-description text-muted mb-3">
+                      <%= item.description %>
+                      <% if (item.details) { %>
+                        <span class="view-details-link"
+                              data-item-title="<%= item.title %>"
+                              data-item-details='<%- JSON.stringify(item.details) %>'
+                              style="color: #0d6efd; cursor: pointer; font-weight: 500;">...more</span>
+                      <% } %>
+                    </p>
                   <% } %>
 
                   <% if (item.variations) { %>
@@ -361,6 +369,24 @@
         </div>
         <div class="modal-footer border-top">
           <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">I Understand</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Item Details Modal -->
+  <div class="modal fade" id="itemDetailsModal" tabindex="-1" aria-labelledby="itemDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title fw-bold" id="itemDetailsModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="itemDetailsBody">
+          <!-- Content will be populated by JavaScript -->
+        </div>
+        <div class="modal-footer border-top">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -522,6 +548,41 @@
           sessionStorage.setItem('hasSeenDisclaimer', 'true');
         });
       }
+    });
+
+    // Item Details Modal Functionality
+    const itemDetailsModal = new bootstrap.Modal(document.getElementById('itemDetailsModal'));
+    const itemDetailsModalLabel = document.getElementById('itemDetailsModalLabel');
+    const itemDetailsBody = document.getElementById('itemDetailsBody');
+
+    document.querySelectorAll('.view-details-link').forEach(link => {
+      link.addEventListener('click', () => {
+        const itemTitle = link.getAttribute('data-item-title');
+        const itemDetails = JSON.parse(link.getAttribute('data-item-details'));
+
+        // Set modal title
+        itemDetailsModalLabel.textContent = itemTitle;
+
+        // Build modal content
+        let content = '';
+        for (const [variant, items] of Object.entries(itemDetails)) {
+          content += `
+            <div class="mb-4">
+              <h6 class="fw-bold text-primary mb-3">${variant}</h6>
+              <ol class="list-group list-group-numbered">
+                ${items.map(item => `
+                  <li class="list-group-item border-0 py-2 px-0">
+                    ${item}
+                  </li>
+                `).join('')}
+              </ol>
+            </div>
+          `;
+        }
+
+        itemDetailsBody.innerHTML = content;
+        itemDetailsModal.show();
+      });
     });
   </script>
 </body>
