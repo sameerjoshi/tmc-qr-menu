@@ -10,7 +10,7 @@
           "title": "Hot & Crispy Chicken 1pcs",
           "description": "Golden-fried perfection: juicy, tender chicken with a shatteringly crispy coating",
           "price": 89,
-          "image": "",
+          "image": "/images/crispy-days-item-images/hot-and-crispy-chicken-2pcs.jpeg",
           "foodType": "Non Veg",
           "variations": [
             {
@@ -29,7 +29,7 @@
           "title": "Hot & Crispy Chicken 2pcs",
           "description": "Double the crunch: two pieces of hot, golden-fried chicken that snap with every bite",
           "price": 179,
-          "image": "/images/crispy-days-item-images/hot-and-crispy-chicken-2pcs.jpeg",
+          "image": "/images/crispy-days-item-images/hot-and-crispy-chicken-1pcs.jpeg",
           "foodType": "Non Veg",
           "variations": [
             {
@@ -48,7 +48,7 @@
           "title": "Hot & Crispy Chicken 4pcs",
           "description": "Our signature four-piece feast: impossibly crispy outside, succulent inside, pure indulgence",
           "price": 339,
-          "image": "/images/crispy-days-item-images/hot-and-crispy-chicken-4pcs.jpeg",
+          "image": "/images/crispy-days-item-images/hot-and-crispy-chicken-4pcs-2.jpeg",
           "foodType": "Non Veg",
           "variations": [
             {
@@ -64,29 +64,10 @@
           ]
         },
         {
-          "title": "Hot & Crispy Chicken",
-          "description": "The ultimate crispy chicken experience: whole pieces of golden, crunchy fried chicken goodness",
-          "price": 649,
-          "image": "/images/crispy-days-item-images/hot-and-crispy-chicken.jpeg",
-          "foodType": "Non Veg",
-          "variations": [
-            {
-              "name": "REGULAR",
-              "price": 649,
-              "foodType": "Non Veg"
-            },
-            {
-              "name": "KOREAN SPICED",
-              "price": 679,
-              "foodType": "Non Veg"
-            }
-          ]
-        },
-        {
           "title": "Crispy Chicken Wings 3Pcs",
           "description": "Sticky-finger wings: three pieces of crispy-edged, tender chicken wings ready for sauce",
           "price": 119,
-          "image": "",
+          "image": "/images/crispy-days-item-images/hot-and-crispy-chicken-4pcs.jpeg",
           "foodType": "Non Veg",
           "variations": [
             {
@@ -105,7 +86,7 @@
           "title": "Crispy Chicken Wings 6Pcs",
           "description": "Wing heaven: six pieces of addictively crispy, meaty chicken wings for maximum satisfaction",
           "price": 219,
-          "image": "/images/crispy-days-item-images/crispy-chicken-wings-6pcs.jpeg",
+          "image": "/images/crispy-days-item-images/6-pc-wings.jpeg",
           "foodType": "Non Veg",
           "variations": [
             {
@@ -187,63 +168,63 @@
           "title": "Crispy Veg Burger",
           "description": "Stacked high: crispy veggie patty, fresh toppings, soft bun, pure comfort in one bite",
           "price": 109,
-          "image": "",
+          "image": "/images/crispy-days-item-images/crispy-veg-burger.png",
           "foodType": "Veg"
         },
         {
           "title": "Spicy Veg Burger",
           "description": "Heat-seeking burger: crispy veg patty loaded with fiery spices and fresh crunchy veggies",
           "price": 119,
-          "image": "",
+          "image": "/images/crispy-days-item-images/spicy-veg-burger.png",
           "foodType": "Veg"
         },
         {
           "title": "Tandoori Veg Burger",
           "description": "Aromatic tandoori-spiced veggie patty with charred flavors and zesty toppings",
           "price": 139,
-          "image": "",
+          "image": "/images/crispy-days-item-images/tandoori-veg-burger.png",
           "foodType": "Veg"
         },
         {
           "title": "Mint Fusion Veg Burger",
           "description": "Cooling mint meets crispy veg in this refreshingly bold, flavor-packed burger",
           "price": 139,
-          "image": "",
+          "image": "/images/crispy-days-item-images/mint-fusion-veg-burger.png",
           "foodType": "Veg"
         },
         {
           "title": "Crispy Peri Peri Paneer Burger",
           "description": "Fiery peri peri meets creamy paneer: crispy, smoky, spicy, utterly addictive",
           "price": 149,
-          "image": "",
+          "image": "/images/crispy-days-item-images/crispy-paneer-peri-peri-burger.png",
           "foodType": "Veg"
         },
         {
           "title": "Crispy Chicken Burger",
           "description": "Juicy chicken patty in a fluffy bun, stacked with fresh toppings and pure satisfaction",
           "price": 149,
-          "image": "",
+          "image": "/images/crispy-days-item-images/crispy-chicken-burger.png",
           "foodType": "Non Veg"
         },
         {
           "title": "A Peri Peri Crispy Chicken Burger",
           "description": "Zesty peri peri kick: crispy chicken, spicy mayo, soft bun, total flavor explosion",
           "price": 159,
-          "image": "",
+          "image": "/images/crispy-days-item-images/crispy-chicken-peri-peri-burger.png",
           "foodType": "Non Veg"
         },
         {
           "title": "Mint Fusion Crispy Chicken Burger",
           "description": "Cool, refreshing mint sauce meets hot crispy chicken in unexpected harmony",
           "price": 159,
-          "image": "",
+          "image": "/images/crispy-days-item-images/mint-fusion-chicken-burger.png",
           "foodType": "Non Veg"
         },
         {
           "title": "Tandoori Crispy Chicken Burger",
           "description": "Smoky tandoori-spiced chicken patty: aromatic, juicy, unforgettable burger bliss",
           "price": 159,
-          "image": "",
+          "image": "/images/crispy-days-item-images/tandoori-crispy-chicken-burger.png",
           "foodType": "Non Veg"
         }
       ]
@@ -256,21 +237,21 @@
           "title": "Margherita Pizza",
           "description": "Classic simplicity: melted mozzarella, fresh basil, tangy tomato sauce on crispy crust",
           "price": 129,
-          "image": "",
+          "image": "/images/crispy-days-item-images/double-cheese-pizza.jpeg",
           "foodType": "Veg"
         },
         {
           "title": "Tomato Onion Pizza",
           "description": "Rustic and satisfying: caramelized onions, ripe tomatoes, gooey cheese on thin crust",
           "price": 139,
-          "image": "",
+          "image": "/images/crispy-days-item-images/o-onion-capsicum-pizza.jpeg",
           "foodType": "Veg"
         },
         {
           "title": "O Onion Capsicum Pizza",
           "description": "Garden-fresh: sweet onions, crunchy capsicums, stretchy cheese, crispy pizza magic",
           "price": 139,
-          "image": "/images/crispy-days-item-images/o-onion-capsicum-pizza.jpeg",
+          "image": "/images/crispy-days-item-images/onion-capsicum-pizza.jpeg",
           "foodType": "Veg"
         },
         {
@@ -754,7 +735,7 @@
           "title": "Combo 499",
           "description": "The feast combo: packed with multiple items for sharing, maximum flavor, best value",
           "price": 499,
-          "image": "",
+          "image": "/images/crispy-days-item-images/hot-and-crispy-chicken.jpeg",
           "foodType": "Other"
         }
       ]
