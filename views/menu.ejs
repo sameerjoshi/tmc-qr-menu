@@ -289,12 +289,12 @@
                             </svg>
                             <span class="variation-name"><%= variation.name %></span>
                           </div>
-                          <span class="variation-price">₹<%= variation.price %></span>
+                          <span class="variation-price"><%= variation.price === 0 ? 'Coming Soon' : '₹' + variation.price %></span>
                         </div>
                       <% }); %>
                     </div>
                   <% } else { %>
-                    <div class="menu-item-price-single">₹<%= item.price %></div>
+                    <div class="menu-item-price-single"><%= item.price === 0 ? 'Coming Soon' : '₹' + item.price %></div>
                   <% } %>
                 </div>
               </div>

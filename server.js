@@ -46,6 +46,10 @@ app.get("/events/:eventType", (req, res) => {
   res.render(`events/${eventType}`);
 });
 
+app.get("/work-from-cafe", (req, res) => {
+  res.render("work-from-cafe");
+});
+
 app.use((req, res) => {
   res.status(404).render("404", { message: "Page not found" });
 });

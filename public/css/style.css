@@ -628,7 +628,7 @@ body[data-brand="misty-cup"] .menu-item-price-single {
   );
 }
 
-.birthday-bg:hover {
+.event-card.birthday-bg:hover {
   background: linear-gradient(
     135deg,
     rgba(255, 107, 53, 0.1) 0%,
@@ -644,7 +644,7 @@ body[data-brand="misty-cup"] .menu-item-price-single {
   );
 }
 
-.kitty-bg:hover {
+.event-card.kitty-bg:hover {
   background: linear-gradient(
     135deg,
     rgba(236, 28, 36, 0.1) 0%,
@@ -660,11 +660,39 @@ body[data-brand="misty-cup"] .menu-item-price-single {
   );
 }
 
-.social-bg:hover {
+.event-card.social-bg:hover {
   background: linear-gradient(
     135deg,
     rgba(111, 78, 55, 0.1) 0%,
     rgba(139, 111, 71, 0.15) 100%
+  );
+}
+
+/* Work from Cafe styles */
+.work-cafe-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.work-cafe-section .single-card {
+  max-width: 480px;
+  width: 100%;
+}
+
+.work-cafe-bg {
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.05) 0%,
+    rgba(99, 102, 241, 0.1) 100%
+  );
+}
+
+.event-card.work-cafe-bg:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.1) 0%,
+    rgba(99, 102, 241, 0.15) 100%
   );
 }
 
