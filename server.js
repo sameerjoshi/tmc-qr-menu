@@ -35,6 +35,17 @@ app.get("/menu/:brand", async (req, res) => {
   }
 });
 
+app.get("/events/:eventType", (req, res) => {
+  const eventType = req.params.eventType;
+  const validEvents = ["birthday-party", "kitty-party", "social-gatherings"];
+
+  if (!validEvents.includes(eventType)) {
+    return res.status(404).render("404", { message: "Event not found" });
+  }
+
+  res.render(`events/${eventType}`);
+});
+
 app.use((req, res) => {
   res.status(404).render("404", { message: "Page not found" });
 });

@@ -3,9 +3,38 @@
   "brandId": "misty-cup",
   "categories": [
     {
-      "name": "Breakfast (7:30 AM to 11 PM)",
+      "name": "Breakfast (7:30 AM to 11 AM)",
       "description": "",
       "items": [
+        {
+          "title": "Baked Beans on Toast",
+          "description": "Simple elegance: perfectly cooked eggs on warm, buttery artisan toast",
+          "price": 199,
+          "image": "/images/tmc-item-images/baked-beans.png",
+          "foodType": "Egg",
+          "details": {
+            "INCLUDES": [
+              "Baked Beans",
+              "2 Toast",
+              "Choice of tea"
+            ]
+          }
+        },
+        {
+          "title": "Egg and Toast",
+          "description": "Simple elegance: perfectly cooked eggs on warm, buttery artisan toast",
+          "price": 249,
+          "image": "/images/tmc-item-images/egg-and-toast.jpeg",
+          "foodType": "Egg",
+          "details": {
+            "INCLUDES": [
+              "Choice of Egg (Sunnyside up, scrambled, masala omelette, cheese omelette)",
+              "2 Toast",
+              "Baked Beans",
+              "Choice of tea"
+            ]
+          }
+        },
         {
           "title": "English Breakfast",
           "description": "Artisan morning feast: fluffy eggs, sautéed mushrooms, grilled tomatoes, toasted bread bliss",
@@ -48,35 +77,6 @@
               "foodType": "Non Veg"
             }
           ]
-        },
-        {
-          "title": "Egg and Toast",
-          "description": "Simple elegance: perfectly cooked eggs on warm, buttery artisan toast",
-          "price": 249,
-          "image": "/images/tmc-item-images/egg-and-toast.jpeg",
-          "foodType": "Egg",
-          "details": {
-            "INCLUDES": [
-              "Choice of Egg (Sunnyside up, scrambled, masala omelette, cheese omelette)",
-              "2 Toast",
-              "Baked Beans",
-              "Choice of tea"
-            ]
-          }
-        },
-        {
-          "title": "Baked Beans on Toast",
-          "description": "Simple elegance: perfectly cooked eggs on warm, buttery artisan toast",
-          "price": 199,
-          "image": "/images/tmc-item-images/baked-beans.png",
-          "foodType": "Egg",
-          "details": {
-            "INCLUDES": [
-              "Baked Beans",
-              "2 Toast",
-              "Choice of tea"
-            ]
-          }
         }
       ]
     },
@@ -84,6 +84,25 @@
       "name": "Pasta",
       "description": "",
       "items": [
+        {
+          "title": "Aglio e Olio Spaghetti",
+          "description": "Italian minimalism: garlic-infused olive oil coats delicate spaghetti with subtle elegance",
+          "price": 229,
+          "image": "/images/tmc-item-images/aglio-e-olio-spaghetti.jpeg",
+          "foodType": "Veg",
+          "variations": [
+            {
+              "name": "Veg",
+              "price": 229,
+              "foodType": "Veg"
+            },
+            {
+              "name": "Chicken",
+              "price": 259,
+              "foodType": "Non Veg"
+            }
+          ]
+        },
         {
           "title": "Pomodoro Pasta",
           "description": "Silky pasta coated in tangy San Marzano tomato sauce, fresh basil, herbaceous comfort",
@@ -140,25 +159,6 @@
               "foodType": "Non Veg"
             }
           ]
-        },
-        {
-          "title": "Aglio e Olio Spaghetti",
-          "description": "Italian minimalism: garlic-infused olive oil coats delicate spaghetti with subtle elegance",
-          "price": 229,
-          "image": "/images/tmc-item-images/aglio-e-olio-spaghetti.jpeg",
-          "foodType": "Veg",
-          "variations": [
-            {
-              "name": "Veg",
-              "price": 229,
-              "foodType": "Veg"
-            },
-            {
-              "name": "Chicken",
-              "price": 259,
-              "foodType": "Non Veg"
-            }
-          ]
         }
       ]
     },
@@ -166,6 +166,20 @@
       "name": "Salads",
       "description": "",
       "items": [
+        {
+          "title": "Fruit Bowl with Yogurt & Muesli",
+          "description": "Fresh seasonal fruits, creamy yogurt, crunchy muesli: wholesome, energizing breakfast",
+          "price": 159,
+          "image": "/images/tmc-item-images/fruit-bowl-with-yogurt---muesli.jpeg",
+          "foodType": "Veg"
+        },
+        {
+          "title": "Watermelon Feta Salad",
+          "description": "Sweet watermelon, tangy feta, mint: refreshing, unexpected, perfectly balanced summer salad",
+          "price": 199,
+          "image": "/images/tmc-item-images/watermelon-feta-salad.jpeg",
+          "foodType": "Veg"
+        },
         {
           "title": "Caesar Salad",
           "description": "Crisp romaine, creamy caesar dressing, parmesan shavings, croutons: classic lunch",
@@ -203,20 +217,6 @@
               "foodType": "Non Veg"
             }
           ]
-        },
-        {
-          "title": "Watermelon Feta Salad",
-          "description": "Sweet watermelon, tangy feta, mint: refreshing, unexpected, perfectly balanced summer salad",
-          "price": 199,
-          "image": "/images/tmc-item-images/watermelon-feta-salad.jpeg",
-          "foodType": "Veg"
-        },
-        {
-          "title": "Fruit Bowl with Yogurt & Muesli",
-          "description": "Fresh seasonal fruits, creamy yogurt, crunchy muesli: wholesome, energizing breakfast",
-          "price": 159,
-          "image": "/images/tmc-item-images/fruit-bowl-with-yogurt---muesli.jpeg",
-          "foodType": "Veg"
         }
       ]
     },
@@ -407,17 +407,17 @@
       "description": "",
       "items": [
         {
-          "title": "Vietnamese Latte",
-          "description": "Slow-drip richness: strong coffee, sweet condensed milk, smooth sophistication",
-          "price": 189,
-          "image": "/images/tmc-item-images/vietnamese-latte.jpeg",
-          "foodType": "Veg"
-        },
-        {
           "title": "Affogato",
           "description": "Dramatic elegance: hot espresso poured over cold vanilla ice cream",
           "price": 169,
           "image": "/images/tmc-item-images/affogato.jpeg",
+          "foodType": "Veg"
+        },
+        {
+          "title": "Vietnamese Latte",
+          "description": "Slow-drip richness: strong coffee, sweet condensed milk, smooth sophistication",
+          "price": 189,
+          "image": "/images/tmc-item-images/vietnamese-latte.jpeg",
           "foodType": "Veg"
         },
         {
@@ -480,6 +480,53 @@
           "description": "Warm spice meets cold coffee: cinnamon sweetness, aromatic refreshment",
           "price": 149,
           "image": "/images/tmc-item-images/cinnamon-cold-coffee.jpeg",
+          "foodType": "Veg"
+        }
+      ]
+    },
+    {
+      "name": "Extra Syrup Shot",
+      "description": "",
+      "items": [
+        {
+          "title": "Vanilla Syrup",
+          "description": "Sweet vanilla flavor: smooth, aromatic, classic coffee companion",
+          "price": 25,
+          "image": "/images/tmc-item-images/vanilla-syrup.jpeg",
+          "foodType": "Veg"
+        },
+        {
+          "title": "Irish Cream Syrup",
+          "description": "Rich cream, whiskey notes: luxurious, smooth, cafe indulgence",
+          "price": 25,
+          "image": "/images/tmc-item-images/irish-cream-syrup.jpeg",
+          "foodType": "Veg"
+        },
+        {
+          "title": "Caramel Syrup",
+          "description": "Sweet, buttery caramel: indulgent sweetness, coffee enhancement, cozy warmth",
+          "price": 25,
+          "image": "/images/tmc-item-images/caramel-syrup.jpeg",
+          "foodType": "Veg"
+        },
+        {
+          "title": "Hazelnut Syrup",
+          "description": "Nutty, toasted flavor: smooth, sophisticated, coffee-friendly richness",
+          "price": 25,
+          "image": "/images/tmc-item-images/hazelnut-syrup.jpeg",
+          "foodType": "Veg"
+        }
+      ]
+    },
+    {
+      "name": "Non Coffee",
+      "description": "",
+      "items": [
+        {
+          "title": "Hot Chocolate with Marshmallow",
+          "description": "Rich, creamy chocolate: warm indulgence, fluffy marshmallows floating on top",
+          "price": 200,
+          "image": "/images/tmc-item-images/hot-chocolate-with-marshmallow.jpeg",
           "foodType": "Veg"
         }
       ]
@@ -589,19 +636,6 @@
           "description": "Fruity peach sweetness: smooth stone fruit, cold tea, summery charm",
           "price": 119,
           "image": "/images/tmc-item-images/peach-iced-tea.jpeg",
-          "foodType": "Veg"
-        }
-      ]
-    },
-    {
-      "name": "Non Coffee",
-      "description": "",
-      "items": [
-        {
-          "title": "Hot Chocolate with Marshmallow",
-          "description": "Rich, creamy chocolate: warm indulgence, fluffy marshmallows floating on top",
-          "price": 200,
-          "image": "/images/tmc-item-images/hot-chocolate-with-marshmallow.jpeg",
           "foodType": "Veg"
         }
       ]
@@ -802,40 +836,6 @@
           "description": "Warm spices with bright citrus: balanced warmth, immune boost, wellness sip",
           "price": 159,
           "image": "/images/tmc-item-images/spiced-citrus.jpeg",
-          "foodType": "Veg"
-        }
-      ]
-    },
-    {
-      "name": "Extra Syrup Shot",
-      "description": "",
-      "items": [
-        {
-          "title": "Vanilla Syrup",
-          "description": "Sweet vanilla flavor: smooth, aromatic, classic coffee companion",
-          "price": 25,
-          "image": "/images/tmc-item-images/vanilla-syrup.jpeg",
-          "foodType": "Veg"
-        },
-        {
-          "title": "Irish Cream Syrup",
-          "description": "Rich cream, whiskey notes: luxurious, smooth, cafe indulgence",
-          "price": 25,
-          "image": "/images/tmc-item-images/irish-cream-syrup.jpeg",
-          "foodType": "Veg"
-        },
-        {
-          "title": "Caramel Syrup",
-          "description": "Sweet, buttery caramel: indulgent sweetness, coffee enhancement, cozy warmth",
-          "price": 25,
-          "image": "/images/tmc-item-images/caramel-syrup.jpeg",
-          "foodType": "Veg"
-        },
-        {
-          "title": "Hazelnut Syrup",
-          "description": "Nutty, toasted flavor: smooth, sophisticated, coffee-friendly richness",
-          "price": 25,
-          "image": "/images/tmc-item-images/hazelnut-syrup.jpeg",
           "foodType": "Veg"
         }
       ]
