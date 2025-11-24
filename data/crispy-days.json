@@ -646,21 +646,21 @@
           "title": "Cheese Garlic Bread 4pcs",
           "description": "Four pieces: buttery bread, gooey melted cheese, fragrant garlic: irresistible indulgence",
           "price": 129,
-          "image": "/images/crispy-days-item-images/cheese-garlic-bread-4pcs.jpeg",
+          "image": "/images/crispy-days-item-images/cheese-garlic-bread.jpeg",
           "foodType": "Veg"
         },
         {
           "title": "Spicy Cheese Garlic Bread 4pcs",
           "description": "Four fiery slices: spicy kick meets melted cheese and garlic on warm, butter bread",
           "price": 139,
-          "image": "",
+          "image": "/images/crispy-days-item-images/spicy-cheese-garlic-bread.jpeg",
           "foodType": "Veg"
         },
         {
           "title": "Chicken & Cheese Garlic Bread 4pcs",
           "description": "Four pieces loaded with tender chicken and layers of melting cheese with garlic",
           "price": 179,
-          "image": "",
+          "image": "/images/crispy-days-item-images/chicken-cheese-garlic-bread.jpeg",
           "foodType": "Non Veg"
         }
       ]
