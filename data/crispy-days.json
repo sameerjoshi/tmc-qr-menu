@@ -175,7 +175,7 @@
           "title": "Spicy Veg Burger",
           "description": "Heat-seeking burger: crispy veg patty loaded with fiery spices and fresh crunchy veggies",
           "price": 119,
-          "image": "/images/crispy-days-item-images/spicy-veg-burger.png",
+          "image": "/images/crispy-days-item-images/tandoori-veg-burger.png",
           "foodType": "Veg"
         },
         {
@@ -207,7 +207,7 @@
           "foodType": "Non Veg"
         },
         {
-          "title": "A Peri Peri Crispy Chicken Burger",
+          "title": "Peri Peri Crispy Chicken Burger",
           "description": "Zesty peri peri kick: crispy chicken, spicy mayo, soft bun, total flavor explosion",
           "price": 159,
           "image": "/images/crispy-days-item-images/crispy-chicken-peri-peri-burger.png",
@@ -248,7 +248,7 @@
           "foodType": "Veg"
         },
         {
-          "title": "O Onion Capsicum Pizza",
+          "title": "Onion Capsicum Pizza",
           "description": "Garden-fresh: sweet onions, crunchy capsicums, stretchy cheese, crispy pizza magic",
           "price": 139,
           "image": "/images/crispy-days-item-images/onion-capsicum-pizza.jpeg",
@@ -320,7 +320,7 @@
           "title": "Paneer Fiesta Wrap",
           "description": "Soft wrap embracing tender paneer, fresh veggies, and bold spices in one package",
           "price": 139,
-          "image": "",
+          "image": "/images/crispy-days-item-images/paneer-fiesta-wrap.jpeg",
           "foodType": "Veg"
         },
         {
@@ -334,55 +334,7 @@
           "title": "Tandoori Grilled Chicken Wrap",
           "description": "Smoky tandoori chicken, cool yogurt sauce, fresh herbs: aromatic wrap perfection",
           "price": 149,
-          "image": "",
-          "foodType": "Non Veg"
-        }
-      ]
-    },
-    {
-      "name": "Grilled Sandwiches",
-      "description": "",
-      "items": [
-        {
-          "title": "Garden Fresh Grilled Sandwich",
-          "description": "Toasted bread hugging fresh, crisp vegetables with melted cheese and garden flavors",
-          "price": 99,
-          "image": "/images/crispy-days-item-images/garden-fresh-grilled-sandwich.jpeg",
-          "foodType": "Veg"
-        },
-        {
-          "title": "Sizzling Veg Grilled Sandwich",
-          "description": "Sizzling hot: grilled veggies, melted cheese, crispy bread, savory sandwich magic",
-          "price": 119,
-          "image": "/images/crispy-days-item-images/sizzling-veg-grilled-sandwich.jpeg",
-          "foodType": "Veg"
-        },
-        {
-          "title": "Tangy Paneer Grilled Sandwich",
-          "description": "Creamy paneer, tangy sauce, grilled to golden perfection between warm, toasted bread",
-          "price": 139,
-          "image": "/images/crispy-days-item-images/tangy-paneer-grilled-sandwich.jpeg",
-          "foodType": "Veg"
-        },
-        {
-          "title": "Classic Egg Grilled Sandwich",
-          "description": "Fluffy scrambled eggs, crispy bread, melted cheese: ultimate comfort sandwich",
-          "price": 129,
-          "image": "/images/crispy-days-item-images/classic-egg-grilled-sandwich.jpeg",
-          "foodType": "Egg"
-        },
-        {
-          "title": "Tangy Peri Peri Grilled Chicken Sandwich",
-          "description": "Hot pressed sandwich: spicy chicken, tangy peri peri, crispy bread, flavor-packed",
-          "price": 149,
-          "image": "",
-          "foodType": "Non Veg"
-        },
-        {
-          "title": "Mint Fusion Chicken Grilled Sandwich",
-          "description": "Succulent chicken, refreshing mint sauce, warm bread: balanced, bold bite",
-          "price": 149,
-          "image": "",
+          "image": "/images/crispy-days-item-images/tandoori-chicken-wrap.jpeg",
           "foodType": "Non Veg"
         }
       ]
@@ -410,14 +362,14 @@
           "description": "Five juicy momos packed with tender chicken: soft steamed or irresistibly crispy fried",
           "price": 129,
           "image": "/images/crispy-days-item-images/chicken-momo.png",
-          "foodType": "Veg"
+          "foodType": "Non Veg"
         },
         {
           "title": "Schezwan Chicken Momos 5pcs",
           "description": "Five fiery dumplings: spicy schezwan chicken filling in delicate, delicious momos",
           "price": 129,
           "image": "/images/crispy-days-item-images/chicken-schez-momo.png",
-          "foodType": "Veg"
+          "foodType": "Non Veg"
         }
       ]
     },
@@ -741,53 +693,13 @@
       ]
     },
     {
-      "name": "Make A Meal",
-      "description": "",
-      "items": [
-        {
-          "title": "Fries with Soft Drink",
-          "description": "Crispy fries paired with ice-cold soft drink: the perfect quick thirst-quenching combo",
-          "price": 89,
-          "image": "",
-          "foodType": "Veg"
-        },
-        {
-          "title": "Fries with Mocktail",
-          "description": "Golden fries matched with a refreshing, colorful mocktail: tasty meal pairing",
-          "price": 139,
-          "image": "",
-          "foodType": "Veg"
-        }
-      ]
-    },
-    {
-      "name": "Desserts",
-      "description": "",
-      "items": [
-        {
-          "title": "Brownie With Ice Cream",
-          "description": "Rich, fudgy brownie topped with cold, creamy ice cream: warm-cold dessert heaven",
-          "price": 129,
-          "image": "",
-          "foodType": "Veg"
-        },
-        {
-          "title": "Sizzling Brownie With Ice Cream",
-          "description": "Hot brownie plate delivered sizzling: melt into cold ice cream for dramatic indulgence",
-          "price": 149,
-          "image": "",
-          "foodType": "Veg"
-        }
-      ]
-    },
-    {
       "name": "Soft Drinks",
       "description": "",
       "items": [
         {
           "title": "Any Soft Drink",
           "description": "Refreshing cold beverage to complement your meal perfectly",
-          "price": 0,
+          "price": 20,
           "image": "",
           "foodType": "Veg"
         }
@@ -833,7 +745,7 @@
       "items": [
         {
           "title": "Extra Cheese Slice",
-          "description": "Melting, gooey cheese slice: add extra richness to any burger or sandwich",
+          "description": "Melting, gooey cheese slice: add extra richness to any burger",
           "price": 20,
           "image": "",
           "foodType": "Veg"
