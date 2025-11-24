@@ -395,28 +395,28 @@
           "title": "Veg Momos 5pcs",
           "description": "Five pillowy dumplings stuffed with fresh veggies: steamed soft or fried golden-crisp",
           "price": 109,
-          "image": "",
+          "image": "/images/crispy-days-item-images/veg-momo.png",
           "foodType": "Veg"
         },
         {
           "title": "Paneer Momos 5pcs",
           "description": "Five tender momos filled with creamy paneer and aromatic spices: steamed or fried",
           "price": 129,
-          "image": "",
+          "image": "/images/crispy-days-item-images/veg-momo.png",
           "foodType": "Veg"
         },
         {
           "title": "Chicken Momos 5pcs",
           "description": "Five juicy momos packed with tender chicken: soft steamed or irresistibly crispy fried",
           "price": 129,
-          "image": "",
+          "image": "/images/crispy-days-item-images/chicken-momo.png",
           "foodType": "Veg"
         },
         {
           "title": "Schezwan Chicken Momos 5pcs",
           "description": "Five fiery dumplings: spicy schezwan chicken filling in delicate, delicious momos",
           "price": 129,
-          "image": "",
+          "image": "/images/crispy-days-item-images/chicken-schez-momo.png",
           "foodType": "Veg"
         }
       ]
