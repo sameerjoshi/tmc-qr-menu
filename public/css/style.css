@@ -700,7 +700,7 @@ body[data-brand="misty-cup"] .menu-item-price-single {
 .event-page {
   background: var(--bg-gray);
   min-height: 100vh;
-  padding: 2rem 0;
+  padding: 0 0 2rem 0;
 }
 
 .event-hero {
