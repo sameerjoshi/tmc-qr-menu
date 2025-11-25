@@ -21,4 +21,4 @@ jobs:
             cd /var/www/tmc.amplyfitdigital.com
             git pull origin master
             npm install --production
-            pm2 restart tmc-website || pm2 start server.js --name tmc-website
+            pm2 restart tmc-menu
