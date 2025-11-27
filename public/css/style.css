@@ -39,7 +39,10 @@ body {
 .brand-selection-page {
   background: var(--bg-gray);
   min-height: 100vh;
-  padding: 2rem 0;
+}
+
+.thanksgiving-banner {
+  margin-bottom: 20px;
 }
 
 .app-title {
@@ -852,4 +855,8 @@ body[data-brand="misty-cup"] .menu-item-price-single {
   .event-features {
     grid-template-columns: 1fr;
   }
+}
+
+.cd-logo-auto {
+  width: auto !important;
 }

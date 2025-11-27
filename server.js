@@ -51,6 +51,10 @@ app.get("/work-from-cafe", (req, res) => {
   res.render("work-from-cafe");
 });
 
+app.get("/thanks-giving-offer-25", (req, res) => {
+  res.render("thanks-giving-offer-25");
+});
+
 app.use((req, res) => {
   res.status(404).render("404", { message: "Page not found" });
 });

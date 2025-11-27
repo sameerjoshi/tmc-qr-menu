@@ -39,7 +39,19 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body class="brand-selection-page">
-    <div class="container-fluid py-5">
+    <!-- Thanksgiving Weekend Offer Banner -->
+    <a href="/thanks-giving-offer-25" class="thanksgiving-banner">
+      <div class="thanksgiving-overlay">
+        <div class="thanksgiving-content">
+          <span class="thanksgiving-badge">Limited Time</span>
+          <h1 class="thanksgiving-title">Thanksgiving Weekend Special</h1>
+          <p class="thanksgiving-subtitle">Celebrate with delicious food & exclusive offers</p>
+          <span class="thanksgiving-cta">View Offers →</span>
+        </div>
+      </div>
+    </a>
+
+    <div class="container-fluid pb-5">
       <div class="row justify-content-center">
         <div class="col-12 col-md-10 col-lg-8">
           <h2 class="text-center mb-4">Our Menus</h2>
@@ -199,12 +211,12 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <!-- Fixed reminder banner -->
     <div class="bill-reminder">
-      We follow a No Bill, No Pay policy for your safety. Please ask for your bill
+      We follow a No Bill, No Pay policy for your safety. Please ask for your
+      bill
     </div>
 
     <!-- WhatsApp Floating Button -->
@@ -227,6 +239,87 @@
     </a>
 
     <style>
+      /* Thanksgiving Banner Styles */
+      .thanksgiving-banner {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 220px;
+        background: url('https://images.pexels.com/photos/5638751/pexels-photo-5638751.jpeg?auto=compress&cs=tinysrgb&w=1260') center center;
+        background-size: cover;
+        text-decoration: none;
+        overflow: hidden;
+      }
+      .thanksgiving-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s ease;
+      }
+      .thanksgiving-banner:hover .thanksgiving-overlay {
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.55));
+      }
+      .thanksgiving-content {
+        text-align: center;
+        color: white;
+        padding: 20px;
+      }
+      .thanksgiving-badge {
+        display: inline-block;
+        background: #e74c3c;
+        color: white;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+      }
+      .thanksgiving-title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin: 0 0 8px 0;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      }
+      .thanksgiving-subtitle {
+        font-size: 1rem;
+        margin: 0 0 16px 0;
+        opacity: 0.95;
+      }
+      .thanksgiving-cta {
+        display: inline-block;
+        background: white;
+        color: #8B4513;
+        padding: 10px 24px;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .thanksgiving-banner:hover .thanksgiving-cta {
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      }
+      @media (max-width: 768px) {
+        .thanksgiving-banner {
+          height: 180px;
+        }
+        .thanksgiving-title {
+          font-size: 1.35rem;
+        }
+        .thanksgiving-subtitle {
+          font-size: 0.85rem;
+        }
+        .thanksgiving-cta {
+          padding: 8px 20px;
+          font-size: 0.85rem;
+        }
+      }
+
       .bill-reminder {
         position: fixed;
         bottom: 0;
