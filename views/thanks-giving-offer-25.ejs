@@ -102,6 +102,13 @@
         color: #7f8c8d;
         margin: 0;
       }
+      .offer-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+        flex-wrap: wrap;
+      }
       .offer-badge {
         display: inline-block;
         background: #27ae60;
@@ -111,21 +118,18 @@
         font-size: 0.7rem;
         font-weight: 600;
         text-transform: uppercase;
-        margin-top: 8px;
       }
       .offer-badge.dine-in-only {
         background: #3498db;
       }
       .menu-link {
-        display: block;
-        text-align: center;
-        padding: 12px 16px;
-        margin-top: 12px;
-        border-radius: 8px;
+        display: inline-block;
+        padding: 6px 14px;
+        border-radius: 20px;
         color: white;
         text-decoration: none;
         font-weight: 600;
-        font-size: 0.9rem;
+        font-size: 0.75rem;
         transition: all 0.2s ease;
       }
       .menu-link.crispy-days {
@@ -260,26 +264,21 @@
                 <div class="offer-subtitle">
                   Order any pizza and get another one absolutely free!
                 </div>
-                <span class="offer-badge">Dine-in / Takeaway / Delivery</span>
+                <div class="offer-actions">
+                  <span class="offer-badge">Dine-in / Takeaway / Delivery</span>
+                  <a href="/menu/crispy-days#category-2" class="menu-link crispy-days">View Menu →</a>
+                </div>
               </div>
-              <a
-                href="/menu/crispy-days#category-2"
-                class="menu-link crispy-days mb-2"
-                >View Pizza Menu →</a
-              >
               <div class="offer-item">
                 <div class="offer-title">Buy One Get One FREE Burger</div>
                 <div class="offer-subtitle">
                   Double the burger goodness this weekend
                 </div>
-                <span class="offer-badge">Dine-in / Takeaway / Delivery</span>
+                <div class="offer-actions">
+                  <span class="offer-badge">Dine-in / Takeaway / Delivery</span>
+                  <a href="/menu/crispy-days#category-1" class="menu-link crispy-days">View Menu →</a>
+                </div>
               </div>
-              <a
-                href="/menu/crispy-days#category-1"
-                class="menu-link crispy-days"
-                style="margin-top: 8px"
-                >View Burger Menu →</a
-              >
             </div>
           </div>
 
@@ -298,11 +297,11 @@
                   Get any Pasta and receive a complimentary Hot Chocolate with
                   Marshmallows
                 </div>
-                <span class="offer-badge dine-in-only">Dine-in Only</span>
+                <div class="offer-actions">
+                  <span class="offer-badge dine-in-only">Dine-in Only</span>
+                  <a href="/menu/misty-cup#category-1" class="menu-link misty-cup">View Menu →</a>
+                </div>
               </div>
-              <a href="/menu/misty-cup#category-1" class="menu-link misty-cup"
-                >View Pasta Menu →</a
-              >
             </div>
           </div>
 
