@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="/css/style.css" />
     <style>
       .offer-hero {
-        background: url('https://images.pexels.com/photos/5638751/pexels-photo-5638751.jpeg?auto=compress&cs=tinysrgb&w=1260') center center;
+        background: url("https://images.pexels.com/photos/5638751/pexels-photo-5638751.jpeg?auto=compress&cs=tinysrgb&w=1260")
+          center center;
         background-size: cover;
         color: white;
         padding: 40px 20px;
@@ -24,10 +25,14 @@
         position: relative;
       }
       .offer-hero::before {
-        content: '';
+        content: "";
         position: absolute;
         inset: 0;
-        background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.6),
+          rgba(0, 0, 0, 0.5)
+        );
       }
       .offer-hero > * {
         position: relative;
@@ -110,6 +115,32 @@
       }
       .offer-badge.dine-in-only {
         background: #3498db;
+      }
+      .menu-link {
+        display: block;
+        text-align: center;
+        padding: 12px 16px;
+        margin-top: 12px;
+        border-radius: 8px;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: all 0.2s ease;
+      }
+      .menu-link.crispy-days {
+        background: linear-gradient(135deg, #e74c3c, #c0392b);
+      }
+      .menu-link.crispy-days:hover {
+        background: linear-gradient(135deg, #c0392b, #a93226);
+        color: white;
+      }
+      .menu-link.misty-cup {
+        background: linear-gradient(135deg, #6b8e6b, #4a6741);
+      }
+      .menu-link.misty-cup:hover {
+        background: linear-gradient(135deg, #4a6741, #3d5635);
+        color: white;
       }
       .validity-note {
         text-align: center;
@@ -231,6 +262,11 @@
                 </div>
                 <span class="offer-badge">Dine-in / Takeaway / Delivery</span>
               </div>
+              <a
+                href="/menu/crispy-days#category-2"
+                class="menu-link crispy-days mb-2"
+                >View Pizza Menu →</a
+              >
               <div class="offer-item">
                 <div class="offer-title">Buy One Get One FREE Burger</div>
                 <div class="offer-subtitle">
@@ -238,6 +274,12 @@
                 </div>
                 <span class="offer-badge">Dine-in / Takeaway / Delivery</span>
               </div>
+              <a
+                href="/menu/crispy-days#category-1"
+                class="menu-link crispy-days"
+                style="margin-top: 8px"
+                >View Burger Menu →</a
+              >
             </div>
           </div>
 
@@ -258,6 +300,9 @@
                 </div>
                 <span class="offer-badge dine-in-only">Dine-in Only</span>
               </div>
+              <a href="/menu/misty-cup#category-1" class="menu-link misty-cup"
+                >View Pasta Menu →</a
+              >
             </div>
           </div>
 
