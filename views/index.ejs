@@ -4,19 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HDDZB21LDQ"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-HDDZB21LDQ"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-HDDZB21LDQ');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-HDDZB21LDQ");
     </script>
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
       })(window, document, "clarity", "script", "ucnosvd9cr");
     </script>
     <title>The Misty Cup Coffee Room | Crispy Days | Digital Menu</title>
@@ -56,7 +68,7 @@
   </head>
   <body class="brand-selection-page">
     <!-- Thanksgiving Weekend Offer Banner -->
-    <a href="/thanks-giving-offer-25" class="thanksgiving-banner">
+    <!-- <a href="/thanks-giving-offer-25" class="thanksgiving-banner">
       <div class="thanksgiving-overlay">
         <div class="thanksgiving-content">
           <span class="thanksgiving-badge">Limited Time</span>
@@ -65,7 +77,7 @@
           <span class="thanksgiving-cta">View Offers →</span>
         </div>
       </div>
-    </a>
+    </a> -->
 
     <div class="container-fluid pb-5">
       <div class="row justify-content-center">
@@ -261,7 +273,8 @@
         position: relative;
         width: 100%;
         height: 220px;
-        background: url('https://images.pexels.com/photos/5638751/pexels-photo-5638751.jpeg?auto=compress&cs=tinysrgb&w=1260') center center;
+        background: url("https://images.pexels.com/photos/5638751/pexels-photo-5638751.jpeg?auto=compress&cs=tinysrgb&w=1260")
+          center center;
         background-size: cover;
         text-decoration: none;
         overflow: hidden;
@@ -269,14 +282,22 @@
       .thanksgiving-overlay {
         position: absolute;
         inset: 0;
-        background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.6),
+          rgba(0, 0, 0, 0.5)
+        );
         display: flex;
         align-items: center;
         justify-content: center;
         transition: background 0.3s ease;
       }
       .thanksgiving-banner:hover .thanksgiving-overlay {
-        background: linear-gradient(135deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.55));
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.65),
+          rgba(0, 0, 0, 0.55)
+        );
       }
       .thanksgiving-content {
         text-align: center;
@@ -299,7 +320,7 @@
         font-size: 1.75rem;
         font-weight: 700;
         margin: 0 0 8px 0;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
       }
       .thanksgiving-subtitle {
         font-size: 1rem;
@@ -309,7 +330,7 @@
       .thanksgiving-cta {
         display: inline-block;
         background: white;
-        color: #8B4513;
+        color: #8b4513;
         padding: 10px 24px;
         border-radius: 25px;
         font-weight: 600;
@@ -318,7 +339,7 @@
       }
       .thanksgiving-banner:hover .thanksgiving-cta {
         transform: scale(1.05);
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       }
       @media (max-width: 768px) {
         .thanksgiving-banner {
