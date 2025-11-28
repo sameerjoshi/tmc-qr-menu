@@ -67,22 +67,23 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body class="brand-selection-page">
-    <!-- Thanksgiving Weekend Offer Banner -->
-    <!-- <a href="/thanks-giving-offer-25" class="thanksgiving-banner">
-      <div class="thanksgiving-overlay">
-        <div class="thanksgiving-content">
-          <span class="thanksgiving-badge">Limited Time</span>
-          <h1 class="thanksgiving-title">Thanksgiving Weekend Special</h1>
-          <p class="thanksgiving-subtitle">Celebrate with delicious food & exclusive offers</p>
-          <span class="thanksgiving-cta">View Offers →</span>
+    <!-- Black Friday Sale Banner -->
+    <a href="/thanks-giving-offer-25" class="blackfriday-banner">
+      <div class="blackfriday-overlay">
+        <div class="blackfriday-content">
+          <span class="blackfriday-badge">Limited Time</span>
+          <h1 class="blackfriday-title"><span>BLACK</span> FRIDAY SALE</h1>
+          <div class="blackfriday-discount">FLAT 20% OFF</div>
+          <p class="blackfriday-subtitle">On billing above ₹500</p>
+          <span class="blackfriday-cta">Grab the Deal →</span>
         </div>
       </div>
-    </a> -->
+    </a>
 
     <div class="container-fluid pb-5">
       <div class="row justify-content-center">
         <div class="col-12 col-md-10 col-lg-8">
-          <h2 class="text-center mb-4">Our Menus</h2>
+          <h2 class="text-center mb-4 mt-4">Our Menus</h2>
           <div class="brand-grid mb-5">
             <a href="/menu/misty-cup" class="brand-card">
               <div class="brand-logo-container misty-cup-bg">
@@ -267,92 +268,142 @@
     </a>
 
     <style>
-      /* Thanksgiving Banner Styles */
-      .thanksgiving-banner {
+      /* Black Friday Banner Styles */
+      .blackfriday-banner {
         display: block;
         position: relative;
         width: 100%;
-        height: 220px;
-        background: url("https://images.pexels.com/photos/5638751/pexels-photo-5638751.jpeg?auto=compress&cs=tinysrgb&w=1260")
-          center center;
-        background-size: cover;
+        height: 240px;
+        background: linear-gradient(
+          135deg,
+          #000000 0%,
+          #1a1a1a 50%,
+          #000000 100%
+        );
         text-decoration: none;
         overflow: hidden;
       }
-      .thanksgiving-overlay {
+      .blackfriday-banner::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(212, 175, 55, 0.15) 0%,
+          transparent 50%
+        );
+        animation: shimmer 3s ease-in-out infinite;
+      }
+      @keyframes shimmer {
+        0%,
+        100% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(180deg);
+        }
+      }
+      .blackfriday-overlay {
         position: absolute;
         inset: 0;
-        background: linear-gradient(
-          135deg,
-          rgba(0, 0, 0, 0.6),
-          rgba(0, 0, 0, 0.5)
-        );
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: background 0.3s ease;
+        transition: all 0.3s ease;
       }
-      .thanksgiving-banner:hover .thanksgiving-overlay {
-        background: linear-gradient(
-          135deg,
-          rgba(0, 0, 0, 0.65),
-          rgba(0, 0, 0, 0.55)
-        );
+      .blackfriday-banner:hover .blackfriday-overlay {
+        background: rgba(212, 175, 55, 0.05);
       }
-      .thanksgiving-content {
+      .blackfriday-content {
         text-align: center;
         color: white;
         padding: 20px;
+        position: relative;
+        z-index: 1;
       }
-      .thanksgiving-badge {
+      .blackfriday-badge {
         display: inline-block;
         background: #e74c3c;
         color: white;
-        padding: 4px 12px;
+        padding: 4px 14px;
         border-radius: 20px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 10px;
-      }
-      .thanksgiving-title {
-        font-size: 1.75rem;
+        font-size: 0.7rem;
         font-weight: 700;
-        margin: 0 0 8px 0;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 12px;
+        animation: pulse 2s ease-in-out infinite;
       }
-      .thanksgiving-subtitle {
-        font-size: 1rem;
-        margin: 0 0 16px 0;
-        opacity: 0.95;
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
       }
-      .thanksgiving-cta {
+      .blackfriday-title {
+        font-size: 1.6rem;
+        font-weight: 800;
+        margin: 0 0 10px 0;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+      .blackfriday-title span {
+        color: #d4af37;
+      }
+      .blackfriday-discount {
+        display: inline-block;
+        background: linear-gradient(135deg, #d4af37, #f4d03f);
+        color: #000;
+        padding: 8px 24px;
+        border-radius: 30px;
+        font-size: 1.3rem;
+        font-weight: 800;
+        margin: 8px 0;
+        box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+      }
+      .blackfriday-subtitle {
+        font-size: 0.9rem;
+        margin: 8px 0 14px 0;
+        color: #d4af37;
+      }
+      .blackfriday-cta {
         display: inline-block;
         background: white;
-        color: #8b4513;
-        padding: 10px 24px;
+        color: #000;
+        padding: 10px 28px;
         border-radius: 25px;
-        font-weight: 600;
+        font-weight: 700;
         font-size: 0.9rem;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        transition: all 0.3s ease;
       }
-      .thanksgiving-banner:hover .thanksgiving-cta {
+      .blackfriday-banner:hover .blackfriday-cta {
         transform: scale(1.05);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+        background: #d4af37;
       }
       @media (max-width: 768px) {
-        .thanksgiving-banner {
-          height: 180px;
+        .blackfriday-banner {
+          height: 220px;
         }
-        .thanksgiving-title {
-          font-size: 1.35rem;
+        .blackfriday-title {
+          font-size: 1.3rem;
+          letter-spacing: 2px;
         }
-        .thanksgiving-subtitle {
-          font-size: 0.85rem;
+        .blackfriday-discount {
+          font-size: 1.1rem;
+          padding: 6px 18px;
         }
-        .thanksgiving-cta {
-          padding: 8px 20px;
+        .blackfriday-subtitle {
+          font-size: 0.8rem;
+        }
+        .blackfriday-cta {
+          padding: 8px 22px;
           font-size: 0.85rem;
         }
       }

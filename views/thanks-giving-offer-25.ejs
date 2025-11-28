@@ -4,25 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HDDZB21LDQ"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-HDDZB21LDQ"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-HDDZB21LDQ');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-HDDZB21LDQ");
     </script>
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
       })(window, document, "clarity", "script", "ucnosvd9cr");
     </script>
-    <title>Thanksgiving Weekend Offers | The Misty Cup & Crispy Days</title>
+    <title>
+      Black Friday Sale | Flat 20% Off | The Misty Cup & Crispy Days
+    </title>
     <meta
       name="description"
-      content="Exclusive Thanksgiving Weekend offers at The Misty Cup & Crispy Days. BOGO Pizza & Burger, Free Hot Chocolate with Pasta and more!"
+      content="Black Friday Sale! Get Flat 20% off on billing above ₹500 at The Misty Cup & Crispy Days. Limited time offer!"
     />
 
     <link
@@ -32,145 +46,181 @@
     <link rel="stylesheet" href="/css/style.css" />
     <style>
       .offer-hero {
-        background: url("https://images.pexels.com/photos/5638751/pexels-photo-5638751.jpeg?auto=compress&cs=tinysrgb&w=1260")
-          center center;
-        background-size: cover;
+        background: linear-gradient(
+          135deg,
+          #000000 0%,
+          #1a1a1a 50%,
+          #000000 100%
+        );
         color: white;
-        padding: 40px 20px;
+        padding: 50px 20px;
         text-align: center;
         position: relative;
+        overflow: hidden;
       }
       .offer-hero::before {
         content: "";
         position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          135deg,
-          rgba(0, 0, 0, 0.6),
-          rgba(0, 0, 0, 0.5)
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(212, 175, 55, 0.1) 0%,
+          transparent 50%
         );
+        animation: shimmer 3s ease-in-out infinite;
+      }
+      @keyframes shimmer {
+        0%,
+        100% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(180deg);
+        }
       }
       .offer-hero > * {
         position: relative;
         z-index: 1;
       }
       .offer-hero h1 {
-        font-size: 2rem;
-        font-weight: 700;
+        font-size: 2.5rem;
+        font-weight: 800;
         margin-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+      .offer-hero h1 span {
+        color: #d4af37;
       }
       .offer-hero p {
         opacity: 0.9;
         margin: 0;
       }
+      .discount-highlight {
+        display: inline-block;
+        background: linear-gradient(135deg, #d4af37, #f4d03f);
+        color: #000;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin: 15px 0;
+        box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+        animation: pulse 2s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+      .min-order {
+        font-size: 0.95rem;
+        color: #d4af37;
+        margin-top: 8px;
+      }
       .offer-card {
         background: white;
         border-radius: 16px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
         overflow: hidden;
         margin-bottom: 24px;
+        border: 2px solid #d4af37;
       }
       .offer-card-header {
-        padding: 16px 20px;
+        padding: 20px;
         color: white;
         display: flex;
         align-items: center;
         gap: 12px;
-      }
-      .offer-card-header.crispy-days {
-        background: linear-gradient(135deg, #e74c3c, #c0392b);
-      }
-      .offer-card-header.misty-cup {
-        background: linear-gradient(135deg, #6b8e6b, #4a6741);
+        background: linear-gradient(135deg, #000000, #1a1a1a) !important;
       }
       .offer-card-header img {
-        width: 50px;
-        height: 50px;
-        border-radius: 8px;
+        width: 55px;
+        height: 55px;
+        border-radius: 10px;
         background: white;
         padding: 4px;
       }
       .offer-card-header h3 {
         margin: 0;
-        font-size: 1.25rem;
-        font-weight: 600;
+        font-size: 1.3rem;
+        font-weight: 700;
       }
       .offer-card-body {
         padding: 20px;
+        background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
       }
-      .offer-item {
-        padding: 16px;
-        background: #f8f9fa;
+      .discount-box {
+        text-align: center;
+        padding: 25px 20px;
+        background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
         border-radius: 12px;
-        margin-bottom: 12px;
+        margin-bottom: 16px;
       }
-      .offer-item:last-child {
-        margin-bottom: 0;
+      .discount-percentage {
+        font-size: 3rem;
+        font-weight: 900;
+        color: #d4af37;
+        line-height: 1;
+        text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
       }
-      .offer-title {
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: #2c3e50;
-        margin-bottom: 4px;
-      }
-      .offer-subtitle {
-        font-size: 0.9rem;
-        color: #7f8c8d;
-        margin: 0;
-      }
-      .offer-actions {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-top: 10px;
-        flex-wrap: wrap;
-      }
-      .offer-badge {
-        display: inline-block;
-        background: #27ae60;
+      .discount-text {
         color: white;
-        padding: 4px 10px;
-        border-radius: 20px;
-        font-size: 0.7rem;
-        font-weight: 600;
-        text-transform: uppercase;
+        font-size: 1rem;
+        margin-top: 8px;
+        font-weight: 500;
       }
-      .offer-badge.dine-in-only {
-        background: #3498db;
+      .menu-buttons {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
       }
       .menu-link {
-        display: inline-block;
-        padding: 6px 14px;
-        border-radius: 20px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 20px;
+        border-radius: 25px;
         color: white;
         text-decoration: none;
         font-weight: 600;
-        font-size: 0.75rem;
-        transition: all 0.2s ease;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        background: linear-gradient(135deg, #d4af37, #b8962e);
       }
-      .menu-link.crispy-days {
-        background: linear-gradient(135deg, #e74c3c, #c0392b);
-      }
-      .menu-link.crispy-days:hover {
-        background: linear-gradient(135deg, #c0392b, #a93226);
+      .menu-link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
         color: white;
       }
-      .menu-link.misty-cup {
-        background: linear-gradient(135deg, #6b8e6b, #4a6741);
-      }
-      .menu-link.misty-cup:hover {
-        background: linear-gradient(135deg, #4a6741, #3d5635);
-        color: white;
+      .menu-link svg {
+        width: 18px;
+        height: 18px;
       }
       .validity-note {
         text-align: center;
-        padding: 16px;
-        background: #fff3cd;
+        padding: 20px;
+        background: linear-gradient(135deg, #000000, #1a1a1a);
         border-radius: 12px;
         margin-top: 24px;
-        font-size: 0.9rem;
-        color: #856404;
+        font-size: 0.95rem;
+        color: #d4af37;
         margin-bottom: 100px;
+        border: 1px solid #d4af37;
+      }
+      .validity-note strong {
+        color: #f4d03f;
+      }
+      .validity-note small {
+        color: rgba(255, 255, 255, 0.7);
       }
       .back-link {
         display: inline-flex;
@@ -256,17 +306,57 @@
         </svg>
         Back to Menu
       </a>
-      <h1>Thanksgiving Weekend Special</h1>
-      <p>Exclusive offers to celebrate with your loved ones</p>
+      <h1><span>Black</span> Friday Sale</h1>
+      <div class="discount-highlight">FLAT 20% OFF</div>
+      <p class="min-order">On billing above ₹500</p>
     </div>
 
     <!-- Offers Section -->
     <div class="container py-4">
       <div class="row justify-content-center">
         <div class="col-12 col-md-8 col-lg-6">
+          <!-- The Misty Cup Offers -->
+          <div class="offer-card">
+            <div class="offer-card-header">
+              <img src="/images/tmc-logo.png" alt="The Misty Cup" />
+              <h3>The Misty Cup Coffee Room</h3>
+            </div>
+            <div class="offer-card-body">
+              <div class="discount-box">
+                <div class="discount-percentage">20% OFF</div>
+                <div class="discount-text">On all The Misty Cup items</div>
+              </div>
+              <div class="menu-buttons">
+                <a href="/menu/misty-cup#category-1" class="menu-link">
+                  <svg fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748z"
+                    />
+                  </svg>
+                  Pasta & Meals
+                </a>
+                <a href="/menu/misty-cup#category-0" class="menu-link">
+                  <svg fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M.5 6a.5.5 0 0 0-.488.608l1.652 7.434A2.5 2.5 0 0 0 4.104 16h5.792a2.5 2.5 0 0 0 2.44-1.958l.131-.59a3 3 0 0 0 1.3-5.854l.221-.99A.5.5 0 0 0 13.5 6H.5ZM13 12.5a2.01 2.01 0 0 1-.316-.025l.867-3.898A2.001 2.001 0 0 1 13 12.5Z"/>
+                    <path d="m4.4.8-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 3.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 3.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 3 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 4.4.8Zm3 0-.003.004-.014.019a4.167 4.167 0 0 0-.204.31 2.327 2.327 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.31 3.31 0 0 1-.202.388 5.444 5.444 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 6.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 6.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 6 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 7.4.8Zm3 0-.003.004-.014.019a4.077 4.077 0 0 0-.204.31 2.337 2.337 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.593.593 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3.198 3.198 0 0 1-.202.388 5.385 5.385 0 0 1-.252.382l-.019.025-.005.008-.002.002A.5.5 0 0 1 9.6 4.2l.003-.004.014-.019a4.149 4.149 0 0 0 .204-.31 2.06 2.06 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.593.593 0 0 0-.09-.252A4.334 4.334 0 0 0 9.6 2.8l-.01-.012a5.099 5.099 0 0 1-.37-.543A1.53 1.53 0 0 1 9 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a5.446 5.446 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 10.4.8Z"/>
+                  </svg>
+                  Coffee & Beverages
+                </a>
+                <a href="/menu/misty-cup" class="menu-link">
+                  <svg fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4.5 5.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7zm0-2a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7zm0 4a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4z"
+                    />
+                  </svg>
+                  Full Menu
+                </a>
+              </div>
+            </div>
+          </div>
+
           <!-- Crispy Days Offers -->
           <div class="offer-card">
-            <div class="offer-card-header crispy-days">
+            <div class="offer-card-header">
               <img
                 src="/images/cd-logo.png"
                 alt="Crispy Days"
@@ -275,58 +365,40 @@
               <h3>Crispy Days</h3>
             </div>
             <div class="offer-card-body">
-              <div class="offer-item">
-                <div class="offer-title">Buy One Get One FREE Pizza</div>
-                <div class="offer-subtitle">
-                  Order any pizza and get another one absolutely free!
-                </div>
-                <div class="offer-actions">
-                  <span class="offer-badge">Dine-in / Takeaway / Delivery</span>
-                  <a href="/menu/crispy-days#category-2" class="menu-link crispy-days">View Menu →</a>
-                </div>
+              <div class="discount-box">
+                <div class="discount-percentage">20% OFF</div>
+                <div class="discount-text">On all Crispy Days items</div>
               </div>
-              <div class="offer-item">
-                <div class="offer-title">Buy One Get One FREE Burger</div>
-                <div class="offer-subtitle">
-                  Double the burger goodness this weekend
-                </div>
-                <div class="offer-actions">
-                  <span class="offer-badge">Dine-in / Takeaway / Delivery</span>
-                  <a href="/menu/crispy-days#category-1" class="menu-link crispy-days">View Menu →</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- The Misty Cup Offers -->
-          <div class="offer-card">
-            <div class="offer-card-header misty-cup">
-              <img src="/images/tmc-logo.png" alt="The Misty Cup" />
-              <h3>The Misty Cup Coffee Room</h3>
-            </div>
-            <div class="offer-card-body">
-              <div class="offer-item">
-                <div class="offer-title">
-                  Get any Pasta with FREE Hot Chocolate
-                </div>
-                <div class="offer-subtitle">
-                  Get any Pasta and receive a complimentary Hot Chocolate with
-                  Marshmallows
-                </div>
-                <div class="offer-actions">
-                  <span class="offer-badge dine-in-only">Dine-in Only</span>
-                  <a href="/menu/misty-cup#category-1" class="menu-link misty-cup">View Menu →</a>
-                </div>
+              <div class="menu-buttons">
+                <a href="/menu/crispy-days#category-1" class="menu-link">
+                  <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M22 11.5C22 10.12 20.88 9 19.5 9H4.5C3.12 9 2 10.12 2 11.5C2 12.88 3.12 14 4.5 14H19.5C20.88 14 22 12.88 22 11.5ZM2 16V17C2 18.1 2.9 19 4 19H20C21.1 19 22 18.1 22 17V16H2ZM4 8H20C20 5.79 16.42 4 12 4C7.58 4 4 5.79 4 8Z"/>
+                  </svg>
+                  Burgers
+                </a>
+                <a href="/menu/crispy-days#category-2" class="menu-link">
+                  <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C8.43 2 5.23 3.54 3.01 6L12 22L20.99 6C18.77 3.54 15.57 2 12 2ZM7 7C7.55 7 8 7.45 8 8S7.55 9 7 9 6 8.55 6 8 6.45 7 7 7ZM10 14C9.45 14 9 13.55 9 13S9.45 12 10 12 11 12.45 11 13 10.55 14 10 14ZM11 8C11 7.45 11.45 7 12 7S13 7.45 13 8 12.55 9 12 9 11 8.55 11 8ZM15 12C14.45 12 14 11.55 14 11S14.45 10 15 10 16 10.45 16 11 15.55 12 15 12Z"/>
+                  </svg>
+                  Pizzas
+                </a>
+                <a href="/menu/crispy-days" class="menu-link">
+                  <svg fill="currentColor" viewBox="0 0 16 16">
+                    <path
+                      d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4.5 5.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7zm0-2a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7zm0 4a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4z"
+                    />
+                  </svg>
+                  Full Menu
+                </a>
               </div>
             </div>
           </div>
 
           <!-- Validity Note -->
           <div class="validity-note">
-            <strong>Valid:</strong> Thanksgiving Weekend Only<br />
             <small
-              >Terms & conditions apply. Cannot be combined with other
-              offers.</small
+              >Min. billing ₹500 • Dine-in / Takeaway / Delivery • T&C
+              apply</small
             >
           </div>
         </div>
@@ -341,7 +413,7 @@
 
     <!-- WhatsApp Floating Button -->
     <a
-      href="https://api.whatsapp.com/send?phone=918977730992&text=Hi!%20I%20would%20like%20to%20know%20more%20about%20the%20Thanksgiving%20Weekend%20offers"
+      href="https://api.whatsapp.com/send?phone=918977730992&text=Hi!%20I%20would%20like%20to%20place%20an%20order"
       target="_blank"
       rel="noopener noreferrer"
       class="whatsapp-float"
