@@ -13,11 +13,7 @@
           "image": "/images/tmc-item-images/baked-beans.png",
           "foodType": "Egg",
           "details": {
-            "INCLUDES": [
-              "Baked Beans",
-              "2 Toast",
-              "Choice of tea"
-            ]
+            "INCLUDES": ["Baked Beans", "2 Toast", "Choice of tea"]
           }
         },
         {
@@ -34,6 +30,13 @@
               "Choice of tea"
             ]
           }
+        },
+        {
+          "title": "Spanish Omelette",
+          "description": "Classic Spanish tortilla: fluffy eggs with tender potatoes and caramelized onions",
+          "price": 249,
+          "image": "/images/tmc-item-images/spanish-omelette.jpeg",
+          "foodType": "Egg"
         },
         {
           "title": "English Breakfast",
@@ -222,40 +225,40 @@
     },
     {
       "name": "Sandwiches",
-      "description": "Coming Soon",
+      "description": "",
       "items": [
         {
           "title": "Spinach & Corn Sandwich",
-          "description": "Fresh spinach and sweet corn in perfectly toasted bread. Price: Coming Soon",
-          "price": 0,
+          "description": "Fresh spinach and sweet corn in perfectly toasted bread",
+          "price": 139,
           "image": "",
           "foodType": "Veg"
         },
         {
           "title": "Vegetarian Club Sandwich",
-          "description": "Layered with fresh vegetables, cheese, and flavorful sauces. Price: Coming Soon",
-          "price": 0,
+          "description": "Layered with fresh vegetables, cheese, and flavorful sauces",
+          "price": 179,
           "image": "",
           "foodType": "Veg"
         },
         {
           "title": "Chicken Clubhouse Sandwich",
-          "description": "Tender chicken, crispy bacon, fresh vegetables in triple-layer toast. Price: Coming Soon",
-          "price": 0,
+          "description": "Tender chicken, crispy bacon, fresh vegetables in triple-layer toast",
+          "price": 229,
           "image": "",
           "foodType": "Non Veg"
         },
         {
           "title": "Egg & Cheese Sandwich",
-          "description": "Fluffy eggs with melted cheese on toasted bread. Price: Coming Soon",
-          "price": 0,
+          "description": "Fluffy eggs with melted cheese on toasted bread",
+          "price": 149,
           "image": "",
           "foodType": "Egg"
         },
         {
           "title": "Bombay & Cheese Sandwich",
-          "description": "Spiced Bombay-style vegetables with melted cheese. Price: Coming Soon",
-          "price": 0,
+          "description": "Spiced Bombay-style vegetables with melted cheese",
+          "price": 139,
           "image": "",
           "foodType": "Veg"
         }
