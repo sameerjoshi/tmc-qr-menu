@@ -52,6 +52,7 @@ app.get("/work-from-cafe", (req, res) => {
 });
 
 app.get("/black-friday-sale-25", (req, res) => {
+  return;
   res.render("thanks-giving-offer-25");
 });
 
