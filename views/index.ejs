@@ -67,19 +67,24 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body class="brand-selection-page">
-    <!-- Baked Treats Banner -->
-    <div class="baked-treats-banner">
-      <div class="baked-treats-content">
-        <div class="baked-treats-emoji">🧁 &nbsp;&nbsp; 🍩 &nbsp;&nbsp; 🧁</div>
-        <h3 class="baked-treats-title">Baked Treats Coming Soon!</h3>
-        <p class="baked-treats-tagline">
-          Donuts like hugs 🤗 • Muffins like home 🏡<br />Cupcakes full of love
-          💝
-        </p>
-        <div class="baked-treats-badge">
-          Stay Tuned... For Oven-Fresh Sweetness!
+    <!-- Promo Banners -->
+    <div class="promo-banners">
+      <a href="/menu/misty-cup#category-16" class="promo-banner baked-treats-banner">
+        <div class="promo-content">
+          <div class="promo-emoji">🧁 &nbsp; 🍩 &nbsp; 🧁</div>
+          <h3 class="promo-title">Baked Treats Now Available!</h3>
+          <p class="promo-tagline">Muffins • Donuts • Cupcakes</p>
+          <div class="promo-badge">Order Now →</div>
         </div>
-      </div>
+      </a>
+      <a href="/menu/misty-cup#category-0" class="promo-banner todays-special-banner">
+        <div class="promo-content">
+          <div class="promo-emoji">🍓 &nbsp; 🥣 &nbsp; 🍊</div>
+          <h3 class="promo-title">Today's Special</h3>
+          <p class="promo-tagline">Fruit Bowl with Yogurt & Muesli<br>Fresh Fruit Juices</p>
+          <div class="promo-badge">Try Now →</div>
+        </div>
+      </a>
     </div>
 
     <div class="container-fluid pb-5">
@@ -270,99 +275,107 @@
     </a>
 
     <style>
-      /* Baked Treats Banner Styles */
-      .baked-treats-banner {
-        background: linear-gradient(
-          135deg,
-          #7b2d8e 0%,
-          #9b4dca 50%,
-          #6a1b7a 100%
-        );
-        padding: 24px 16px;
+      /* Promo Banners Styles */
+      .promo-banners {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .promo-banner {
+        display: block;
+        text-decoration: none;
+        padding: 20px 12px;
         text-align: center;
         position: relative;
         overflow: hidden;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
-      .baked-treats-banner::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5c2 0 3.5 1.5 3.5 3.5S32 12 30 12s-3.5-1.5-3.5-3.5S28 5 30 5z' fill='rgba(255,255,255,0.05)'/%3E%3C/svg%3E");
-        pointer-events: none;
+      .promo-banner:hover {
+        transform: scale(1.02);
       }
-      .baked-treats-content {
+      .promo-banner:hover .promo-badge {
+        transform: scale(1.05);
+      }
+      .baked-treats-banner {
+        background: linear-gradient(135deg, #7b2d8e 0%, #9b4dca 50%, #6a1b7a 100%);
+      }
+      .baked-treats-banner:hover {
+        box-shadow: 0 4px 20px rgba(123, 45, 142, 0.4);
+      }
+      .todays-special-banner {
+        background: linear-gradient(135deg, #00897b 0%, #26a69a 50%, #4db6ac 100%);
+      }
+      .todays-special-banner:hover {
+        box-shadow: 0 4px 20px rgba(38, 166, 154, 0.4);
+      }
+      .todays-special-banner .promo-tagline {
+        color: #e0f2f1;
+      }
+      .todays-special-banner .promo-badge {
+        background: linear-gradient(135deg, #ffcc80, #ffab40);
+        color: #333;
+      }
+      .promo-content {
         position: relative;
         z-index: 1;
-        max-width: 600px;
-        margin: 0 auto;
       }
-      .baked-treats-emoji {
-        font-size: 3.5rem;
-        margin-bottom: 12px;
+      .promo-emoji {
+        font-size: 2.2rem;
+        margin-bottom: 8px;
         animation: bounce 2s ease-in-out infinite;
       }
       @keyframes bounce {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-8px);
-        }
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-6px); }
       }
-      .baked-treats-title {
+      .promo-title {
         color: white;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         font-weight: 800;
-        margin: 0 0 10px 0;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        margin: 0 0 6px 0;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
       }
-      .baked-treats-tagline {
+      .promo-tagline {
         color: #ffd6f7;
-        font-size: 0.95rem;
-        margin: 0 0 12px 0;
+        font-size: 0.8rem;
+        margin: 0 0 10px 0;
         font-weight: 500;
-        line-height: 1.6;
+        line-height: 1.5;
       }
-      .baked-treats-badge {
+      .promo-badge {
         display: inline-block;
         background: linear-gradient(135deg, #ff6b9d, #ff8a65);
         color: white;
-        padding: 8px 20px;
-        border-radius: 25px;
-        font-size: 0.85rem;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 0.75rem;
         font-weight: 700;
-        box-shadow: 0 4px 15px rgba(255, 107, 157, 0.4);
-        animation: pulse 2s ease-in-out infinite;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease, background 0.2s ease;
       }
       @keyframes pulse {
-        0%,
-        100% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.03);
-        }
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.03); }
       }
       @media (max-width: 768px) {
-        .baked-treats-banner {
-          padding: 20px 12px;
+        .promo-banners {
+          grid-template-columns: 1fr;
         }
-        .baked-treats-emoji {
-          font-size: 2.5rem;
+        .promo-banner {
+          padding: 16px 10px;
         }
-        .baked-treats-title {
-          font-size: 1.25rem;
+        .promo-emoji {
+          font-size: 1.8rem;
         }
-        .baked-treats-tagline {
-          font-size: 0.8rem;
+        .promo-title {
+          font-size: 1rem;
         }
-        .baked-treats-badge {
+        .promo-tagline {
           font-size: 0.75rem;
-          padding: 6px 16px;
+        }
+        .promo-badge {
+          font-size: 0.7rem;
+          padding: 5px 12px;
         }
       }
 

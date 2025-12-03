@@ -80,6 +80,13 @@
               "foodType": "Non Veg"
             }
           ]
+        },
+        {
+          "title": "Fruit Bowl with Yogurt & Muesli",
+          "description": "Fresh seasonal fruits, creamy yogurt, crunchy muesli: wholesome, energizing breakfast",
+          "price": 159,
+          "image": "/images/tmc-item-images/fruit-bowl-with-yogurt---muesli.jpeg",
+          "foodType": "Veg"
         }
       ]
     },
@@ -169,13 +176,6 @@
       "name": "Salads",
       "description": "",
       "items": [
-        {
-          "title": "Fruit Bowl with Yogurt & Muesli",
-          "description": "Fresh seasonal fruits, creamy yogurt, crunchy muesli: wholesome, energizing breakfast",
-          "price": 159,
-          "image": "/images/tmc-item-images/fruit-bowl-with-yogurt---muesli.jpeg",
-          "foodType": "Veg"
-        },
         {
           "title": "Watermelon Feta Salad",
           "description": "Sweet watermelon, tangy feta, mint: refreshing, unexpected, perfectly balanced summer salad",
@@ -880,6 +880,33 @@
           "description": "Warm spices with bright citrus: balanced warmth, immune boost, wellness sip",
           "price": 159,
           "image": "/images/tmc-item-images/spiced-citrus.jpeg",
+          "foodType": "Veg"
+        }
+      ]
+    },
+    {
+      "name": "Baked Treats",
+      "description": "Oven-fresh sweetness!",
+      "items": [
+        {
+          "title": "Chocolate Cupcake",
+          "description": "Decadent chocolate cupcake with creamy frosting: pure indulgence",
+          "price": 99,
+          "image": "",
+          "foodType": "Veg"
+        },
+        {
+          "title": "Chocolate Donut",
+          "description": "Rich chocolate glazed donut: soft, fluffy, and irresistibly sweet",
+          "price": 109,
+          "image": "",
+          "foodType": "Veg"
+        },
+        {
+          "title": "Chocochip Muffin",
+          "description": "Soft, moist muffin loaded with chocolate chips: bakery-fresh goodness",
+          "price": 109,
+          "image": "",
           "foodType": "Veg"
         }
       ]
