@@ -67,25 +67,15 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body class="brand-selection-page">
-    <!-- Promo Banners -->
-    <div class="promo-banners">
-      <a href="/menu/misty-cup#category-16" class="promo-banner baked-treats-banner">
-        <div class="promo-content">
-          <div class="promo-emoji">🧁 &nbsp; 🍩 &nbsp; 🧁</div>
-          <h3 class="promo-title">Baked Treats Now Available!</h3>
-          <p class="promo-tagline">Muffins • Donuts • Cupcakes</p>
-          <div class="promo-badge">Order Now →</div>
-        </div>
-      </a>
-      <a href="/menu/misty-cup#category-0" class="promo-banner todays-special-banner">
-        <div class="promo-content">
-          <div class="promo-emoji">🍓 &nbsp; 🥣 &nbsp; 🍊</div>
-          <h3 class="promo-title">Today's Special</h3>
-          <p class="promo-tagline">Fruit Bowl with Yogurt & Muesli<br>Fresh Fruit Juices</p>
-          <div class="promo-badge">Try Now →</div>
-        </div>
-      </a>
-    </div>
+    <!-- Promo Banner -->
+    <a href="/menu/misty-cup#category-16" class="promo-banner baked-treats-banner">
+      <div class="promo-content">
+        <div class="promo-emoji">🧁 &nbsp; 🍩 &nbsp; 🧁</div>
+        <h3 class="promo-title">Baked Treats Now Available!</h3>
+        <p class="promo-tagline">Muffins • Donuts • Cupcakes</p>
+        <div class="promo-badge">Order Now →</div>
+      </div>
+    </a>
 
     <div class="container-fluid pb-5">
       <div class="row justify-content-center">
@@ -275,15 +265,11 @@
     </a>
 
     <style>
-      /* Promo Banners Styles */
-      .promo-banners {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
+      /* Promo Banner Styles */
       .promo-banner {
         display: block;
         text-decoration: none;
-        padding: 20px 12px;
+        padding: 24px 16px;
         text-align: center;
         position: relative;
         overflow: hidden;
@@ -291,7 +277,7 @@
         transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
       .promo-banner:hover {
-        transform: scale(1.02);
+        transform: scale(1.01);
       }
       .promo-banner:hover .promo-badge {
         transform: scale(1.05);
@@ -302,26 +288,15 @@
       .baked-treats-banner:hover {
         box-shadow: 0 4px 20px rgba(123, 45, 142, 0.4);
       }
-      .todays-special-banner {
-        background: linear-gradient(135deg, #00897b 0%, #26a69a 50%, #4db6ac 100%);
-      }
-      .todays-special-banner:hover {
-        box-shadow: 0 4px 20px rgba(38, 166, 154, 0.4);
-      }
-      .todays-special-banner .promo-tagline {
-        color: #e0f2f1;
-      }
-      .todays-special-banner .promo-badge {
-        background: linear-gradient(135deg, #ffcc80, #ffab40);
-        color: #333;
-      }
       .promo-content {
         position: relative;
         z-index: 1;
+        max-width: 600px;
+        margin: 0 auto;
       }
       .promo-emoji {
-        font-size: 2.2rem;
-        margin-bottom: 8px;
+        font-size: 3rem;
+        margin-bottom: 10px;
         animation: bounce 2s ease-in-out infinite;
       }
       @keyframes bounce {
@@ -330,15 +305,15 @@
       }
       .promo-title {
         color: white;
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         font-weight: 800;
-        margin: 0 0 6px 0;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        margin: 0 0 8px 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
       }
       .promo-tagline {
         color: #ffd6f7;
-        font-size: 0.8rem;
-        margin: 0 0 10px 0;
+        font-size: 0.95rem;
+        margin: 0 0 12px 0;
         font-weight: 500;
         line-height: 1.5;
       }
@@ -358,24 +333,21 @@
         50% { transform: scale(1.03); }
       }
       @media (max-width: 768px) {
-        .promo-banners {
-          grid-template-columns: 1fr;
-        }
         .promo-banner {
-          padding: 16px 10px;
+          padding: 20px 12px;
         }
         .promo-emoji {
-          font-size: 1.8rem;
+          font-size: 2.5rem;
         }
         .promo-title {
-          font-size: 1rem;
+          font-size: 1.2rem;
         }
         .promo-tagline {
-          font-size: 0.75rem;
+          font-size: 0.85rem;
         }
         .promo-badge {
-          font-size: 0.7rem;
-          padding: 5px 12px;
+          font-size: 0.75rem;
+          padding: 6px 14px;
         }
       }
 
