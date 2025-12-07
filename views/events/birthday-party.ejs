@@ -48,6 +48,24 @@
     </div>
   </div>
 
+  <!-- Image Gallery -->
+  <div class="container my-4">
+    <div class="gallery-grid">
+      <img src="/images/birthday/bday-1.jpeg" alt="Birthday celebration at The Misty Cup" class="gallery-img" onclick="openLightbox(this.src)">
+      <img src="/images/birthday/bday-2.jpeg" alt="Birthday party decorations" class="gallery-img" onclick="openLightbox(this.src)">
+      <img src="/images/birthday/bday-3.jpeg" alt="Birthday celebration" class="gallery-img" onclick="openLightbox(this.src)">
+      <img src="/images/birthday/bday-4.jpeg" alt="Birthday party at cafe" class="gallery-img" onclick="openLightbox(this.src)">
+      <img src="/images/birthday/bday-6.jpeg" alt="Birthday event" class="gallery-img" onclick="openLightbox(this.src)">
+      <img src="/images/birthday/bday-7.jpeg" alt="Birthday memories" class="gallery-img" onclick="openLightbox(this.src)">
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Gallery image">
+  </div>
+
   <!-- Main Content -->
   <div class="container">
     <div class="row">
@@ -159,6 +177,62 @@
   </a>
 
   <style>
+    /* Gallery Styles */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .gallery-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery-img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    @media (max-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .gallery-img {
+        height: 150px;
+      }
+    }
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox.active {
+      display: flex;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+    }
+
     .bill-reminder {
       position: fixed;
       bottom: 0;
@@ -215,5 +289,14 @@
   </style>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+  </script>
 </body>
 </html>

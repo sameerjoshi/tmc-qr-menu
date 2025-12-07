@@ -67,15 +67,54 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body class="brand-selection-page">
-    <!-- Birthday Celebration Banner -->
-    <a href="/events/birthday-party" class="promo-banner birthday-banner">
-      <div class="promo-content">
-        <div class="promo-emoji">🎂 &nbsp; 🎉 &nbsp; 🎈</div>
-        <h3 class="promo-title">Celebrate Your Birthday With Us!</h3>
-        <p class="promo-tagline">Make memories at The Misty Cup Coffee Room<br>Decorations • Cake • Good Vibes</p>
-        <div class="promo-badge">Book Now →</div>
+    <!-- Promo Slider -->
+    <div class="promo-slider">
+      <div class="slider-container">
+        <!-- Slide 1: Birthday -->
+        <a href="/events/birthday-party" class="promo-slide birthday-slide active">
+          <div class="promo-content">
+            <div class="promo-emoji">🎂 &nbsp; 🎉 &nbsp; 🎈</div>
+            <h3 class="promo-title">Celebrate Your Birthday With Us!</h3>
+            <p class="promo-tagline">Make memories at The Misty Cup Coffee Room<br>Decorations • Cake • Good Vibes</p>
+            <div class="promo-badge">Book Now →</div>
+          </div>
+        </a>
+        <!-- Slide 2: Social Events -->
+        <a href="/events/social-gatherings" class="promo-slide social-slide">
+          <div class="promo-content">
+            <div class="promo-emoji">🎊 &nbsp; 👥 &nbsp; 🥂</div>
+            <h3 class="promo-title">Host Your Social Events</h3>
+            <p class="promo-tagline">Team celebrations, reunions & get-togethers<br>Cozy Ambience • Great Food • Perfect Vibes</p>
+            <div class="promo-badge">Learn More →</div>
+          </div>
+        </a>
+        <!-- Slide 3: Kitty Party -->
+        <a href="/events/kitty-party" class="promo-slide kitty-slide">
+          <div class="promo-content">
+            <div class="promo-emoji">👗 &nbsp; ☕ &nbsp; 💅</div>
+            <h3 class="promo-title">Perfect Kitty Party Venue</h3>
+            <p class="promo-tagline">Ladies, it's time to catch up!<br>Elegant Space • Delicious Treats • Fun Times</p>
+            <div class="promo-badge">Plan Your Party →</div>
+          </div>
+        </a>
+        <!-- Slide 4: Work from Cafe -->
+        <a href="/work-from-cafe" class="promo-slide work-slide">
+          <div class="promo-content">
+            <div class="promo-emoji">💻 &nbsp; ☕ &nbsp; 📶</div>
+            <h3 class="promo-title">Work From Cafe</h3>
+            <p class="promo-tagline">Your productive workspace awaits<br>High-Speed WiFi • Power Outlets • Great Coffee</p>
+            <div class="promo-badge">See Packages →</div>
+          </div>
+        </a>
       </div>
-    </a>
+      <!-- Slider Indicators -->
+      <div class="slider-indicators">
+        <button class="indicator active" data-slide="0" aria-label="Birthday slide"></button>
+        <button class="indicator" data-slide="1" aria-label="Social events slide"></button>
+        <button class="indicator" data-slide="2" aria-label="Kitty party slide"></button>
+        <button class="indicator" data-slide="3" aria-label="Work from cafe slide"></button>
+      </div>
+    </div>
 
     <div class="container-fluid pb-5">
       <div class="row justify-content-center">
@@ -265,28 +304,39 @@
     </a>
 
     <style>
-      /* Promo Banner Styles */
-      .promo-banner {
-        display: block;
+      /* Promo Slider Styles */
+      .promo-slider {
+        position: relative;
+        overflow: hidden;
+      }
+      .slider-container {
+        position: relative;
+        height: auto;
+      }
+      .promo-slide {
+        display: none;
         text-decoration: none;
         padding: 24px 16px;
         text-align: center;
         position: relative;
         overflow: hidden;
         cursor: pointer;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
       }
-      .promo-banner:hover {
-        transform: scale(1.01);
+      .promo-slide.active {
+        display: block;
+        opacity: 1;
       }
-      .promo-banner:hover .promo-badge {
+      .promo-slide:hover .promo-badge {
         transform: scale(1.05);
       }
-      .birthday-banner {
+
+      /* Birthday Slide */
+      .birthday-slide {
         background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 30%, #ff8e53 70%, #feca57 100%);
-        position: relative;
       }
-      .birthday-banner::before {
+      .birthday-slide::before {
         content: "";
         position: absolute;
         top: 0;
@@ -297,21 +347,112 @@
         pointer-events: none;
         animation: sparkle 3s ease-in-out infinite;
       }
-      @keyframes sparkle {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.7; }
-      }
-      .birthday-banner:hover {
-        box-shadow: 0 4px 25px rgba(255, 107, 107, 0.5);
-      }
-      .birthday-banner .promo-tagline {
-        color: #fff5f5;
-      }
-      .birthday-banner .promo-badge {
+      .birthday-slide .promo-tagline { color: #fff5f5; }
+      .birthday-slide .promo-badge {
         background: linear-gradient(135deg, #fff 0%, #ffe8e8 100%);
         color: #e74c3c;
         font-weight: 800;
       }
+
+      /* Social Events Slide */
+      .social-slide {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+      }
+      .social-slide::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='15' cy='15' r='2' fill='rgba(255,255,255,0.12)'/%3E%3Ccircle cx='60' cy='40' r='1.5' fill='rgba(255,255,255,0.1)'/%3E%3Ccircle cx='85' cy='70' r='2' fill='rgba(255,255,255,0.15)'/%3E%3Ccircle cx='25' cy='80' r='1' fill='rgba(255,255,255,0.1)'/%3E%3C/svg%3E");
+        pointer-events: none;
+        animation: sparkle 3s ease-in-out infinite;
+      }
+      .social-slide .promo-tagline { color: #f0e6ff; }
+      .social-slide .promo-badge {
+        background: linear-gradient(135deg, #fff 0%, #f0e6ff 100%);
+        color: #764ba2;
+        font-weight: 800;
+      }
+
+      /* Kitty Party Slide */
+      .kitty-slide {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 50%, #ff6b9d 100%);
+      }
+      .kitty-slide::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='2' fill='rgba(255,255,255,0.12)'/%3E%3Ccircle cx='70' cy='35' r='1.5' fill='rgba(255,255,255,0.1)'/%3E%3Ccircle cx='40' cy='75' r='2' fill='rgba(255,255,255,0.15)'/%3E%3Ccircle cx='90' cy='55' r='1' fill='rgba(255,255,255,0.1)'/%3E%3C/svg%3E");
+        pointer-events: none;
+        animation: sparkle 3s ease-in-out infinite;
+      }
+      .kitty-slide .promo-tagline { color: #fff0f5; }
+      .kitty-slide .promo-badge {
+        background: linear-gradient(135deg, #fff 0%, #fff0f5 100%);
+        color: #f5576c;
+        font-weight: 800;
+      }
+
+      /* Work from Cafe Slide */
+      .work-slide {
+        background: linear-gradient(135deg, #11998e 0%, #38ef7d 50%, #2ebf91 100%);
+      }
+      .work-slide::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='25' r='2' fill='rgba(255,255,255,0.12)'/%3E%3Ccircle cx='55' cy='45' r='1.5' fill='rgba(255,255,255,0.1)'/%3E%3Ccircle cx='80' cy='15' r='2' fill='rgba(255,255,255,0.15)'/%3E%3Ccircle cx='35' cy='85' r='1' fill='rgba(255,255,255,0.1)'/%3E%3C/svg%3E");
+        pointer-events: none;
+        animation: sparkle 3s ease-in-out infinite;
+      }
+      .work-slide .promo-tagline { color: #e8fff5; }
+      .work-slide .promo-badge {
+        background: linear-gradient(135deg, #fff 0%, #e8fff5 100%);
+        color: #11998e;
+        font-weight: 800;
+      }
+
+      @keyframes sparkle {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.7; }
+      }
+
+      /* Slider Indicators */
+      .slider-indicators {
+        position: absolute;
+        bottom: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+        z-index: 10;
+      }
+      .indicator {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        padding: 0;
+      }
+      .indicator:hover {
+        background: rgba(255, 255, 255, 0.5);
+      }
+      .indicator.active {
+        background: white;
+        transform: scale(1.1);
+      }
+
       .promo-content {
         position: relative;
         z-index: 1;
@@ -357,7 +498,7 @@
         50% { transform: scale(1.03); }
       }
       @media (max-width: 768px) {
-        .promo-banner {
+        .promo-slide {
           padding: 20px 12px;
         }
         .promo-emoji {
@@ -372,6 +513,13 @@
         .promo-badge {
           font-size: 0.75rem;
           padding: 6px 14px;
+        }
+        .slider-indicators {
+          bottom: 8px;
+        }
+        .indicator {
+          width: 8px;
+          height: 8px;
         }
       }
 
@@ -431,5 +579,87 @@
     </style>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Promo Slider Script -->
+    <script>
+      (function() {
+        const slides = document.querySelectorAll('.promo-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        let currentSlide = 0;
+        let slideInterval;
+        const SLIDE_DURATION = 4000; // 4 seconds per slide
+
+        function showSlide(index) {
+          // Remove active from all slides and indicators
+          slides.forEach(slide => slide.classList.remove('active'));
+          indicators.forEach(ind => ind.classList.remove('active'));
+
+          // Add active to current slide and indicator
+          slides[index].classList.add('active');
+          indicators[index].classList.add('active');
+          currentSlide = index;
+        }
+
+        function nextSlide() {
+          const next = (currentSlide + 1) % slides.length;
+          showSlide(next);
+        }
+
+        function startSlider() {
+          slideInterval = setInterval(nextSlide, SLIDE_DURATION);
+        }
+
+        function resetSlider() {
+          clearInterval(slideInterval);
+          startSlider();
+        }
+
+        // Indicator click handlers
+        indicators.forEach((indicator, index) => {
+          indicator.addEventListener('click', () => {
+            showSlide(index);
+            resetSlider();
+          });
+        });
+
+        // Pause on hover
+        const slider = document.querySelector('.promo-slider');
+        slider.addEventListener('mouseenter', () => clearInterval(slideInterval));
+        slider.addEventListener('mouseleave', startSlider);
+
+        // Touch swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        slider.addEventListener('touchstart', (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+          clearInterval(slideInterval);
+        }, { passive: true });
+
+        slider.addEventListener('touchend', (e) => {
+          touchEndX = e.changedTouches[0].screenX;
+          handleSwipe();
+          startSlider();
+        }, { passive: true });
+
+        function handleSwipe() {
+          const swipeThreshold = 50;
+          const diff = touchStartX - touchEndX;
+
+          if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+              // Swipe left - next slide
+              showSlide((currentSlide + 1) % slides.length);
+            } else {
+              // Swipe right - previous slide
+              showSlide((currentSlide - 1 + slides.length) % slides.length);
+            }
+          }
+        }
+
+        // Start the slider
+        startSlider();
+      })();
+    </script>
   </body>
 </html>
