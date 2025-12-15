@@ -557,12 +557,12 @@
 
         // Filter menu items
         menuItems.forEach(item => {
-          const foodTypes = item.dataset.foodTypes;
+          const foodTypes = item.dataset.foodTypes.split(',');
 
           if (filter === 'all') {
             item.classList.remove('hidden');
           } else {
-            // Check if item has the selected food type
+            // Check if item has the selected food type (exact match)
             if (foodTypes.includes(filter)) {
               item.classList.remove('hidden');
             } else {
