@@ -840,7 +840,7 @@
 
     const BRAND_ID = '<%= brand %>';
     const BRAND_NAME = '<%= menu.brandName %>';
-    const WHATSAPP_PHONE = '918977730992';
+    const WHATSAPP_PHONE = '919503537470'; // Dev number - change back to 918977730992 for production
     const CART_KEY = `cart_${BRAND_ID}`;
 
     // Initialize cart from sessionStorage
@@ -1301,16 +1301,16 @@
         }
       }
 
-      // Build order type label
+      // Build order type label (CAPS for visibility)
       const orderTypeLabels = {
-        'dine-in': 'Dine In',
-        'takeaway': 'Takeaway',
-        'delivery': 'Delivery'
+        'dine-in': 'DINE IN',
+        'takeaway': 'TAKEAWAY',
+        'delivery': 'DELIVERY'
       };
-      const orderTypeLabel = orderTypeLabels[selectedOrderType] || 'Order';
+      const orderTypeLabel = orderTypeLabels[selectedOrderType] || 'ORDER';
 
-      let message = `*New Order - ${cart.brandName}*\n`;
-      message += `*${orderTypeLabel}*\n\n`;
+      let message = `*${orderTypeLabel}*\n`;
+      message += `${cart.brandName}\n\n`;
 
       // Customer details (only for delivery)
       if (selectedOrderType === 'delivery') {
@@ -1319,49 +1319,27 @@
         const address = document.getElementById('customerAddress').value.trim();
         const notes = document.getElementById('customerNotes').value.trim();
 
-        message += `*Delivery Details:*\n`;
-        message += `Name: ${name}\n`;
-        message += `Phone: ${phone}\n`;
-        message += `Address: ${address}\n`;
+        message += `*Deliver To:*\n`;
+        message += `${name}\n`;
+        message += `${phone}\n`;
+        message += `${address}\n`;
         if (notes) {
-          message += `Notes: ${notes}\n`;
+          message += `\n_Special Instructions: ${notes}_\n`;
         }
         message += `\n`;
       }
 
-      // Order details
-      message += `*Order Details:*\n`;
-      message += `─────────────────\n`;
-
-      let subtotal = 0;
+      // Order items (no pricing)
+      message += `*Order:*\n`;
       cart.items.forEach((item, index) => {
-        const itemTotal = item.price * item.quantity;
-        subtotal += itemTotal;
-
         message += `${index + 1}. ${item.title}`;
         if (item.variation) {
-          message += ` (${item.variation})`;
+          message += ` - ${item.variation}`;
         }
-        message += `\n`;
-        message += `   Qty: ${item.quantity} x Rs ${item.price} = Rs ${itemTotal}\n`;
+        message += ` x${item.quantity}\n`;
       });
 
-      const tax = Math.round(subtotal * 0.05);
-      const total = subtotal + tax;
-
-      message += `─────────────────\n`;
-      message += `Subtotal: Rs ${subtotal}\n`;
-      message += `GST (5%): Rs ${tax}\n`;
-      message += `*Total: Rs ${total}*\n\n`;
-
-      // Closing message based on order type
-      if (selectedOrderType === 'delivery') {
-        message += `Please confirm order and delivery time.`;
-      } else if (selectedOrderType === 'takeaway') {
-        message += `Please confirm order and pickup time.`;
-      } else {
-        message += `Please confirm order.`;
-      }
+      message += `\n*Please confirm the order*`;
 
       const encodedMessage = encodeURIComponent(message);
       const whatsappUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_PHONE}&text=${encodedMessage}`;
