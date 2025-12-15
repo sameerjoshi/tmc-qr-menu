@@ -325,6 +325,33 @@
                   <% } else { %>
                     <div class="menu-item-price-single"><%= item.price === 0 ? 'Coming Soon' : '₹' + item.price %></div>
                   <% } %>
+
+                  <!-- Cart Controls -->
+                  <%
+                    const itemId = `item_${categoryIndex}_${itemIndex}`;
+                    const hasVariations = item.variations && item.variations.length > 0;
+                    const itemPrice = item.price || 0;
+                    const allComingSoon = hasVariations
+                      ? item.variations.every(v => v.price === 0)
+                      : item.price === 0;
+                  %>
+                  <div class="cart-controls"
+                       data-item-id="<%= itemId %>"
+                       data-title="<%= item.title %>"
+                       data-price="<%= itemPrice %>"
+                       data-food-type="<%= item.foodType || '' %>"
+                       data-image="<%= item.image || '' %>"
+                       data-has-variations="<%= hasVariations %>"
+                       data-variations='<%- hasVariations ? JSON.stringify(item.variations) : "[]" %>'>
+                    <button class="btn-add-to-cart" onclick="handleAddClick(this)" <%= allComingSoon ? 'disabled' : '' %>>
+                      ADD
+                    </button>
+                    <div class="quantity-controls" style="display: none;">
+                      <button class="qty-btn qty-minus" onclick="decrementQty(this)">−</button>
+                      <span class="qty-display">0</span>
+                      <button class="qty-btn qty-plus" onclick="incrementQty(this)">+</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -339,18 +366,8 @@
     We follow a No Bill, No Pay policy for your safety. Please ask for your bill
   </div>
 
-  <!-- WhatsApp Floating Button -->
-  <%
-    const whatsappPhone = '918977730992';
-    const whatsappMessage = `Hi! I would like to place an order with ${menu.brandName}`;
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappPhone}&text=${encodeURIComponent(whatsappMessage)}`;
-  %>
-  <a href="<%= whatsappUrl %>" target="_blank" rel="noopener noreferrer" class="whatsapp-float">
-    <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-    </svg>
-    Order on WhatsApp
-  </a>
+  <!-- WhatsApp Floating Button - Hidden when cart is in use -->
+  <!-- Replaced by cart system with WhatsApp integration -->
 
   <!-- Fine Print Disclaimer Footer -->
   <footer class="disclaimer-footer py-4 mt-5 border-top bg-light">
@@ -436,6 +453,189 @@
         </div>
         <div class="modal-footer border-top">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Variation Selector Modal -->
+  <div class="modal fade" id="variationModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title fw-bold" id="variationModalTitle">Select Variation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="variationModalBody">
+          <!-- Variation options populated by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Cart Bar -->
+  <div class="floating-cart-bar" id="floatingCartBar" style="display: none;">
+    <div class="cart-bar-content">
+      <div class="cart-bar-info">
+        <span class="cart-count">0 item(s) added</span>
+        <span class="cart-bar-total">₹0</span>
+      </div>
+      <button class="btn-view-cart" onclick="openCartPage()">
+        View Cart
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Cart Page Overlay -->
+  <div class="cart-page-overlay" id="cartPageOverlay" style="display: none;">
+    <div class="cart-page">
+      <div class="cart-header">
+        <button class="btn-back" onclick="closeCartPage()">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+          </svg>
+        </button>
+        <h5 class="cart-title">Your Order</h5>
+        <button class="btn-clear-cart" onclick="clearCart()">Clear</button>
+      </div>
+      <!-- Step 1: Cart Items -->
+      <div class="cart-step" id="cartStep1">
+        <div class="cart-items" id="cartItemsList">
+          <!-- Cart items populated by JS -->
+        </div>
+        <div class="cart-footer">
+          <div class="cart-subtotal">
+            <span>Subtotal</span>
+            <span class="subtotal-amount" id="cartSubtotal">₹0</span>
+          </div>
+          <div class="cart-tax">
+            <span>GST (5%)</span>
+            <span class="tax-amount" id="cartTax">₹0</span>
+          </div>
+          <div class="cart-total">
+            <span>Total</span>
+            <span class="total-amount" id="cartTotal">₹0</span>
+          </div>
+          <button class="btn-proceed" onclick="goToStep2()">
+            Proceed to Checkout
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 2: Order Type Selection -->
+      <div class="cart-step" id="cartStep2" style="display: none;">
+        <div class="cart-items">
+          <div class="order-type-section">
+            <h6 class="delivery-title">How would you like your order?</h6>
+            <div class="order-type-options">
+              <button class="order-type-btn" onclick="selectOrderType('dine-in')">
+                <span class="order-type-icon">🍽️</span>
+                <span class="order-type-label">Dine In</span>
+                <span class="order-type-desc">Eat at restaurant</span>
+              </button>
+              <button class="order-type-btn" onclick="selectOrderType('takeaway')">
+                <span class="order-type-icon">🥡</span>
+                <span class="order-type-label">Takeaway</span>
+                <span class="order-type-desc">Pick up your order</span>
+              </button>
+              <button class="order-type-btn" onclick="selectOrderType('delivery')">
+                <span class="order-type-icon">🛵</span>
+                <span class="order-type-label">Delivery</span>
+                <span class="order-type-desc">Get it delivered</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Order Summary -->
+          <div class="order-summary">
+            <h6 class="delivery-title">Order Summary</h6>
+            <div class="summary-row">
+              <span>Items</span>
+              <span id="summaryItems">0</span>
+            </div>
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span id="summarySubtotal">₹0</span>
+            </div>
+            <div class="summary-row">
+              <span>GST (5%)</span>
+              <span id="summaryTax">₹0</span>
+            </div>
+            <div class="summary-row total">
+              <span>Total</span>
+              <span id="summaryTotal">₹0</span>
+            </div>
+          </div>
+        </div>
+        <div class="cart-footer">
+          <button class="btn-back-step" onclick="goToStep1()">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+            </svg>
+            Back to Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 3: Delivery Details (only for delivery) -->
+      <div class="cart-step" id="cartStep3" style="display: none;">
+        <div class="cart-items">
+          <div class="delivery-details">
+            <h6 class="delivery-title">Delivery Details</h6>
+            <div class="form-group">
+              <input type="text" id="customerName" class="form-input" placeholder="Your Name *" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="customerPhone" class="form-input" placeholder="Phone Number *" required>
+            </div>
+            <div class="form-group">
+              <textarea id="customerAddress" class="form-input" placeholder="Delivery Address *" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+              <textarea id="customerNotes" class="form-input" placeholder="Special Instructions (optional)" rows="2"></textarea>
+            </div>
+          </div>
+
+          <!-- Order Summary -->
+          <div class="order-summary">
+            <h6 class="delivery-title">Order Summary</h6>
+            <div class="summary-row">
+              <span>Items</span>
+              <span id="summaryItems2">0</span>
+            </div>
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span id="summarySubtotal2">₹0</span>
+            </div>
+            <div class="summary-row">
+              <span>GST (5%)</span>
+              <span id="summaryTax2">₹0</span>
+            </div>
+            <div class="summary-row total">
+              <span>Total</span>
+              <span id="summaryTotal2">₹0</span>
+            </div>
+          </div>
+        </div>
+        <div class="cart-footer">
+          <button class="btn-back-step" onclick="goToStep2()">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+            </svg>
+            Back
+          </button>
+          <button class="btn-whatsapp-order" onclick="sendToWhatsApp()">
+            <svg class="whatsapp-icon" viewBox="0 0 24 24" width="20" height="20">
+              <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            Send Order on WhatsApp
+          </button>
         </div>
       </div>
     </div>
@@ -557,12 +757,12 @@
 
         // Filter menu items
         menuItems.forEach(item => {
-          const foodTypes = item.dataset.foodTypes;
+          const foodTypes = item.dataset.foodTypes.split(',');
 
           if (filter === 'all') {
             item.classList.remove('hidden');
           } else {
-            // Check if item has the selected food type
+            // Check if item has the selected food type (exact match)
             if (foodTypes.includes(filter)) {
               item.classList.remove('hidden');
             } else {
@@ -633,6 +833,544 @@
         itemDetailsModal.show();
       });
     });
+
+    // ========================================
+    // CART FUNCTIONALITY
+    // ========================================
+
+    const BRAND_ID = '<%= brand %>';
+    const BRAND_NAME = '<%= menu.brandName %>';
+    const WHATSAPP_PHONE = '918977730992';
+    const CART_KEY = `cart_${BRAND_ID}`;
+
+    // Initialize cart from sessionStorage
+    function getCart() {
+      try {
+        const cart = sessionStorage.getItem(CART_KEY);
+        return cart ? JSON.parse(cart) : { brandId: BRAND_ID, brandName: BRAND_NAME, items: [], updatedAt: Date.now() };
+      } catch (e) {
+        return { brandId: BRAND_ID, brandName: BRAND_NAME, items: [], updatedAt: Date.now() };
+      }
+    }
+
+    function saveCart(cart) {
+      cart.updatedAt = Date.now();
+      sessionStorage.setItem(CART_KEY, JSON.stringify(cart));
+      updateCartUI();
+    }
+
+    // Handle ADD button click
+    function handleAddClick(button) {
+      const controls = button.closest('.cart-controls');
+      const hasVariations = controls.dataset.hasVariations === 'true';
+
+      if (hasVariations) {
+        showVariationModal(controls);
+      } else {
+        addToCart(controls);
+      }
+    }
+
+    // Show variation selection modal
+    function showVariationModal(controls) {
+      const variations = JSON.parse(controls.dataset.variations);
+      const itemTitle = controls.dataset.title;
+      const itemId = controls.dataset.itemId;
+      const itemImage = controls.dataset.image;
+
+      const modalTitle = document.getElementById('variationModalTitle');
+      const modalBody = document.getElementById('variationModalBody');
+
+      modalTitle.textContent = itemTitle;
+
+      let optionsHtml = '';
+      variations.forEach((variation, index) => {
+        if (variation.price === 0) return; // Skip Coming Soon items
+
+        const foodIcon = getFoodTypeIconSvg(variation.foodType);
+        const escapedTitle = escapeAttr(itemTitle);
+        const escapedVariation = escapeAttr(variation.name);
+        const escapedImage = escapeAttr(itemImage);
+
+        optionsHtml += `
+          <div class="variation-option" onclick="selectVariation('${itemId}', ${index}, '${escapedTitle}', '${escapedVariation}', ${variation.price}, '${variation.foodType}', '${escapedImage}')">
+            <div class="variation-option-info">
+              ${foodIcon}
+              <span class="variation-option-name">${variation.name}</span>
+            </div>
+            <span class="variation-option-price">₹${variation.price}</span>
+          </div>
+        `;
+      });
+
+      modalBody.innerHTML = optionsHtml;
+
+      const variationModal = new bootstrap.Modal(document.getElementById('variationModal'));
+      variationModal.show();
+    }
+
+    function getFoodTypeIconSvg(foodType) {
+      const colors = {
+        'Veg': { border: '#22c55e', color: '#22c55e', shape: 'circle' },
+        'Non Veg': { border: '#ef4444', color: '#ef4444', shape: 'triangle' },
+        'Egg': { border: '#eab308', color: '#eab308', shape: 'triangle' }
+      };
+      const icon = colors[foodType] || colors['Veg'];
+
+      if (icon.shape === 'circle') {
+        return `<svg width="14" height="14" viewBox="0 0 16 16"><rect x="1" y="1" width="14" height="14" rx="1" fill="none" stroke="${icon.border}" stroke-width="1.5"/><circle cx="8" cy="8" r="4" fill="${icon.color}"/></svg>`;
+      } else {
+        return `<svg width="14" height="14" viewBox="0 0 16 16"><rect x="1" y="1" width="14" height="14" rx="1" fill="none" stroke="${icon.border}" stroke-width="1.5"/><polygon points="8,4.5 12,11.5 4,11.5" fill="${icon.color}"/></svg>`;
+      }
+    }
+
+    function escapeAttr(str) {
+      if (!str) return '';
+      return str.replace(/'/g, "\\'").replace(/"/g, '\\"');
+    }
+
+    // Select variation and add to cart
+    function selectVariation(itemId, variationIndex, title, variationName, price, foodType, image) {
+      const cart = getCart();
+      const fullItemId = `${itemId}_${variationIndex}`;
+
+      const existingIndex = cart.items.findIndex(item => item.id === fullItemId);
+
+      if (existingIndex === -1) {
+        cart.items.push({
+          id: fullItemId,
+          title: title,
+          variation: variationName,
+          price: price,
+          quantity: 1,
+          foodType: foodType,
+          image: image
+        });
+      } else {
+        cart.items[existingIndex].quantity = Math.min(99, cart.items[existingIndex].quantity + 1);
+      }
+
+      saveCart(cart);
+
+      // Close modal
+      const variationModal = bootstrap.Modal.getInstance(document.getElementById('variationModal'));
+      if (variationModal) variationModal.hide();
+
+      // Update the card UI
+      updateItemCardUI(itemId);
+    }
+
+    // Add non-variation item to cart
+    function addToCart(controls) {
+      const cart = getCart();
+      const itemId = controls.dataset.itemId;
+      const title = controls.dataset.title;
+      const price = parseFloat(controls.dataset.price);
+      const foodType = controls.dataset.foodType;
+      const image = controls.dataset.image;
+
+      const existingIndex = cart.items.findIndex(item => item.id === itemId);
+
+      if (existingIndex === -1) {
+        cart.items.push({
+          id: itemId,
+          title: title,
+          variation: null,
+          price: price,
+          quantity: 1,
+          foodType: foodType,
+          image: image
+        });
+      } else {
+        cart.items[existingIndex].quantity = Math.min(99, cart.items[existingIndex].quantity + 1);
+      }
+
+      saveCart(cart);
+      updateItemCardUI(itemId);
+    }
+
+    // Increment quantity
+    function incrementQty(button) {
+      const controls = button.closest('.cart-controls');
+      const itemId = controls.dataset.itemId;
+      const hasVariations = controls.dataset.hasVariations === 'true';
+
+      if (hasVariations) {
+        // For items with variations, show modal to select which one to add
+        showVariationModal(controls);
+      } else {
+        const cart = getCart();
+        const item = cart.items.find(i => i.id === itemId);
+        if (item) {
+          item.quantity = Math.min(99, item.quantity + 1);
+          saveCart(cart);
+          updateItemCardUI(itemId);
+        }
+      }
+    }
+
+    // Decrement quantity
+    function decrementQty(button) {
+      const controls = button.closest('.cart-controls');
+      const itemId = controls.dataset.itemId;
+      const hasVariations = controls.dataset.hasVariations === 'true';
+
+      const cart = getCart();
+
+      if (hasVariations) {
+        // Find all variations of this item in cart
+        const relatedItems = cart.items.filter(i => i.id.startsWith(itemId + '_'));
+        if (relatedItems.length > 0) {
+          // Decrement the last added variation
+          const lastItem = relatedItems[relatedItems.length - 1];
+          lastItem.quantity--;
+          if (lastItem.quantity <= 0) {
+            cart.items = cart.items.filter(i => i.id !== lastItem.id);
+          }
+          saveCart(cart);
+          updateItemCardUI(itemId);
+        }
+      } else {
+        const itemIndex = cart.items.findIndex(i => i.id === itemId);
+        if (itemIndex !== -1) {
+          cart.items[itemIndex].quantity--;
+          if (cart.items[itemIndex].quantity <= 0) {
+            cart.items.splice(itemIndex, 1);
+          }
+          saveCart(cart);
+          updateItemCardUI(itemId);
+        }
+      }
+    }
+
+    // Update a specific item card UI
+    function updateItemCardUI(itemId) {
+      const cart = getCart();
+      const controls = document.querySelector(`.cart-controls[data-item-id="${itemId}"]`);
+      if (!controls) return;
+
+      const hasVariations = controls.dataset.hasVariations === 'true';
+      const addBtn = controls.querySelector('.btn-add-to-cart');
+      const qtyControls = controls.querySelector('.quantity-controls');
+      const qtyDisplay = controls.querySelector('.qty-display');
+
+      let totalQty = 0;
+      if (hasVariations) {
+        // Sum all variations of this item
+        cart.items.forEach(item => {
+          if (item.id.startsWith(itemId + '_')) {
+            totalQty += item.quantity;
+          }
+        });
+      } else {
+        const item = cart.items.find(i => i.id === itemId);
+        totalQty = item ? item.quantity : 0;
+      }
+
+      if (totalQty > 0) {
+        addBtn.style.display = 'none';
+        qtyControls.style.display = 'inline-flex';
+        qtyDisplay.textContent = totalQty;
+      } else {
+        addBtn.style.display = 'inline-flex';
+        qtyControls.style.display = 'none';
+      }
+    }
+
+    // Update overall cart UI (floating bar, counts)
+    function updateCartUI() {
+      const cart = getCart();
+      const floatingBar = document.getElementById('floatingCartBar');
+
+      const totalItems = cart.items.reduce((sum, item) => sum + item.quantity, 0);
+      const totalPrice = cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+      if (totalItems > 0) {
+        floatingBar.style.display = 'block';
+        floatingBar.querySelector('.cart-count').textContent = `${totalItems} item${totalItems > 1 ? 's' : ''} added`;
+        floatingBar.querySelector('.cart-bar-total').textContent = `₹${totalPrice}`;
+      } else {
+        floatingBar.style.display = 'none';
+      }
+
+      // Update all item cards
+      document.querySelectorAll('.cart-controls').forEach(controls => {
+        updateItemCardUI(controls.dataset.itemId);
+      });
+    }
+
+    // Open cart page
+    function openCartPage() {
+      const overlay = document.getElementById('cartPageOverlay');
+      overlay.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+      goToStep1();
+      renderCartPage();
+    }
+
+    // Close cart page
+    function closeCartPage() {
+      const overlay = document.getElementById('cartPageOverlay');
+      overlay.style.display = 'none';
+      document.body.style.overflow = '';
+      goToStep1(); // Reset to step 1 for next open
+    }
+
+    // Step navigation
+    let selectedOrderType = null;
+
+    function goToStep1() {
+      document.getElementById('cartStep1').style.display = 'flex';
+      document.getElementById('cartStep2').style.display = 'none';
+      document.getElementById('cartStep3').style.display = 'none';
+    }
+
+    function goToStep2() {
+      const cart = getCart();
+      if (cart.items.length === 0) return;
+
+      // Update summary
+      updateOrderSummary();
+
+      document.getElementById('cartStep1').style.display = 'none';
+      document.getElementById('cartStep2').style.display = 'flex';
+      document.getElementById('cartStep3').style.display = 'none';
+    }
+
+    function goToStep3() {
+      updateOrderSummary();
+
+      document.getElementById('cartStep1').style.display = 'none';
+      document.getElementById('cartStep2').style.display = 'none';
+      document.getElementById('cartStep3').style.display = 'flex';
+    }
+
+    function updateOrderSummary() {
+      const cart = getCart();
+      const totalItems = cart.items.reduce((sum, item) => sum + item.quantity, 0);
+      const subtotal = cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+      const tax = Math.round(subtotal * 0.05);
+      const total = subtotal + tax;
+
+      // Update Step 2 summary
+      document.getElementById('summaryItems').textContent = totalItems;
+      document.getElementById('summarySubtotal').textContent = `₹${subtotal}`;
+      document.getElementById('summaryTax').textContent = `₹${tax}`;
+      document.getElementById('summaryTotal').textContent = `₹${total}`;
+
+      // Update Step 3 summary
+      document.getElementById('summaryItems2').textContent = totalItems;
+      document.getElementById('summarySubtotal2').textContent = `₹${subtotal}`;
+      document.getElementById('summaryTax2').textContent = `₹${tax}`;
+      document.getElementById('summaryTotal2').textContent = `₹${total}`;
+    }
+
+    function selectOrderType(type) {
+      selectedOrderType = type;
+
+      if (type === 'delivery') {
+        goToStep3();
+      } else {
+        // For dine-in and takeaway, send directly to WhatsApp
+        sendToWhatsApp();
+      }
+    }
+
+    // Render cart page items
+    function renderCartPage() {
+      const cart = getCart();
+      const cartList = document.getElementById('cartItemsList');
+      const subtotalEl = document.getElementById('cartSubtotal');
+
+      if (cart.items.length === 0) {
+        cartList.innerHTML = `
+          <div class="cart-empty">
+            <div class="cart-empty-icon">🛒</div>
+            <p>Your cart is empty</p>
+            <button class="btn btn-outline-secondary" onclick="closeCartPage()">Browse Menu</button>
+          </div>
+        `;
+        subtotalEl.textContent = '₹0';
+        return;
+      }
+
+      let html = '';
+      let subtotal = 0;
+
+      cart.items.forEach((item, index) => {
+        const itemTotal = item.price * item.quantity;
+        subtotal += itemTotal;
+        const foodIcon = getFoodTypeIconSvg(item.foodType);
+
+        html += `
+          <div class="cart-item">
+            ${item.image ? `<div class="cart-item-image" style="background-image: url('${item.image}')"></div>` : ''}
+            <div class="cart-item-details">
+              <div class="d-flex align-items-center gap-2 mb-1">
+                ${foodIcon}
+                <span class="cart-item-title">${item.title}</span>
+              </div>
+              ${item.variation ? `<div class="cart-item-variation">${item.variation}</div>` : ''}
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="cart-item-price">₹${itemTotal}</span>
+                <div class="cart-item-qty">
+                  <button class="qty-btn" onclick="updateCartItemQty(${index}, -1)">−</button>
+                  <span>${item.quantity}</span>
+                  <button class="qty-btn" onclick="updateCartItemQty(${index}, 1)">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      cartList.innerHTML = html;
+
+      const tax = Math.round(subtotal * 0.05);
+      const total = subtotal + tax;
+
+      subtotalEl.textContent = `₹${subtotal}`;
+      document.getElementById('cartTax').textContent = `₹${tax}`;
+      document.getElementById('cartTotal').textContent = `₹${total}`;
+    }
+
+    // Update cart item quantity from cart page
+    function updateCartItemQty(index, delta) {
+      const cart = getCart();
+      cart.items[index].quantity += delta;
+
+      if (cart.items[index].quantity <= 0) {
+        cart.items.splice(index, 1);
+      } else {
+        cart.items[index].quantity = Math.min(99, cart.items[index].quantity);
+      }
+
+      saveCart(cart);
+      renderCartPage();
+
+      if (cart.items.length === 0) {
+        closeCartPage();
+      }
+    }
+
+    // Clear entire cart
+    function clearCart() {
+      if (confirm('Clear all items from your cart?')) {
+        sessionStorage.removeItem(CART_KEY);
+        updateCartUI();
+        closeCartPage();
+      }
+    }
+
+    // Send order to WhatsApp
+    function sendToWhatsApp() {
+      const cart = getCart();
+      if (cart.items.length === 0) return;
+
+      // For delivery orders, validate customer details
+      if (selectedOrderType === 'delivery') {
+        const nameInput = document.getElementById('customerName');
+        const phoneInput = document.getElementById('customerPhone');
+        const addressInput = document.getElementById('customerAddress');
+
+        const name = nameInput.value.trim();
+        const phone = phoneInput.value.trim();
+        const address = addressInput.value.trim();
+
+        // Clear previous errors
+        [nameInput, phoneInput, addressInput].forEach(input => input.classList.remove('error'));
+
+        // Validate mandatory fields
+        let hasError = false;
+        if (!name) {
+          nameInput.classList.add('error');
+          hasError = true;
+        }
+        if (!phone) {
+          phoneInput.classList.add('error');
+          hasError = true;
+        }
+        if (!address) {
+          addressInput.classList.add('error');
+          hasError = true;
+        }
+
+        if (hasError) {
+          alert('Please fill in all required fields (Name, Phone, Address)');
+          return;
+        }
+      }
+
+      // Build order type label
+      const orderTypeLabels = {
+        'dine-in': 'Dine In',
+        'takeaway': 'Takeaway',
+        'delivery': 'Delivery'
+      };
+      const orderTypeLabel = orderTypeLabels[selectedOrderType] || 'Order';
+
+      let message = `*New Order - ${cart.brandName}*\n`;
+      message += `*${orderTypeLabel}*\n\n`;
+
+      // Customer details (only for delivery)
+      if (selectedOrderType === 'delivery') {
+        const name = document.getElementById('customerName').value.trim();
+        const phone = document.getElementById('customerPhone').value.trim();
+        const address = document.getElementById('customerAddress').value.trim();
+        const notes = document.getElementById('customerNotes').value.trim();
+
+        message += `*Delivery Details:*\n`;
+        message += `Name: ${name}\n`;
+        message += `Phone: ${phone}\n`;
+        message += `Address: ${address}\n`;
+        if (notes) {
+          message += `Notes: ${notes}\n`;
+        }
+        message += `\n`;
+      }
+
+      // Order details
+      message += `*Order Details:*\n`;
+      message += `─────────────────\n`;
+
+      let subtotal = 0;
+      cart.items.forEach((item, index) => {
+        const itemTotal = item.price * item.quantity;
+        subtotal += itemTotal;
+
+        message += `${index + 1}. ${item.title}`;
+        if (item.variation) {
+          message += ` (${item.variation})`;
+        }
+        message += `\n`;
+        message += `   Qty: ${item.quantity} x Rs ${item.price} = Rs ${itemTotal}\n`;
+      });
+
+      const tax = Math.round(subtotal * 0.05);
+      const total = subtotal + tax;
+
+      message += `─────────────────\n`;
+      message += `Subtotal: Rs ${subtotal}\n`;
+      message += `GST (5%): Rs ${tax}\n`;
+      message += `*Total: Rs ${total}*\n\n`;
+
+      // Closing message based on order type
+      if (selectedOrderType === 'delivery') {
+        message += `Please confirm order and delivery time.`;
+      } else if (selectedOrderType === 'takeaway') {
+        message += `Please confirm order and pickup time.`;
+      } else {
+        message += `Please confirm order.`;
+      }
+
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_PHONE}&text=${encodedMessage}`;
+
+      window.open(whatsappUrl, '_blank');
+    }
+
+    // Initialize cart UI on page load
+    updateCartUI();
   </script>
 </body>
 </html>
