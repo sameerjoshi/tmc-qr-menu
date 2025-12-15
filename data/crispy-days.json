@@ -340,36 +340,48 @@
       ]
     },
     {
-      "name": "Momos (fried/steamed)",
+      "name": "Momo (fried/steamed)",
       "description": "",
       "items": [
         {
-          "title": "Veg Momos 5pcs",
+          "title": "Veg Momo 5pcs",
           "description": "Five pillowy dumplings stuffed with fresh veggies: steamed soft or fried golden-crisp",
           "price": 109,
           "image": "/images/crispy-days-item-images/veg-momo.png",
-          "foodType": "Veg"
+          "foodType": "Veg",
+          "choices": {
+            "Style": ["Steamed", "Fried"]
+          }
         },
         {
-          "title": "Paneer Momos 5pcs",
-          "description": "Five tender momos filled with creamy paneer and aromatic spices: steamed or fried",
+          "title": "Paneer Momo 5pcs",
+          "description": "Five tender momo filled with creamy paneer and aromatic spices: steamed or fried",
           "price": 129,
           "image": "/images/crispy-days-item-images/veg-momo.png",
-          "foodType": "Veg"
+          "foodType": "Veg",
+          "choices": {
+            "Style": ["Steamed", "Fried"]
+          }
         },
         {
-          "title": "Chicken Momos 5pcs",
-          "description": "Five juicy momos packed with tender chicken: soft steamed or irresistibly crispy fried",
+          "title": "Chicken Momo 5pcs",
+          "description": "Five juicy momo packed with tender chicken: soft steamed or irresistibly crispy fried",
           "price": 129,
           "image": "/images/crispy-days-item-images/chicken-momo.png",
-          "foodType": "Non Veg"
+          "foodType": "Non Veg",
+          "choices": {
+            "Style": ["Steamed", "Fried"]
+          }
         },
         {
-          "title": "Schezwan Chicken Momos 5pcs",
-          "description": "Five fiery dumplings: spicy schezwan chicken filling in delicate, delicious momos",
+          "title": "Schezwan Chicken Momo 5pcs",
+          "description": "Five fiery dumplings: spicy schezwan chicken filling in delicate, delicious momo",
           "price": 129,
           "image": "/images/crispy-days-item-images/chicken-schez-momo.png",
-          "foodType": "Non Veg"
+          "foodType": "Non Veg",
+          "choices": {
+            "Style": ["Steamed", "Fried"]
+          }
         }
       ]
     },

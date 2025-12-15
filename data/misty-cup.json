@@ -24,11 +24,14 @@
           "foodType": "Egg",
           "details": {
             "INCLUDES": [
-              "Choice of Egg (Sunnyside up, scrambled, masala omelette, cheese omelette)",
+              "Choice of Egg",
               "2 Toast",
               "Baked Beans",
               "Choice of tea"
             ]
+          },
+          "choices": {
+            "Egg Style": ["Sunny Side Up", "Scrambled", "Masala Omelette", "Cheese Omelette"]
           }
         },
         {
@@ -77,7 +80,10 @@
             {
               "name": "Chicken",
               "price": 399,
-              "foodType": "Non Veg"
+              "foodType": "Non Veg",
+              "choices": {
+                "Egg Style": ["Sunny Side Up", "Scrambled", "Masala Omelette", "Cheese Omelette"]
+              }
             }
           ]
         },
