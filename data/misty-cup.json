@@ -241,7 +241,7 @@
           "foodType": "Veg"
         },
         {
-          "title": "Bombay & Cheese Sandwich",
+          "title": "Bombay Cheese Sandwich",
           "description": "Spiced Bombay-style vegetables with melted cheese",
           "price": 139,
           "image": "/images/tmc-item-images/bombay-sandwich.jpeg",
@@ -263,7 +263,7 @@
         },
         {
           "title": "Chicken Clubhouse Sandwich",
-          "description": "Tender chicken, crispy bacon, fresh vegetables in triple-layer toast",
+          "description": "Tender chicken, fresh vegetables in triple-layer toast",
           "price": 229,
           "image": "/images/tmc-item-images/chicken-club.jpeg",
           "foodType": "Non Veg"
