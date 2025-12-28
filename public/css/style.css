@@ -659,27 +659,27 @@ body[data-brand="misty-cup"] .btn-outline-secondary:hover {
 }
 
 .variation-price {
-  font-weight: 700;
-  font-size: 1rem;
-  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #555;
 }
 
 .menu-item-price-single {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--text-dark);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #555;
   margin-top: auto;
 }
 
 /* Brand-specific variation styles */
 body[data-brand="crispy-days"] .variation-price,
 body[data-brand="crispy-days"] .menu-item-price-single {
-  color: var(--crispy-days-primary);
+  color: #555;
 }
 
 body[data-brand="misty-cup"] .variation-price,
 body[data-brand="misty-cup"] .menu-item-price-single {
-  color: var(--misty-cup-color);
+  color: #555;
 }
 
 /* Event Cards Styles */
