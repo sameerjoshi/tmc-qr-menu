@@ -879,15 +879,15 @@
     const BRAND_ID = '<%= brand %>';
     const BRAND_NAME = '<%= menu.brandName %>';
     const WHATSAPP_PHONE = '919503537470'; // Dev number - change back to 918977730992 for production
-    const CART_KEY = `cart_${BRAND_ID}`;
+    const CART_KEY = 'cart'; // Unified cart for both brands
 
     // Initialize cart from sessionStorage
     function getCart() {
       try {
         const cart = sessionStorage.getItem(CART_KEY);
-        return cart ? JSON.parse(cart) : { brandId: BRAND_ID, brandName: BRAND_NAME, items: [], updatedAt: Date.now() };
+        return cart ? JSON.parse(cart) : { items: [], updatedAt: Date.now() };
       } catch (e) {
-        return { brandId: BRAND_ID, brandName: BRAND_NAME, items: [], updatedAt: Date.now() };
+        return { items: [], updatedAt: Date.now() };
       }
     }
 
@@ -1053,6 +1053,7 @@
         cart.items.push({
           id: fullItemId,
           baseId: pendingChoicesItem.id.split('_').slice(0, 3).join('_'), // For UI update
+          brandId: BRAND_ID,
           title: pendingChoicesItem.title,
           variation: pendingChoicesItem.variation,
           price: pendingChoicesItem.price,
@@ -1122,6 +1123,7 @@
         cart.items.push({
           id: fullItemId,
           baseId: itemId,
+          brandId: BRAND_ID,
           title: itemTitle,
           variation: variation.name,
           price: variation.price,
@@ -1153,6 +1155,7 @@
         cart.items.push({
           id: itemId,
           baseId: itemId,
+          brandId: BRAND_ID,
           title: title,
           variation: null,
           price: price,
@@ -1254,8 +1257,10 @@
 
       let totalQty = 0;
 
-      // Sum all related items (variations, choices, or both)
+      // Sum all related items (variations, choices, or both) from current brand only
       cart.items.forEach(item => {
+        // Only count items from the current brand
+        if (item.brandId !== BRAND_ID) return;
         // Check if this cart item belongs to this menu item card
         // Items can match by: exact id, baseId, or id prefix
         if (item.id === itemId ||
@@ -1516,8 +1521,7 @@
       };
       const orderTypeLabel = orderTypeLabels[selectedOrderType] || 'ORDER';
 
-      let message = `*${orderTypeLabel}*\n`;
-      message += `${cart.brandName}\n\n`;
+      let message = `*${orderTypeLabel}*\n\n`;
 
       // Customer details (only for delivery)
       if (selectedOrderType === 'delivery') {
