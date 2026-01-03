@@ -70,8 +70,18 @@
     <!-- Promo Slider -->
     <div class="promo-slider">
       <div class="slider-container">
-        <!-- Slide 1: Birthday -->
-        <a href="/events/birthday-party" class="promo-slide birthday-slide active">
+        <!-- Slide 1: WhatsApp Ordering -->
+        <div class="promo-slide whatsapp-slide active">
+          <div class="promo-content">
+            <div class="promo-emoji">📱 &nbsp; 💬 &nbsp; 🍽️</div>
+            <h3 class="promo-title">Order via WhatsApp!</h3>
+            <p class="promo-tagline">Now send your order directly from our menu<br>Browse • Add to Cart • Send on WhatsApp</p>
+            <div class="promo-badge">Pay After Delivery</div>
+            <div class="promo-badge">Try It Now ↓</div>
+          </div>
+        </div>
+        <!-- Slide 2: Birthday -->
+        <a href="/events/birthday-party" class="promo-slide birthday-slide">
           <div class="promo-content">
             <div class="promo-emoji">🎂 &nbsp; 🎉 &nbsp; 🎈</div>
             <h3 class="promo-title">Celebrate Your Birthday With Us!</h3>
@@ -79,7 +89,7 @@
             <div class="promo-badge">Book Now →</div>
           </div>
         </a>
-        <!-- Slide 2: Social Events -->
+        <!-- Slide 3: Social Events -->
         <a href="/events/social-gatherings" class="promo-slide social-slide">
           <div class="promo-content">
             <div class="promo-emoji">🎊 &nbsp; 👥 &nbsp; 🥂</div>
@@ -88,7 +98,7 @@
             <div class="promo-badge">Learn More →</div>
           </div>
         </a>
-        <!-- Slide 3: Kitty Party -->
+        <!-- Slide 4: Kitty Party -->
         <a href="/events/kitty-party" class="promo-slide kitty-slide">
           <div class="promo-content">
             <div class="promo-emoji">👗 &nbsp; ☕ &nbsp; 💅</div>
@@ -97,7 +107,7 @@
             <div class="promo-badge">Plan Your Party →</div>
           </div>
         </a>
-        <!-- Slide 4: Work from Cafe -->
+        <!-- Slide 5: Work from Cafe -->
         <a href="/work-from-cafe" class="promo-slide work-slide">
           <div class="promo-content">
             <div class="promo-emoji">💻 &nbsp; ☕ &nbsp; 📶</div>
@@ -109,10 +119,11 @@
       </div>
       <!-- Slider Indicators -->
       <div class="slider-indicators">
-        <button class="indicator active" data-slide="0" aria-label="Birthday slide"></button>
-        <button class="indicator" data-slide="1" aria-label="Social events slide"></button>
-        <button class="indicator" data-slide="2" aria-label="Kitty party slide"></button>
-        <button class="indicator" data-slide="3" aria-label="Work from cafe slide"></button>
+        <button class="indicator active" data-slide="0" aria-label="WhatsApp ordering slide"></button>
+        <button class="indicator" data-slide="1" aria-label="Birthday slide"></button>
+        <button class="indicator" data-slide="2" aria-label="Social events slide"></button>
+        <button class="indicator" data-slide="3" aria-label="Kitty party slide"></button>
+        <button class="indicator" data-slide="4" aria-label="Work from cafe slide"></button>
       </div>
     </div>
 
@@ -331,6 +342,29 @@
         transform: scale(1.05);
       }
 
+      /* WhatsApp Ordering Slide */
+      .whatsapp-slide {
+        background: linear-gradient(135deg, #25D366 0%, #128C7E 50%, #075E54 100%);
+        cursor: default;
+      }
+      .whatsapp-slide::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='2' fill='rgba(255,255,255,0.15)'/%3E%3Ccircle cx='50' cy='30' r='1.5' fill='rgba(255,255,255,0.1)'/%3E%3Ccircle cx='80' cy='60' r='2' fill='rgba(255,255,255,0.12)'/%3E%3Ccircle cx='30' cy='70' r='1' fill='rgba(255,255,255,0.1)'/%3E%3Ccircle cx='90' cy='20' r='1.5' fill='rgba(255,255,255,0.15)'/%3E%3C/svg%3E");
+        pointer-events: none;
+        animation: sparkle 3s ease-in-out infinite;
+      }
+      .whatsapp-slide .promo-tagline { color: #e8f5e9; }
+      .whatsapp-slide .promo-badge {
+        background: linear-gradient(135deg, #fff 0%, #e8f5e9 100%);
+        color: #128C7E;
+        font-weight: 800;
+      }
+
       /* Birthday Slide */
       .birthday-slide {
         background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 30%, #ff8e53 70%, #feca57 100%);
@@ -530,15 +564,16 @@
         background: linear-gradient(135deg, #2c3e50, #34495e);
         color: rgba(255, 255, 255, 0.9);
         text-align: center;
-        padding: 8px 16px;
-        font-size: 0.75rem;
-        letter-spacing: 0.5px;
+        padding: 6px 5px;
+        font-size: 0.6rem;
+        letter-spacing: 0;
         z-index: 999;
+        white-space: nowrap;
       }
       .whatsapp-float {
         position: fixed;
         right: 20px;
-        bottom: 50px;
+        bottom: 30px;
         background-color: #25d366;
         color: white;
         border-radius: 50px;
@@ -568,7 +603,7 @@
         .whatsapp-float {
           padding: 10px 16px;
           font-size: 14px;
-          bottom: 60px;
+          bottom: 40px;
         }
         .whatsapp-icon {
           width: 20px;
