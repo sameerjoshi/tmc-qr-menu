@@ -695,5 +695,133 @@
         startSlider();
       })();
     </script>
+
+    <!-- WhatsApp Order Promo Modal -->
+    <div id="whatsappPromoModal" class="whatsapp-promo-modal" onclick="dismissWhatsAppPromo()">
+      <div class="whatsapp-promo-content">
+        <button class="whatsapp-promo-close">&times;</button>
+        <div class="whatsapp-promo-icon">📱</div>
+        <h4>Order via WhatsApp!</h4>
+        <p>Browse menu • Add to cart • Send order directly on WhatsApp</p>
+        <div class="whatsapp-promo-badges">
+          <span class="whatsapp-promo-badge">Pay After Delivery</span>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .whatsapp-promo-modal {
+        display: none;
+        position: fixed;
+        bottom: 100px;
+        right: 20px;
+        z-index: 1001;
+        animation: slideInRight 0.4s ease-out;
+      }
+      .whatsapp-promo-modal.show {
+        display: block;
+      }
+      .whatsapp-promo-modal {
+        cursor: pointer;
+      }
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      .whatsapp-promo-content {
+        background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        color: white;
+        padding: 20px 24px;
+        border-radius: 16px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+        max-width: 280px;
+        position: relative;
+        text-align: center;
+      }
+      .whatsapp-promo-close {
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        background: none;
+        border: none;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 24px;
+        cursor: pointer;
+        line-height: 1;
+        padding: 0;
+      }
+      .whatsapp-promo-close:hover {
+        color: white;
+      }
+      .whatsapp-promo-icon {
+        font-size: 2.5rem;
+        margin-bottom: 8px;
+      }
+      .whatsapp-promo-content h4 {
+        margin: 0 0 8px 0;
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+      .whatsapp-promo-content p {
+        margin: 0 0 12px 0;
+        font-size: 0.85rem;
+        opacity: 0.95;
+        line-height: 1.4;
+      }
+      .whatsapp-promo-badges {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .whatsapp-promo-badge {
+        background: rgba(255, 255, 255, 0.25);
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+      @media (max-width: 768px) {
+        .whatsapp-promo-modal {
+          bottom: 90px;
+          right: 10px;
+          left: 10px;
+        }
+        .whatsapp-promo-content {
+          max-width: none;
+        }
+      }
+    </style>
+
+    <script>
+      // Show WhatsApp promo modal on load, auto-dismiss after 10 seconds
+      (function() {
+        const PROMO_DISMISSED_KEY = 'whatsappPromoDismissed';
+        const modal = document.getElementById('whatsappPromoModal');
+
+        // Check if already dismissed this session
+        if (sessionStorage.getItem(PROMO_DISMISSED_KEY)) return;
+
+        // Show immediately
+        modal.classList.add('show');
+
+        // Auto-dismiss after 10 seconds
+        setTimeout(() => {
+          dismissWhatsAppPromo();
+        }, 10000);
+      })();
+
+      function dismissWhatsAppPromo() {
+        const modal = document.getElementById('whatsappPromoModal');
+        modal.classList.remove('show');
+        sessionStorage.setItem('whatsappPromoDismissed', 'true');
+      }
+    </script>
   </body>
 </html>
